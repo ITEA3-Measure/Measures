@@ -69,14 +69,15 @@ public class CognitiveComplexity extends DirectMeasure{
     public static int countIfForStmt(Node block, int level) {
 
 	    List<Node> stmtNodes = block.getChildNodes();
-        stmtNodes.forEach(c -> System.out.println(c.getClass()));
 	    int poid=level;
+	    System.out.println(stmtNodes);
 	    if (!stmtNodes.isEmpty()){
             for (Node stmtNode : stmtNodes) {
-                System.out.println("first :\n"+stmtNode);
+
+                System.out.println("first :\n"+stmtNode.getNodesByType(IfStmt.class));
                  if (stmtNode instanceof IfStmt || stmtNode instanceof ForStmt) {
                  //weight += level;
-                     System.out.println("second :\n"+stmtNode.getChildNodes());
+                     System.out.println("second :\n"+stmtNode.getChildNodes().get(1).getClass());
                      System.out.println("level :\n " + level);
                      poid += level;
                      countIfForStmt(stmtNode, level + 1);
@@ -97,9 +98,12 @@ public class CognitiveComplexity extends DirectMeasure{
             CompilationUnit ast= JavaParser.parse(files);
             List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
             for (Node method : methods) {
-                method.getChildNodes().forEach(c -> System.out.println(c.getClass()));
+                method.getChildNodes().forEach(c -> System.out.println("Method childs : \n"+c.getClass()+" FIN"));
+                //System.out.println(method.getNodesByType(IfStmt.class));
                 for (Node block : method.getChildNodes()) {
+                   // block.getChildNodes().forEach(c -> System.out.println("Method childs childs : \n"+c.getClass()+" fin\n"));
                     if (block instanceof BlockStmt) {
+                        block.getChildNodes().forEach(c -> System.out.println("block childs : \n"+c.getClass()+" FIN2"));
                         poids += countIfForStmt(block, 1);
                         System.out.println("poids : \n"+ poids);
                     }
