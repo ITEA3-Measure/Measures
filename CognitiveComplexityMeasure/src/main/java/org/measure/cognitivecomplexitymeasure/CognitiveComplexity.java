@@ -4,10 +4,7 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.MethodDeclaration;
-import com.github.javaparser.ast.stmt.BlockStmt;
-import com.github.javaparser.ast.stmt.ForStmt;
-import com.github.javaparser.ast.stmt.ForeachStmt;
-import com.github.javaparser.ast.stmt.IfStmt;
+import com.github.javaparser.ast.stmt.*;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
@@ -15,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class CognitiveComplexity extends DirectMeasure{
     int weight;
@@ -69,19 +67,28 @@ public class CognitiveComplexity extends DirectMeasure{
     public static int countIfForStmt(Node block, int level) {
 
 	    List<Node> stmtNodes = block.getChildNodes();
+	    System.out.println("Block : \n"+stmtNodes+" FIN BLOCK");
 	    int poid=level;
-	    System.out.println(stmtNodes);
+        System.out.println("level : "+level+"\n");
 	    if (!stmtNodes.isEmpty()){
             for (Node stmtNode : stmtNodes) {
+                 if (stmtNode instanceof IfStmt ) {
+                     System.out.println("Then Statement :\n"+((IfStmt) stmtNode).getThenStmt());
+                     System.out.println("level : "+level+"\n");
+                     countIfForStmt(((IfStmt) stmtNode).getThenStmt(), level++);
+                     Optional<Statement> elseStatement=((IfStmt) stmtNode).getElseStmt();
+                     if (elseStatement.isPresent()) {
+                         System.out.println("else statement :\n"+elseStatement.get()+" Fin ELSE");
+                         countIfForStmt(elseStatement.get(), level++);
+                     }
 
-                System.out.println("first :\n"+stmtNode.getNodesByType(IfStmt.class));
-                 if (stmtNode instanceof IfStmt || stmtNode instanceof ForStmt) {
-                 //weight += level;
-                     System.out.println("second :\n"+stmtNode.getChildNodes().get(1).getClass());
-                     System.out.println("level :\n " + level);
-                     poid += level;
-                     countIfForStmt(stmtNode, level + 1);
+                 }else if(stmtNode instanceof ForStmt) {
+                        System.out.println("For Statement :\n"+((ForStmt) stmtNode).getBody());
+                         countIfForStmt(((ForStmt) stmtNode).getBody(),level++);
 
+                 }else if(stmtNode instanceof ForeachStmt) {
+                     System.out.println("Foreach Statement :\n" + ((ForeachStmt) stmtNode).getBody());
+                     countIfForStmt(((ForeachStmt) stmtNode).getBody(), level++);
                  }
             }
         }
@@ -98,58 +105,13 @@ public class CognitiveComplexity extends DirectMeasure{
             CompilationUnit ast= JavaParser.parse(files);
             List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
             for (Node method : methods) {
-                method.getChildNodes().forEach(c -> System.out.println("Method childs : \n"+c.getClass()+" FIN"));
-                //System.out.println(method.getNodesByType(IfStmt.class));
                 for (Node block : method.getChildNodes()) {
-                   // block.getChildNodes().forEach(c -> System.out.println("Method childs childs : \n"+c.getClass()+" fin\n"));
                     if (block instanceof BlockStmt) {
-                        block.getChildNodes().forEach(c -> System.out.println("block childs : \n"+c.getClass()+" FIN2"));
-                        poids += countIfForStmt(block, 1);
+                        poids += countIfForStmt(block, 0);
                         System.out.println("poids : \n"+ poids);
                     }
                 }
             }
-
-          /*  for (BlockStmt stmt: stmts){
-                List<IfStmt> ifstmts=stmt.getNodesByType(IfStmt.class);
-                if(!ifstmts.isEmpty()){
-                System.out.println(ifstmts);
-                System.out.println("first level :\n"+stmt.getNodesByType(IfStmt.class));
-
-                for (IfStmt ifstmt: ifstmts){
-                    List<IfStmt> sousifstmts=ifstmt.getNodesByType(IfStmt.class);
-                    if (!sousifstmts.isEmpty())
-                        System.out.println("second level :\n"+ifstmt.getNodesByType(IfStmt.class));
-                }
-
-                }
-
-            }*/
-
-        /*    List<Node> nodes = ast.getChildNodes();
-            for (Node nodechild : nodes){
-                if(nodechild instanceof ClassOrInterfaceDeclaration) {
-                    List<Node> nodechildlist = nodechild.getChildNodes();
-                    for (Node sousnodechild: nodechildlist) {
-                        if (sousnodechild instanceof MethodDeclaration) {
-                            List<Node> methodNodes = sousnodechild.getChildNodes();
-                            for (Node methodNode:methodNodes){
-                                if (methodNode instanceof BlockStmt){
-                                    List<Node> stmtNodes = methodNode.getChildNodes();
-                                    for (Node stmtNode:stmtNodes) {
-                                        System.out.println("voici l'ast :\n" + stmtNode.getClass());//.getBegin());
-                                    }
-
-                                }
-
-
-                            }
-
-                        }
-                    }
-                }
-            }*/
-           // System.out.println("voici node list :\n"+ast);
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }
