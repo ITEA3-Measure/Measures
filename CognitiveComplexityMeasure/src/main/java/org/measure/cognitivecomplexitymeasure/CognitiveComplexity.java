@@ -48,13 +48,14 @@ public class CognitiveComplexity extends DirectMeasure{
 	public void fileParse(File classFile){
 
         try {
+            int poids=0;
             CompilationUnit ast= JavaParser.parse(classFile);
             List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
             for (Node method : methods) {
                 for (Node block : method.getChildNodes()) {
                     if (block instanceof BlockStmt) {
-                        countIfForStmt(block,1);
-
+                        poids += countIfForStmt(block, 0);
+                        System.out.println("poids : \n"+ poids);
                     }
                 }
             }
@@ -73,22 +74,21 @@ public class CognitiveComplexity extends DirectMeasure{
 	    if (!stmtNodes.isEmpty()){
             for (Node stmtNode : stmtNodes) {
                  if (stmtNode instanceof IfStmt ) {
-                     System.out.println("Then Statement :\n"+((IfStmt) stmtNode).getThenStmt());
-                     System.out.println("level : "+level+"\n");
-                     countIfForStmt(((IfStmt) stmtNode).getThenStmt(), level++);
+                     int levelIf=++level;
+                     countIfForStmt(((IfStmt) stmtNode).getThenStmt(), levelIf);
                      Optional<Statement> elseStatement=((IfStmt) stmtNode).getElseStmt();
                      if (elseStatement.isPresent()) {
                          System.out.println("else statement :\n"+elseStatement.get()+" Fin ELSE");
-                         countIfForStmt(elseStatement.get(), level++);
+                         countIfForStmt(elseStatement.get(), levelIf);
                      }
 
                  }else if(stmtNode instanceof ForStmt) {
                         System.out.println("For Statement :\n"+((ForStmt) stmtNode).getBody());
-                         countIfForStmt(((ForStmt) stmtNode).getBody(),level++);
+                         countIfForStmt(((ForStmt) stmtNode).getBody(),++level);
 
                  }else if(stmtNode instanceof ForeachStmt) {
                      System.out.println("Foreach Statement :\n" + ((ForeachStmt) stmtNode).getBody());
-                     countIfForStmt(((ForeachStmt) stmtNode).getBody(), level++);
+                     countIfForStmt(((ForeachStmt) stmtNode).getBody(), ++level);
                  }
             }
         }
