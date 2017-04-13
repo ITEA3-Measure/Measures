@@ -6,6 +6,7 @@ import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.stmt.*;
 import org.measure.smm.measure.api.IMeasurement;
+import org.measure.smm.measure.defaultimpl.measurements.IntegerMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
 import java.io.File;
@@ -22,14 +23,17 @@ public class CognitiveComplexity extends DirectMeasure{
 		List<IMeasurement> result=new ArrayList<IMeasurement>();
 		String url=getProperty("URL");
         File files= new File(url);
+        System.out.println(files);
         weight=0;
-        //classCheck(files);
+        classCheck(files);
 
-		return result;//.add(weight);
+        IntegerMeasurement weightmeasured=new IntegerMeasurement();
+        weightmeasured.setValue(weight);
+        result.add(weightmeasured);
+		return result;
 	}
-/*
+
     private void classCheck(File files) {
-        //voir probleme de répertoire !!
         if (files.isDirectory()) {
             for (File child : files.listFiles()) {
                 if (child.isFile() & child.getName().endsWith(".java")) {
@@ -48,14 +52,13 @@ public class CognitiveComplexity extends DirectMeasure{
 	public void fileParse(File classFile){
 
         try {
-            int poids=0;
+
             CompilationUnit ast= JavaParser.parse(classFile);
             List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
             for (Node method : methods) {
                 for (Node block : method.getChildNodes()) {
                     if (block instanceof BlockStmt) {
-                        poids += countIfForStmt(block, 0);
-                        System.out.println("poids : \n"+ poids);
+                        countIfForStmt(block, 0);
                     }
                 }
             }
@@ -64,13 +67,14 @@ public class CognitiveComplexity extends DirectMeasure{
         }
 
     }
-*/
-    public static int countIfForStmt(Node block, int level) {
+
+    public void countIfForStmt(Node block, int level) {
 
 	    List<Node> stmtNodes = block.getChildNodes();
-	    System.out.println("Block : \n"+stmtNodes+" FIN BLOCK");
-	    int poid=level;
-        System.out.println("level : "+level+"\n");
+	   // System.out.println("Block : \n"+stmtNodes+" FIN BLOCK");
+       // System.out.println("level : "+level+"\n");
+        weight+=level;
+        System.out.println(weight);
 	    if (!stmtNodes.isEmpty()){
             for (Node stmtNode : stmtNodes) {
                  if (stmtNode instanceof IfStmt ) {
@@ -78,25 +82,25 @@ public class CognitiveComplexity extends DirectMeasure{
                      countIfForStmt(((IfStmt) stmtNode).getThenStmt(), levelIf);
                      Optional<Statement> elseStatement=((IfStmt) stmtNode).getElseStmt();
                      if (elseStatement.isPresent()) {
-                         System.out.println("else statement :\n"+elseStatement.get()+" Fin ELSE");
+                        // System.out.println("else statement :\n"+elseStatement.get()+" Fin ELSE");
                          countIfForStmt(elseStatement.get(), levelIf);
                      }
 
                  }else if(stmtNode instanceof ForStmt) {
-                        System.out.println("For Statement :\n"+((ForStmt) stmtNode).getBody());
-                         countIfForStmt(((ForStmt) stmtNode).getBody(),++level);
+                       // System.out.println("For Statement :\n"+((ForStmt) stmtNode).getBody());
+                        countIfForStmt(((ForStmt) stmtNode).getBody(),++level);
 
                  }else if(stmtNode instanceof ForeachStmt) {
-                     System.out.println("Foreach Statement :\n" + ((ForeachStmt) stmtNode).getBody());
+                     //System.out.println("Foreach Statement :\n" + ((ForeachStmt) stmtNode).getBody());
                      countIfForStmt(((ForeachStmt) stmtNode).getBody(), ++level);
                  }
             }
         }
-        return poid;
+
     }
 
 
-
+/*
     public static void main(String[] args){
         //Desktop.getDesktop.open( new File(" file path"));
         File files= new File("projectmine/CognitiveComplexity.java");
@@ -117,6 +121,6 @@ public class CognitiveComplexity extends DirectMeasure{
         }
 
 
-    }
+    }*/
 
 }

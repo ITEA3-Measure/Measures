@@ -8,8 +8,11 @@
 	<repositories>
 		<repository>
 			<id>org.tmatesoft.svnkit</id>
-
 			<url>https://maven.tmatesoft.com/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>Modelio</id>
+			<url>http://repository.modelio.org/</url>
 		</repository>
 	</repositories>
 

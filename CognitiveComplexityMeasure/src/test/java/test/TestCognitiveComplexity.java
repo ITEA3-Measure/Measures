@@ -7,15 +7,15 @@ import org.measure.smm.measure.api.IMeasurement;
 public class TestCognitiveComplexity {
 	
 	@Test
-	public void testSVNCommitCount(){
+	public void testCognitiveComplexity(){
 		CognitiveComplexity measure = new CognitiveComplexity();
-		measure.getProperties().put("Property1", "Value1");
-
+		measure.getProperties().put("URL", "C:/Users/Sdahab/Documents/MeasureImpl/Measures/projectmine");
+		System.out.println(measure.getProperties());
 			
 
 		try {
 			for(IMeasurement result : measure.getMeasurement()){
-				System.out.println("Test Resul : " + result.getLabel());
+				System.out.println("Test Result : " + result.getLabel());
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
