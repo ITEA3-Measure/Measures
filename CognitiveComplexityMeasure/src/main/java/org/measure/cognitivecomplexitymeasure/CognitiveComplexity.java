@@ -37,21 +37,15 @@ public class CognitiveComplexity extends DirectMeasure{
             System.out.println(svnurl);
 
             final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
-            System.out.println(svnOperationFactory);
             BasicAuthenticationManager basicAuthenticationManager = new BasicAuthenticationManager(login, password);
             svnOperationFactory.setAuthenticationManager(basicAuthenticationManager);
-            System.out.println(svnOperationFactory);
             SVNUpdateClient svnUpdateClient = new SVNUpdateClient(basicAuthenticationManager,null);
             svnUpdateClient.doCheckout(svnurl,destinationFolder,null,null,true);
 
-
-            System.out.println(destinationFolder.exists());
-
-            // System.out.println(checkout);
         } catch (SVNException e) {
             e.printStackTrace();
         }
-        System.out.println(destinationFolder);
+
         weight=0;
         classCheck(destinationFolder);
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
