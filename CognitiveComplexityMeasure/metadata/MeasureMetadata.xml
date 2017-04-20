@@ -5,5 +5,11 @@
     <scopeProperties name="URL" defaultValue="">
         <description>...</description>
     </scopeProperties>
+    <scopeProperties name="LOGIN" defaultValue="">
+        <description>...</description>
+    </scopeProperties>
+    <scopeProperties name="PASSWORD" defaultValue="">
+        <description>...</description>
+    </scopeProperties>
 
 </Measure>

@@ -9,9 +9,9 @@ public class TestCognitiveComplexity {
 	@Test
 	public void testCognitiveComplexity(){
 		CognitiveComplexity measure = new CognitiveComplexity();
-		measure.getProperties().put("URL", "C:/Users/Sdahab/Documents/MeasureImpl/Measures/projectmine");
-		System.out.println(measure.getProperties());
-			
+		measure.getProperties().put("URL", "https://svn.softeam.fr/svn/MEASURE/trunk/Software/SMM_EMF_API");
+		measure.getProperties().put("LOGIN","sdahab");
+		measure.getProperties().put("PASSWORD","3bI2RE78m&");
 
 		try {
 			for(IMeasurement result : measure.getMeasurement()){

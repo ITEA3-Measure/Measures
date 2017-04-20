@@ -8,6 +8,13 @@ import com.github.javaparser.ast.stmt.*;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.IntegerMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
+import org.tmatesoft.svn.core.SVNException;
+import org.tmatesoft.svn.core.SVNLogEntry;
+import org.tmatesoft.svn.core.SVNURL;
+import org.tmatesoft.svn.core.auth.BasicAuthenticationManager;
+import org.tmatesoft.svn.core.wc.SVNRevision;
+import org.tmatesoft.svn.core.wc.SVNUpdateClient;
+import org.tmatesoft.svn.core.wc2.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,12 +28,32 @@ public class CognitiveComplexity extends DirectMeasure{
 	@Override
 	public List<IMeasurement> getMeasurement() throws Exception {
 		List<IMeasurement> result=new ArrayList<IMeasurement>();
-		String url=getProperty("URL");
-        File files= new File(url);
-        System.out.println(files);
-        weight=0;
-        classCheck(files);
+        String url=getProperty("URL");
+        String login=getProperty("LOGIN");
+        String password=getProperty("PASSWORD");
+        File destinationFolder= new File("projectTarget");
+        try {
+            final SVNURL svnurl = SVNURL.parseURIEncoded(url);
+            System.out.println(svnurl);
 
+            final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
+            System.out.println(svnOperationFactory);
+            BasicAuthenticationManager basicAuthenticationManager = new BasicAuthenticationManager(login, password);
+            svnOperationFactory.setAuthenticationManager(basicAuthenticationManager);
+            System.out.println(svnOperationFactory);
+            SVNUpdateClient svnUpdateClient = new SVNUpdateClient(basicAuthenticationManager,null);
+            svnUpdateClient.doCheckout(svnurl,destinationFolder,null,null,true);
+
+
+            System.out.println(destinationFolder.exists());
+
+            // System.out.println(checkout);
+        } catch (SVNException e) {
+            e.printStackTrace();
+        }
+        System.out.println(destinationFolder);
+        weight=0;
+        classCheck(destinationFolder);
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
         weightmeasured.setValue(weight);
         result.add(weightmeasured);
@@ -52,7 +79,7 @@ public class CognitiveComplexity extends DirectMeasure{
 	public void fileParse(File classFile){
 
         try {
-
+            System.out.println(classFile.getAbsolutePath());
             CompilationUnit ast= JavaParser.parse(classFile);
             List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
             for (Node method : methods) {
@@ -101,24 +128,33 @@ public class CognitiveComplexity extends DirectMeasure{
 
 
 /*
-    public static void main(String[] args){
-        //Desktop.getDesktop.open( new File(" file path"));
-        File files= new File("projectmine/CognitiveComplexity.java");
+    public static void main(String[] args) {
+
+
+        File destinationFolder= new File("projectTarget");
+        String url="https://svn.softeam.fr/svn/MEASURE/trunk/Software/SMMDesigner";
         try {
-            int poids=0;
-            CompilationUnit ast= JavaParser.parse(files);
-            List<MethodDeclaration> methods = ast.getNodesByType(MethodDeclaration.class);
-            for (Node method : methods) {
-                for (Node block : method.getChildNodes()) {
-                    if (block instanceof BlockStmt) {
-                        poids += countIfForStmt(block, 0);
-                        System.out.println("poids : \n"+ poids);
-                    }
-                }
-            }
-        }catch (FileNotFoundException e){
+            final SVNURL svnurl = SVNURL.parseURIEncoded(url);
+            System.out.println(svnurl);
+
+        final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
+        System.out.println(svnOperationFactory);
+        BasicAuthenticationManager basicAuthenticationManager = new BasicAuthenticationManager("sdahab", "3bI2RE78m&");
+        svnOperationFactory.setAuthenticationManager(basicAuthenticationManager);
+        System.out.println(svnOperationFactory);
+        SVNUpdateClient svnUpdateClient = new SVNUpdateClient(basicAuthenticationManager,null);
+        svnUpdateClient.doCheckout(svnurl,destinationFolder,null,null,true);
+
+
+        System.out.println(destinationFolder.exists());
+
+       // System.out.println(checkout);
+        } catch (SVNException e) {
             e.printStackTrace();
         }
+        //destinationFolder = svnOperationFactory.createCheckout().getSource().getFile();
+
+        //System.out.println(destinationFolder);
 
 
     }*/
