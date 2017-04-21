@@ -48,9 +48,11 @@ public class CognitiveComplexity extends DirectMeasure{
 
         weight=0;
         classCheck(destinationFolder);
+        deleteDir(destinationFolder);
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
         weightmeasured.setValue(weight);
         result.add(weightmeasured);
+
 		return result;
 	}
 
@@ -118,6 +120,17 @@ public class CognitiveComplexity extends DirectMeasure{
             }
         }
 
+    }
+    public boolean deleteDir(File dir) {
+        if (dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success)
+                    return false;
+            }
+        }
+        return dir.delete();
     }
 
 
