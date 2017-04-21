@@ -134,7 +134,7 @@ public class CognitiveComplexity extends DirectMeasure{
     }
 
 
-/*
+
     public static void main(String[] args) {
 
 
@@ -164,6 +164,6 @@ public class CognitiveComplexity extends DirectMeasure{
         //System.out.println(destinationFolder);
 
 
-    }*/
+    }
 
 }
