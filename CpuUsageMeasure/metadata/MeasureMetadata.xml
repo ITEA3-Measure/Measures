@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="CpuUsage" type="DIRECT" unite="Numeric">
+    <description>Measure the cpu usage</description>
+    
+    <scopeProperties name="URL" defaultValue="">
+        <description>...</description>
+    </scopeProperties>
+    <scopeProperties name="LOGIN" defaultValue="">
+        <description>...</description>
+    </scopeProperties>
+    <scopeProperties name="PASSWORD" defaultValue="">
+        <description>...</description>
+    </scopeProperties>
+</Measure>
