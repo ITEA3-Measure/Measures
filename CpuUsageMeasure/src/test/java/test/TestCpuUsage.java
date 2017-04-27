@@ -11,13 +11,13 @@ public class TestCpuUsage {
 	@Test
 	public void testCpuUsage(){
 		CpuUsage measure = new CpuUsage();
-		measure.getProperties().put("Property1", "Value1");
+		//measure.getProperties().put("Property1", "Value1");
 
 			
 
 		try {
 			for(IMeasurement result : measure.getMeasurement()){
-				System.out.println("Test Resul : " + result.getLabel());
+				System.out.println("Test Result : " + result.getLabel());
 			}			
 		} catch (Exception e) {
 			e.printStackTrace();
