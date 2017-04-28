@@ -1,14 +1,13 @@
 package org.measure.cpuusagemeasure;
 
 import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryMXBean;
 import java.util.ArrayList;
 import java.util.List;
 import com.sun.management.OperatingSystemMXBean;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.IntegerMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
-import sun.plugin2.gluegen.runtime.CPU;
+
 
 public class CpuUsage extends DirectMeasure{
 
