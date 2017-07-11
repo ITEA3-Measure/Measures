@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="Statements_SonarCube4.5" unite="Numeric">
+<Measure name="Statements_SonarCube4.5" unite="Numeric" type="COUNTING">
     <description>Number of statements as defined in the Java Language Specification but without block definitions. Statements counter gets incremented by one each time a following keyword is encountered: if, else, while, do, for, switch, break, continue, return, throw, synchronized, catch, finally.
 
 Statements counter is not incremented by a class, method, field, annotation definition, package declaration and import declaration.</description>

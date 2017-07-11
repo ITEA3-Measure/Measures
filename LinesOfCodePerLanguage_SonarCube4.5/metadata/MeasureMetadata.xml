@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="LinesOfCodePerLanguage_SonarCube4.5" unite="Numeric">
+<Measure name="LinesOfCodePerLanguage_SonarCube4.5" unite="Numeric" type="COUNTING">
     <description>Non Commenting Lines of Code Distributed By Language</description>
     <scopeProperties defaultValue="" name="ServerURL"/>
     <scopeProperties defaultValue="" name="Login"/>
