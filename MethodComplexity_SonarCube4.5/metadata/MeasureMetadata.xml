@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="MethodComplexity_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Average complexity by function.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

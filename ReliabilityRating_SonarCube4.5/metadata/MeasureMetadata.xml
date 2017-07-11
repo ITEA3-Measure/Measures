@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="ReliabilityRating_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>A = 0 Bug
+B = at least 1 Minor Bug
+C = at least 1 Major Bug
+D = at least 1 Critical Bug
+E = at least 1 Blocker Bug</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

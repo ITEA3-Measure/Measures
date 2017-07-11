@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="CoverageOnNewCode_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>It is a mix of Line coverage and Condition coverage. Its goal is to provide an even more accurate answer to the following question: How much of the source code has been covered by the unit tests?
+Restricted to new / updated source code.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

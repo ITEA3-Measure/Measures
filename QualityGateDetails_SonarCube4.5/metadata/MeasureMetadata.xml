@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="QualityGateDetails_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>For all the conditions of your Quality Gate, you know which condition is failing and which is not.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

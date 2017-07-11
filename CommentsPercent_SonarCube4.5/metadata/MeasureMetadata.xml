@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="CommentsPercent_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Density of comment lines = Comment lines / (Lines of code + Comment lines) * 100
+
+With such a formula:
+
+-50% means that the number of lines of code equals the number of comment lines
+- 100% means that the file only contains comment lines</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

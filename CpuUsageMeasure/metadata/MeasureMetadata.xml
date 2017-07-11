@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="CpuUsage" type="DIRECT" unite="Numeric">
-    <description>Measure the cpu usage of JVM</description>
-    
-
-</Measure>

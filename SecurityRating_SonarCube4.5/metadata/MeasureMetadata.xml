@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="SecurityRating_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>A = 0 Vulnerability
+B = at least 1 Minor Vulnerability
+C = at least 1 Major Vulnerability
+D = at least 1 Critical Vulnerability
+E = at least 1 Blocker Vulnerability</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

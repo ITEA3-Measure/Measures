@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="PublicAPI_SonarCube4.5" unite="Numeric">
+    <description>Public classes, interfaces, methods, constructors, annotations and attributes.
+
+The following objects are excluded:
+
+    static final attribute
+    method with @Override annotation
+    empty constructor with no parameters</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

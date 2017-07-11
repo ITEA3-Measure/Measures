@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="NewIssuesBySeverity_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Number of new issues with severity being blocker, critical, major, minor or info.uplications.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+    <scopeProperties defaultValue="" name="Severity"/>
+</Measure>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="TechnicalDebtRatio_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Ratio between the cost to develop the software and the cost to fix it. The Technical Debt Ratio formula is:
+
+	Remediation cost / Development cost 
+
+Which can be restated as:
+
+	Remediation cost / (Cost to develop 1 line of code * Number of lines of code)
+
+The value of the cost to develop a line of code is 0.06 days.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

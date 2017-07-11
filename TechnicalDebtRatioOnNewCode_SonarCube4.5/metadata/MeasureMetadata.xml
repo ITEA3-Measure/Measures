@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="TechnicalDebtRatioOnNewCode_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Ratio between the cost to develop the code changed in the leak period and the cost of the issues linked to it.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

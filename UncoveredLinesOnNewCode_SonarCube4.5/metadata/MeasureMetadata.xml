@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="UncoveredLinesOnNewCode_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Number of lines of code which are not covered by unit tests.
+Restricted to new / updated source code.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>

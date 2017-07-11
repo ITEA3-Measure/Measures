@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <groupId>org.measure.smmmeasure.impl</groupId>
+        <artifactId>NewIssues_SonarCube4.5</artifactId>
+        <version>1.0.0</version>
+
+        <repositories>
+            <repository>
+                <id>Modelio</id>
+                <url>http://repository.modelio.org/</url>
+            </repository>
+        </repositories>
+
+        <dependencies>
+            <dependency>
+                <groupId>org.modelio</groupId>
+                <artifactId>javadesigner</artifactId>
+                <version>2.2.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.measure.smmmeasure.api</groupId>
+                <artifactId>SMMMeasureApi</artifactId>
+                <version>0.2.08</version>
+            </dependency>
+
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.sonar</groupId>
+			<artifactId>sonar-ws-client</artifactId>
+			<version>4.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.3</version>
+		</dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+        </dependencies>
+
+        <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.8</source>
+                                <target>1.8</target>
+                                <encoding>UTF-8</encoding>
+                            </configuration>
+                            </plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-dependency-plugin</artifactId>
+<executions>
+    <execution>
+        <id>copy-deps</id>
+        <phase>package</phase>
+        <goals>
+            <goal>copy-dependencies</goal>
+        </goals>
+        <inherited>false</inherited>
+        <configuration>
+            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+            <copyPom>false</copyPom>
+        </configuration>
+    </execution>
+</executions>
+</plugin>
+                    </plugins>
+            </build>
+            </project>

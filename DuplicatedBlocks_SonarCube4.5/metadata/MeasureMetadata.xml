@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="DuplicatedBlocks_SonarCube4.5" type="DIRECT" unite="Numeric">
+    <description>Number of duplicated blocks of lines.
+
+For a block of code to be considered as duplicated:
+
+    Non-Java projects:
+        There should be at least 100 successive and duplicated tokens.
+        Those tokens should be spread at least on:
+            30 lines of code for COBOL
+            20 lines of code for ABAP
+            10 lines of code for other languages
+
+    Java projects:
+        There should be at least 10 successive and duplicated statements whatever the number of tokens and lines.
+
+Differences in indentation as well as in string literals are ignored while detecting duplications.</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="Login"/>
+    <scopeProperties defaultValue="" name="Password"/>
+    <scopeProperties defaultValue="" name="ProjectKey"/>
+</Measure>
