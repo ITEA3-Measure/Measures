@@ -16,7 +16,7 @@ public class TestWeightedClassComplexity {
         measure.getProperties().put("PASSWORD","3bI2RE78m&");
 
         try {
-            for(IMeasurement result : measure.getMeasurement()){
+            for(IMeasurement result : measure.calculateMeasurement()){
                 System.out.println("Test Result : " + result.getLabel());
             }
         } catch (Exception e) {

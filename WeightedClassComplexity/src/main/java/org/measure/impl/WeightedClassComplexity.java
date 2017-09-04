@@ -15,8 +15,10 @@ import com.github.javaparser.ast.type.ArrayType;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.type.PrimitiveType;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.measure.smm.measure.api.IDerivedMeasure;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.IntegerMeasurement;
+import org.measure.smm.measure.defaultimpl.measures.DerivedMeasure;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 import org.tmatesoft.svn.core.SVNException;
 import org.tmatesoft.svn.core.SVNLogEntry;
@@ -27,14 +29,16 @@ import org.tmatesoft.svn.core.wc.SVNUpdateClient;
 import org.tmatesoft.svn.core.wc2.*;
 
 @objid ("ddaed34d-c390-4c8d-90ca-dc81aaf7e0f2")
-public class WeightedClassComplexity extends DirectMeasure {
+public class WeightedClassComplexity extends DerivedMeasure {
+
     @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
      int weight;
 
-    @objid ("8f5df965-8ab1-49bb-8786-6c729bd36cb2")
+
     @Override
-    public List<IMeasurement> getMeasurement() throws Exception {
-        List<IMeasurement> result=new ArrayList<IMeasurement>();
+    public List<IMeasurement> calculateMeasurement() throws Exception {
+        List<IMeasurement> classComplexity= getMeasureInputByName("ClassComplexity A");
+
         String url=getProperty("URL");
         String login=getProperty("LOGIN");
         String password=getProperty("PASSWORD");
@@ -56,9 +60,15 @@ public class WeightedClassComplexity extends DirectMeasure {
         weight=0;
         classCheck(destinationFolder);
         deleteDir(destinationFolder);
+
+        int finalWeight=weight+(Integer)classComplexity.get(0).getValues().get("value");
+
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
-        weightmeasured.setValue(weight);
+        weightmeasured.setValue(finalWeight);
+
+        List<IMeasurement> result=new ArrayList<IMeasurement>();
         result.add(weightmeasured);
+
         return result;
     }
 
@@ -113,35 +123,7 @@ public class WeightedClassComplexity extends DirectMeasure {
             }
         }
     }
-    /*@objid ("685d8539-0c88-43c2-ad8c-66f4219de2c0")
-    public void countIfForStmt(Node block, int level) {
-        List<Node> stmtNodes = block.getChildNodes();
-               // System.out.println("Block : \n"+stmtNodes+" FIN BLOCK");
-               // System.out.println("level : "+level+"\n");
-        weight+=level;
-        System.out.println(weight);
-        if (!stmtNodes.isEmpty()){
-            for (Node stmtNode : stmtNodes) {
-                 if (stmtNode instanceof IfStmt ) {
-                     int levelIf=++level;
-                     countIfForStmt(((IfStmt) stmtNode).getThenStmt(), levelIf);
-                     Optional<Statement> elseStatement=((IfStmt) stmtNode).getElseStmt();
-                     if (elseStatement.isPresent()) {
-                        // System.out.println("else statement :\n"+elseStatement.get()+" Fin ELSE");
-                         countIfForStmt(elseStatement.get(), levelIf);
-                     }
-        
-                 }else if(stmtNode instanceof ForStmt) {
-                       // System.out.println("For Statement :\n"+((ForStmt) stmtNode).getBody());
-                        countIfForStmt(((ForStmt) stmtNode).getBody(),++level);
-        
-                 }else if(stmtNode instanceof ForeachStmt) {
-                     //System.out.println("Foreach Statement :\n" + ((ForeachStmt) stmtNode).getBody());
-                     countIfForStmt(((ForeachStmt) stmtNode).getBody(), ++level);
-                 }
-            }
-        }
-    }*/
+
 
     @objid ("9148c04a-3359-4a39-a712-6766da7ffd39")
     public boolean deleteDir(File dir) {
@@ -157,5 +139,40 @@ public class WeightedClassComplexity extends DirectMeasure {
     }
 
 
+
+
+
 }
 
+/*
+    public static void main(String[] args) {
+
+
+        File destinationFolder= new File("projectTarget");
+        String url="https://svn.softeam.fr/svn/MEASURE/trunk/Software/SMMDesigner";
+        try {
+            final SVNURL svnurl = SVNURL.parseURIEncoded(url);
+            System.out.println(svnurl);
+
+        final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
+        System.out.println(svnOperationFactory);
+        BasicAuthenticationManager basicAuthenticationManager = new BasicAuthenticationManager("sdahab", "3bI2RE78m&");
+        svnOperationFactory.setAuthenticationManager(basicAuthenticationManager);
+        System.out.println(svnOperationFactory);
+        SVNUpdateClient svnUpdateClient = new SVNUpdateClient(basicAuthenticationManager,null);
+        svnUpdateClient.doCheckout(svnurl,destinationFolder,null,null,true);
+
+
+        System.out.println(destinationFolder.exists());
+
+       // System.out.println(checkout);
+        } catch (SVNException e) {
+            e.printStackTrace();
+        }
+        //destinationFolder = svnOperationFactory.createCheckout().getSource().getFile();
+
+        //System.out.println(destinationFolder);
+
+
+    }
+    */

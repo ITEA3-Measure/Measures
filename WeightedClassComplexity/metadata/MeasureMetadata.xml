@@ -7,7 +7,7 @@ This metric computes the complexity of each class computing and adding the cogni
     <scopeProperties defaultValue="" name="LOGIN"/>
     <scopeProperties defaultValue="" name="PASSWORD"/>
 
-    <dependency>
-
-    </dependency>
+    <references expiratioDelay="60000" measureRef="Class Complexity" number="1">
+        <role>ClassComplexity A</role>
+    </references>
 </Measure>
