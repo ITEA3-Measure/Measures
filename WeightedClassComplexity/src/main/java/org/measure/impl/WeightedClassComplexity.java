@@ -14,6 +14,7 @@ import com.github.javaparser.ast.stmt.*;
 import com.github.javaparser.ast.type.ArrayType;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.type.PrimitiveType;
+import com.github.javaparser.ast.type.Type;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IDerivedMeasure;
 import org.measure.smm.measure.api.IMeasurement;
@@ -32,7 +33,7 @@ import org.tmatesoft.svn.core.wc2.*;
 public class WeightedClassComplexity extends DerivedMeasure {
 
     @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
-     int weight;
+    int weight;
 
 
     @Override
@@ -46,17 +47,17 @@ public class WeightedClassComplexity extends DerivedMeasure {
         try {
             final SVNURL svnurl = SVNURL.parseURIEncoded(url);
             System.out.println(svnurl);
-        
+
             final SvnOperationFactory svnOperationFactory = new SvnOperationFactory();
             BasicAuthenticationManager basicAuthenticationManager = new BasicAuthenticationManager(login, password);
             svnOperationFactory.setAuthenticationManager(basicAuthenticationManager);
             SVNUpdateClient svnUpdateClient = new SVNUpdateClient(basicAuthenticationManager,null);
             svnUpdateClient.doCheckout(svnurl,destinationFolder,null,null,true);
-        
+
         } catch (SVNException e) {
             e.printStackTrace();
         }
-        
+
         weight=0;
         classCheck(destinationFolder);
         deleteDir(destinationFolder);
@@ -82,7 +83,7 @@ public class WeightedClassComplexity extends DerivedMeasure {
                     classCheck(child);
                 }
             }
-        
+
         }else if(files.isFile() & files.getName().endsWith(".java")){
             fileParse(files);
         }
@@ -107,20 +108,41 @@ public class WeightedClassComplexity extends DerivedMeasure {
 
     public void countFieldType(List<FieldDeclaration> fields){
         for (Node field : fields) {
-            if(field instanceof PrimitiveType){
-                System.out.println("1" + field);
-                weight+=1;
-            }else if(field instanceof ArrayType){
-                System.out.println("2" + field);
-                weight+=2;
+            System.out.println(field.getNodesByType(Type.class).get(0).getClass());
+            List<Type> type= field.getNodesByType(Type.class);
+            if (type.size()==1) {
+                if (type.get(0) instanceof PrimitiveType) {
+                    System.out.println("1" + field);
+                    weight += 1;
+                }/*else if (type.get(0) instanceof ArrayType){
+                    System.out.println("2" + field);
+                    weight += 2;
+                } */else if (type.get(0) instanceof ClassOrInterfaceType) {
+                    System.out.println("3" + field);
+                    weight += 3;
+                } else {
+                    System.out.println("4" + field);
+                    weight += 4;
+                }
+            }else if(type.size()==2){
+                if( type.get(0) instanceof ArrayType || type.get(0) instanceof ClassOrInterfaceType) {
 
-            }else if(field instanceof ClassOrInterfaceType){
-                System.out.println("3" + field);
-                weight+=3;
-            }else{
-                System.out.println("4" + field);
-                weight+=4;
+                    if (type.get(1) instanceof PrimitiveType) {
+                        System.out.println("2" + field);
+                        weight += 2;
+                    } else if (type.get(1) instanceof ClassOrInterfaceType) {
+                        System.out.println("5" + field);
+                        weight += 5;
+                    } else {
+                        System.out.println("6" + field);
+                        weight += 6;
+                    }
+                }
+            }else {
+                System.out.println("5 bis" + field);
+                weight += 5;
             }
+
         }
     }
 
