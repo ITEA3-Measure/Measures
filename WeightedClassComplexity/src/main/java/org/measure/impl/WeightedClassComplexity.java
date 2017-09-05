@@ -33,7 +33,7 @@ import org.tmatesoft.svn.core.wc2.*;
 public class WeightedClassComplexity extends DerivedMeasure {
 
     @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
-    int weight;
+     int weight;
 
 
     @Override
@@ -61,8 +61,12 @@ public class WeightedClassComplexity extends DerivedMeasure {
         weight=0;
         classCheck(destinationFolder);
         deleteDir(destinationFolder);
+        //a retirer sans le test
+        IntegerMeasurement ccmeasured=new IntegerMeasurement();
+        ccmeasured.setValue(1452);
+        addMeasureInput("Class Complexity","ClassComplexity A",ccmeasured);
 
-        int finalWeight=weight+(Integer)classComplexity.get(0).getValues().get("value");
+        int finalWeight=weight;//+(Integer)classComplexity.get(0).getValues().get("value");
 
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
         weightmeasured.setValue(finalWeight);
@@ -138,10 +142,10 @@ public class WeightedClassComplexity extends DerivedMeasure {
                         weight += 6;
                     }
                 }
-            }else {
-                System.out.println("5 bis" + field);
-                weight += 5;
-            }
+                }else {
+                    System.out.println("5 bis" + field);
+                    weight += 5;
+                }
 
         }
     }
