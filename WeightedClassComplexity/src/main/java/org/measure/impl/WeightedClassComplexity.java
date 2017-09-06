@@ -60,17 +60,17 @@ public class WeightedClassComplexity extends DerivedMeasure {
         weight=0;
         classCheck(destinationFolder);
         deleteDir(destinationFolder);
-        //a retirer sans le test
+
+        //simulation de l'utilisation d'une métriques déjà executé
         IntegerMeasurement ccmeasured=new IntegerMeasurement();
         ccmeasured.setValue(1452);
         addMeasureInput("Class Complexity","ClassComplexity A",ccmeasured);
         List<IMeasurement> cc = getMeasureInputByRole("ClassComplexity A");
 
-
-
-
+        //resultat
         int finalWeight=weight+(Integer)cc.get(0).getValues().get("value");
 
+        //intégration du résultat final
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
         weightmeasured.setValue(finalWeight);
 

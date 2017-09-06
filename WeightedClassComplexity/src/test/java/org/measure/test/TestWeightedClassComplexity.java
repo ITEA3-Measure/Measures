@@ -15,9 +15,7 @@ public class TestWeightedClassComplexity {
         measure.getProperties().put("URL", "https://svn.softeam.fr/svn/MEASURE/trunk/Software/SMM_EMF_API");
         measure.getProperties().put("LOGIN","sdahab");
         measure.getProperties().put("PASSWORD","3bI2RE78m&");
-        //IntegerMeasurement weightmeasured=new IntegerMeasurement();
-        //weightmeasured.setValue(1542);
-        //measure.addMeasureInput("Class Complexity","ClassComplexity A",weightmeasured);
+
         try {
             for(IMeasurement result : measure.calculateMeasurement()){
 
