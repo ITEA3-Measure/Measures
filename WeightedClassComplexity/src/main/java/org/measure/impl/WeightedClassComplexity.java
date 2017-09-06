@@ -38,7 +38,6 @@ public class WeightedClassComplexity extends DerivedMeasure {
 
     @Override
     public List<IMeasurement> calculateMeasurement() throws Exception {
-        List<IMeasurement> classComplexity= getMeasureInputByName("ClassComplexity A");
 
         String url=getProperty("URL");
         String login=getProperty("LOGIN");
@@ -65,8 +64,12 @@ public class WeightedClassComplexity extends DerivedMeasure {
         IntegerMeasurement ccmeasured=new IntegerMeasurement();
         ccmeasured.setValue(1452);
         addMeasureInput("Class Complexity","ClassComplexity A",ccmeasured);
+        List<IMeasurement> cc = getMeasureInputByRole("ClassComplexity A");
 
-        int finalWeight=weight;//+(Integer)classComplexity.get(0).getValues().get("value");
+
+
+
+        int finalWeight=weight+(Integer)cc.get(0).getValues().get("value");
 
         IntegerMeasurement weightmeasured=new IntegerMeasurement();
         weightmeasured.setValue(finalWeight);
