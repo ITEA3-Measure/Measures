@@ -33,7 +33,7 @@ import org.tmatesoft.svn.core.wc2.*;
 public class WeightedClassComplexity extends DerivedMeasure {
 
     @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
-     int weight;
+    int weight;
 
 
     @Override
@@ -61,10 +61,7 @@ public class WeightedClassComplexity extends DerivedMeasure {
         classCheck(destinationFolder);
         deleteDir(destinationFolder);
 
-        //simulation de l'utilisation d'une métriques déjà executé
-        IntegerMeasurement ccmeasured=new IntegerMeasurement();
-        ccmeasured.setValue(1452);
-        addMeasureInput("Class Complexity","ClassComplexity A",ccmeasured);
+        //recupération de la mesure dépendante
         List<IMeasurement> cc = getMeasureInputByRole("ClassComplexity A");
 
         //resultat
@@ -103,11 +100,6 @@ public class WeightedClassComplexity extends DerivedMeasure {
             CompilationUnit ast= JavaParser.parse(classFile);
             List<FieldDeclaration> fields = ast.getNodesByType(FieldDeclaration.class);
             countFieldType(fields);
-            /*for (Node block : field.getChildNodes()) {
-                    if (block instanceof BlockStmt) {
-                        countIfForStmt(block, 0);
-                    }
-                }*/
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -115,40 +107,30 @@ public class WeightedClassComplexity extends DerivedMeasure {
 
     public void countFieldType(List<FieldDeclaration> fields){
         for (Node field : fields) {
-            System.out.println(field.getNodesByType(Type.class).get(0).getClass());
+            //System.out.println(field.getNodesByType(Type.class).get(0).getClass());
             List<Type> type= field.getNodesByType(Type.class);
             if (type.size()==1) {
                 if (type.get(0) instanceof PrimitiveType) {
-                    System.out.println("1" + field);
                     weight += 1;
-                }/*else if (type.get(0) instanceof ArrayType){
-                    System.out.println("2" + field);
-                    weight += 2;
-                } */else if (type.get(0) instanceof ClassOrInterfaceType) {
-                    System.out.println("3" + field);
+                }else if (type.get(0) instanceof ClassOrInterfaceType) {
                     weight += 3;
                 } else {
-                    System.out.println("4" + field);
                     weight += 4;
                 }
             }else if(type.size()==2){
                 if( type.get(0) instanceof ArrayType || type.get(0) instanceof ClassOrInterfaceType) {
 
                     if (type.get(1) instanceof PrimitiveType) {
-                        System.out.println("2" + field);
                         weight += 2;
                     } else if (type.get(1) instanceof ClassOrInterfaceType) {
-                        System.out.println("5" + field);
                         weight += 5;
                     } else {
-                        System.out.println("6" + field);
                         weight += 6;
                     }
                 }
-                }else {
-                    System.out.println("5 bis" + field);
-                    weight += 5;
-                }
+            }else {
+                weight += 5;
+            }
 
         }
     }
