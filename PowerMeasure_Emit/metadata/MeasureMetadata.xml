@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="PowerMeasure" type="DIRECT" unite="Numeric">
+    <description>count the number of commit in an SVN Repository during the last 24 hours</description>
+    <scopeProperties name="EmitServerUri" defaultValue="http://emit.icam.fr:8080/emit">
+        <description>URI of the EMIT server</description>
+    </scopeProperties>
+    <scopeProperties name="StartDateTime" defaultValue="">
+        <description>Smallest date and time value of the power measurements</description>
+    </scopeProperties>
+    <scopeProperties name="EndDateTime" defaultValue="">
+        <description>Greatest date and time value of the power measurements</description>
+    </scopeProperties>
+</Measure>
