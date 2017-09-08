@@ -12,6 +12,11 @@ public class TestWeightedClassComplexity {
     @Test
     public void testWeightedClassComplexity() {
         WeightedClassComplexity measure = new WeightedClassComplexity();
+        //simulation de l'utilisation du résultat d'une métriques déjà executée
+        IntegerMeasurement ccmeasured=new IntegerMeasurement();
+        ccmeasured.setValue(1452);
+        measure.addMeasureInput("Class Complexity","ClassComplexity A",ccmeasured);
+
         measure.getProperties().put("URL", "https://svn.softeam.fr/svn/MEASURE/trunk/Software/SMM_EMF_API");
         measure.getProperties().put("LOGIN","sdahab");
         measure.getProperties().put("PASSWORD","3bI2RE78m&");
