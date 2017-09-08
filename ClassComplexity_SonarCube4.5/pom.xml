@@ -80,6 +80,24 @@
     </execution>
 </executions>
 </plugin>
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <configuration>
+    <descriptors>
+      <descriptor>zip.xml</descriptor>
+    </descriptors>
+    <finalName>${project.build.finalName}</finalName>
+  </configuration>
+  <executions>
+    <execution>
+      <phase>package</phase> <!-- append to the packaging phase. -->
+      <goals>
+        <goal>single</goal> <!-- goals == mojos -->
+      </goals>
+    </execution>
+  </executions>
+</plugin>
                     </plugins>
             </build>
             </project>
