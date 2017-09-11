@@ -8,9 +8,8 @@ public class PowerMeasureTest {
 	@Test
 	public void test() throws Exception {
 		PowerMeasure measure = new PowerMeasure();
-		measure.getProperties().put("EmitServerUri", "http://172.21.50.3:8080/emit");
-		measure.getProperties().put("StartDateTime", "2017-09-01 00:00:00");
-		measure.getProperties().put("EndDateTime", "2017-09-10 00:00:00");
+		measure.getProperties().put("EmitServerUri", "http://emit.icam.fr:8080/emit");
+		measure.getProperties().put("AccessToken", "253f4097-de3e-40bf-b675-1dd70226f64b"); // FIXME
 		for(IMeasurement measurement : measure.getMeasurement()){
 			System.out.println("Test Resul : " + measurement.getLabel());
 		}

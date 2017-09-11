@@ -1,8 +1,5 @@
 package org.measure.power;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.junit.After;
@@ -10,31 +7,22 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.icam.emit.clients.MeasurementFind;
 import fr.icam.emit.entities.Measurement;
 
 public class MeasurementFindTest {
 	
-	private static final String URL = "http://172.21.50.3:8080/emit";
-	
-	private DateFormat formatter;
-	
+	private static final String URL = "http://emit.icam.fr:8080/emit";
+		
     @Before
-    public final void setUp() {
-    	formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    }
+    public final void setUp() { }
 
     @After
-    public final void tearDown() {
-    	
-    }
+    public final void tearDown() { }
 	
 	@Test
 	public void test() throws Exception {
-		Date started = formatter.parse("2017-09-01 00:00:00");
-		Date stopped = formatter.parse("2017-09-10 00:00:00");
 		MeasurementFind app = new MeasurementFind(URL);
-		List<Measurement> measurements = app.doGet("power", started, stopped);
+		List<Measurement> measurements = app.doGet("253f4097-de3e-40bf-b675-1dd70226f64b"); // FIXME 
 		Assert.assertNotNull(measurements);
 		Assert.assertTrue(measurements.size() > 0);
 		for (Measurement measurement : measurements) {

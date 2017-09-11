@@ -1,9 +1,6 @@
 package org.measure.power;
 
 import java.net.URI;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -11,17 +8,12 @@ import java.util.Map;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-import fr.icam.emit.clients.MeasurementFind;
 import fr.icam.emit.entities.Measurement;
 
 public class PowerMeasure extends DirectMeasure {
 
-	private DateFormat formatter;
-
-	
 	public PowerMeasure() {
 		super();
-		this.formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	}
 	
 	@Override
@@ -29,14 +21,11 @@ public class PowerMeasure extends DirectMeasure {
 		List<IMeasurement> allMeasurements = new LinkedList<IMeasurement>();
 
 		String emitServerUri = this.getProperty("EmitServerUri");
-		String startDateTime = this.getProperty("StartDateTime");
-		String endDateTime = this.getProperty("EndDateTime");
+		String accessToken = this.getProperty("AccessToken");
 		
 		URI uri = URI.create(emitServerUri);
-		Date started = formatter.parse(startDateTime);
-		Date stopped = formatter.parse(endDateTime);
 		MeasurementFind app = new MeasurementFind(uri.toURL().toString());
-		List<Measurement> items = app.doGet("power", started, stopped);
+		List<Measurement> items = app.doGet(accessToken);
 		for (Measurement item : items) {
 			List<IMeasurement> measurements = this.getMeasurements(item);
 			allMeasurements.addAll(measurements);
