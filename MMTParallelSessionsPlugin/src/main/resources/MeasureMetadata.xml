@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="MMT-Parallel-Sessions" type="DIRECT" unite="Numeric">
+    <description>This is a plugin that computes the number of parallel sessions (as seen by the Montimage Monitoring Tool) in the last minute</description>
+    
+    <scopeProperties name="mmtdbhostname" defaultValue="localhost">
+        <description>Hostname of the MMT database</description>
+    </scopeProperties>
+    <scopeProperties name="mmtdbportname" defaultValue="27017">
+        <description>Port on the host to connecto to the MMT database</description>
+    </scopeProperties>
+</Measure>
