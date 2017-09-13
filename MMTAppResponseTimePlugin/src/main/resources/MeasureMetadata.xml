@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="MMT-Application-Response-Time" type="DIRECT" unite="Numeric">
+    <description>This a plugin that computes the Application Response Time (interaction time) as determined by the Montimage Monitorign Tool</description>
+    
+    <scopeProperties name="mmtdbhostname" defaultValue="localhost">
+        <description>Hostname of the MMT database</description>
+    </scopeProperties>
+    <scopeProperties name="mmtdbportname" defaultValue="27017">
+        <description>Port on the host to connecto to the MMT database</description>
+    </scopeProperties>
+</Measure>

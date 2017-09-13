@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="MMT-Countries-Plugin" type="DIRECT" unite="Numeric">
+    <description>This is plugin that uses the Montimage Monitoring Tool to compute the number of connected countries. This plugin can be configured to include the countries of the source IPs or the destination IPs, depending on the network the MMT Probe has been deployed. When this tool is configured to include both the origin and destination countries, its behavior is unspecified.</description>
+    
+    <scopeProperties name="mmtdbhostname" defaultValue="localhost">
+        <description>Hostname of the MMT database</description>
+    </scopeProperties>
+    <scopeProperties name="mmtdbportname" defaultValue="27017">
+        <description>Port on the host to connecto to the MMT database</description>
+    </scopeProperties>
+    <scopeProperties name="includeOriginCountries" defaultValue="false">
+        <description>Whether to include the countries of the source IPs</description>
+    </scopeProperties>
+    <scopeProperties name="includeDestinationCountries" defaultValue="false">
+        <description>Whether to include the countries of the destination IPs</description>
+    </scopeProperties>
+</Measure>
