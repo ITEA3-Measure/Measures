@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="MMT-Connected-Devices" type="DIRECT" unite="Numeric">
+    <description>This is plugin that uses the Montimage Monitoring Tool to compute the number of connected devices on the local network</description>
+    
+    <scopeProperties name="mmtdbhostname" defaultValue="localhost">
+        <description>Hostname of the MMT database</description>
+    </scopeProperties>
+    <scopeProperties name="mmtdbportname" defaultValue="27017">
+        <description>Port on the host to connecto to the MMT database</description>
+    </scopeProperties>
+</Measure>
