@@ -10,9 +10,9 @@ import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
 import fr.icam.emit.entities.Measurement;
 
-public class PowerMeasure extends DirectMeasure {
+public class PowerUsage extends DirectMeasure {
 
-	public PowerMeasure() {
+	public PowerUsage() {
 		super();
 	}
 	
@@ -24,7 +24,7 @@ public class PowerMeasure extends DirectMeasure {
 		String accessToken = this.getProperty("AccessToken");
 		
 		URI uri = URI.create(emitServerUri);
-		MeasurementFind app = new MeasurementFind(uri.toURL().toString());
+		EmitMeasurementRetrieve app = new EmitMeasurementRetrieve(uri.toURL().toString());
 		List<Measurement> items = app.doGet(accessToken);
 		for (Measurement item : items) {
 			List<IMeasurement> measurements = this.getMeasurements(item);

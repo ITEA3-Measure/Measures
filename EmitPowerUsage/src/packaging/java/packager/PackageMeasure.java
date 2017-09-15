@@ -10,9 +10,9 @@ import org.measure.smm.service.MeasurePackager;
 
 public class PackageMeasure {
 	
-	public static final String PROJECTSPACE = "/home/jerome/GitHub/itea3-measure/Measures/PowerMeasure_Emit";
+	public static final String PROJECTSPACE = "/home/jerome/GitHub/itea3-measure/Measures/EmitPowerUsage";
 	
-	public static final String MEASURENAME = "PowerMeasure_Emit";
+	public static final String MEASURENAME = "EmitPowerUsage";
 	
 	public static final String VERSION = "1.2";
 

@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import fr.icam.emit.entities.Measurement;
 
-public class MeasurementFindTest {
+public class EmitMeasurementRetrieveTest {
 	
 	private static final String URL = "http://emit.icam.fr:8080/emit";
 		
@@ -21,10 +21,9 @@ public class MeasurementFindTest {
 	
 	@Test
 	public void test() throws Exception {
-		MeasurementFind app = new MeasurementFind(URL);
+		EmitMeasurementRetrieve app = new EmitMeasurementRetrieve(URL);
 		List<Measurement> measurements = app.doGet("253f4097-de3e-40bf-b675-1dd70226f64b"); // FIXME 
 		Assert.assertNotNull(measurements);
-		Assert.assertTrue(measurements.size() > 0);
 		for (Measurement measurement : measurements) {
 			Assert.assertNotNull(measurement);
 			Assert.assertNotNull(measurement.getFeature());
@@ -35,7 +34,7 @@ public class MeasurementFindTest {
 	}
 	
 	public static void main(String[] arguments) throws Exception {
-		MeasurementFindTest test = new MeasurementFindTest();
+		EmitMeasurementRetrieveTest test = new EmitMeasurementRetrieveTest();
 		test.setUp();
 		test.test();
 		test.tearDown();

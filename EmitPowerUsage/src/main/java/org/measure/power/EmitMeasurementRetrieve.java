@@ -17,7 +17,7 @@ import org.apache.http.util.EntityUtils;
 import fr.icam.emit.clients.Client;
 import fr.icam.emit.entities.Measurement;
 
-public class MeasurementFind extends Client {
+public class EmitMeasurementRetrieve extends Client {
 
 	private static final String path = "/measurements/find";
 
@@ -26,7 +26,7 @@ public class MeasurementFind extends Client {
 		return path;
 	}
 
-	public MeasurementFind(String url) {
+	public EmitMeasurementRetrieve(String url) {
 		super(url);
 	}
 
