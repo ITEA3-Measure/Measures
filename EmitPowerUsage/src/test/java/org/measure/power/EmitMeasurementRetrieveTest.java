@@ -11,7 +11,7 @@ import fr.icam.emit.entities.Measurement;
 
 public class EmitMeasurementRetrieveTest {
 	
-	private static final String URL = "http://emit.icam.fr:8080/emit";
+	private static final String URL = "http://emit.icam.fr/emit";
 		
     @Before
     public final void setUp() { }

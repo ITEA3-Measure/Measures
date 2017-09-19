@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="PowerUsage" type="DIRECT" unite="Numeric">
+<Measure name="EmitPowerUsage" type="DIRECT" unite="Numeric">
     <description>Retrieve the power measurements selected from instrument features on EMIT systems.</description>
-    <scopeProperties name="EmitServerUri" defaultValue="http://emit.icam.fr:8080/emit">
+    <scopeProperties name="EmitServerUri" defaultValue="http://emit.icam.fr/emit">
         <description>URI of the EMIT system</description>
     </scopeProperties>
     <scopeProperties name="AccessToken" defaultValue="">
