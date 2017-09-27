@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="River" unite="Numeric" type="COUNTING">
+    <description>River Performance Indicators</description>
+    <scopeProperties defaultValue="" name="ServerURL"/>
+    <scopeProperties defaultValue="" name="JWTToken"/>
+</Measure>
