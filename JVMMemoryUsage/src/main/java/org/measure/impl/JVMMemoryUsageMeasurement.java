@@ -6,9 +6,9 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
 
 @objid ("441cfb39-5a5d-44af-8a8b-0082341ac9cd")
-public class MemoryUsageMeasurement extends DefaultMeasurement {
+public class JVMMemoryUsageMeasurement extends DefaultMeasurement {
     @objid ("8dea38be-e351-4ac8-9b09-8a1ebdd5fe6d")
-    public MemoryUsageMeasurement(String system, Long memoryusage) {
+    public JVMMemoryUsageMeasurement(String system, Long memoryusage) {
         super();
         this.valueMap = new HashMap<>();
         if (system == null) {
