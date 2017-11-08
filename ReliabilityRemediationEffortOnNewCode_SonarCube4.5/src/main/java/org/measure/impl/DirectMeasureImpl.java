@@ -12,7 +12,7 @@ import org.sonar.wsclient.services.ResourceQuery;
 
 @objid ("4ef10173-273e-4cfe-99bf-63ad0a780e81")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("26aaa994-80fb-47ce-b3a6-79fd244d8c88")
+    @objid ("cc9a1a5b-d49f-4282-9469-4dab96ef0b30")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         String serverURL = getProperty("ServerURL");

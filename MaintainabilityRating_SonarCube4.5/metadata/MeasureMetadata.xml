@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="MaintainabilityRating_SonarCube4.5" type="DIRECT" unite="Numeric">
-    <description>Rating given to your project related to the value of your Technical Debt Ratio. The default Maintainability Rating grid is:
-
-A=0-0.05, B=0.06-0.1, C=0.11-0.20, D=0.21-0.5, E=0.51-1
-
-The Maintainability Rating scale can be alternately stated by saying that if the outstanding remediation cost is:
-
-    &lt;=5% of the time that has already gone into the application, the rating is A
-    between 6 to 10% the rating is a B
-    between 11 to 20% the rating is a C
-    between 21 to 50% the rating is a D
-    anything over 50% is an E</description>
-    <scopeProperties defaultValue="" name="ServerURL"/>
-    <scopeProperties defaultValue="" name="Login"/>
-    <scopeProperties defaultValue="" name="Password"/>
-    <scopeProperties defaultValue="" name="ProjectKey"/>
+<Measure category="SonarCube" name="MaintainabilityRating_SonarCube4.5" provider="Measure.org By Softeam" type="DIRECT">
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_text"/>
+    </unit>
 </Measure>

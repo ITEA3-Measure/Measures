@@ -22,7 +22,7 @@
             <dependency>
                 <groupId>org.measure.smmmeasure.api</groupId>
                 <artifactId>SMMMeasureApi</artifactId>
-                <version>0.2.08</version>
+                <version>0.6.00</version>
             </dependency>
 
 

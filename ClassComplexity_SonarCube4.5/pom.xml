@@ -22,7 +22,7 @@
             <dependency>
                 <groupId>org.measure.smmmeasure.api</groupId>
                 <artifactId>SMMMeasureApi</artifactId>
-                <version>0.2.08</version>
+                <version>0.6.00</version>
             </dependency>
 
 
@@ -79,24 +79,6 @@
         </configuration>
     </execution>
 </executions>
-</plugin>
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-assembly-plugin</artifactId>
-  <configuration>
-    <descriptors>
-      <descriptor>zip.xml</descriptor>
-    </descriptors>
-    <finalName>${project.build.finalName}</finalName>
-  </configuration>
-  <executions>
-    <execution>
-      <phase>package</phase> <!-- append to the packaging phase. -->
-      <goals>
-        <goal>single</goal> <!-- goals == mojos -->
-      </goals>
-    </execution>
-  </executions>
 </plugin>
                     </plugins>
             </build>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="PublicAPI_SonarCube4.5" unite="Numeric" type="COUNTING">
+<Measure category="SonarCube" name="PublicAPI_SonarCube4.5" provider="Measure.org By Softeam">
     <description>Public classes, interfaces, methods, constructors, annotations and attributes.
 
 The following objects are excluded:
@@ -7,8 +7,11 @@ The following objects are excluded:
     static final attribute
     method with @Override annotation
     empty constructor with no parameters</description>
-    <scopeProperties defaultValue="" name="ServerURL"/>
-    <scopeProperties defaultValue="" name="Login"/>
-    <scopeProperties defaultValue="" name="Password"/>
-    <scopeProperties defaultValue="" name="ProjectKey"/>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_text"/>
+    </unit>
 </Measure>

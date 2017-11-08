@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="DailyGithubCommitCount" type="COUNTING">
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="GitHubAuth" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="Domain" type="STRING"/>
+    <scopeProperties defaultValue="" name="Repository" type="STRING"/>
+    <scopeProperties defaultValue="2000-01-01T00:00:00z" name="Since" type="STRING"/>
+    <unit name="DailyGithubCommitCount">
+        <fields fieldName="commits" fieldType="u_integer"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+</Measure>

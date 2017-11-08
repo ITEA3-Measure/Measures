@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="GitHubTracker" type="DIRECT">
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="GitHubAuth" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="Domain" type="STRING"/>
+    <scopeProperties defaultValue="" name="Repository" type="STRING"/>
+    <scopeProperties defaultValue="2000-01-01T00:00:00z" name="Since" type="STRING"/>
+    <unit name="GitHubTrackerData">
+        <fields fieldName="author" fieldType="u_text"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="commitMessage" fieldType="u_text"/>
+        <fields fieldName="LigneAdd" fieldType="u_integer"/>
+        <fields fieldName="LigneChanged" fieldType="u_integer"/>
+        <fields fieldName="LigneDelete" fieldType="u_integer"/>
+    </unit>
+</Measure>

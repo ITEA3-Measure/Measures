@@ -12,7 +12,7 @@ import org.sonar.wsclient.services.ResourceQuery;
 
 @objid ("4d9fe867-ffdf-42a8-9e0d-c1824cab247f")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("fb66d91d-ff05-4f61-bfce-6e60f58dc5be")
+    @objid ("ce64d8d6-2130-476a-8716-6eb40a3240a6")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         String serverURL = getProperty("ServerURL");
@@ -24,18 +24,17 @@ public class DirectMeasureImpl extends DirectMeasure {
         
             Sonar sonar = Sonar.create(serverURL, login, password);
             Resource struts = sonar.find(ResourceQuery.createForMetrics(projectKey, "public_undocumented_api"));
+            Measure m = struts.getMeasure("public_undocumented_api");
         
             List<IMeasurement> result = new ArrayList<IMeasurement>();
             DoubleMeasurement data = new DoubleMeasurement();
-            Measure m = struts.getMeasure("public_undocumented_api");
             data.setValue(m.getValue());
             result.add(data);
         
             return result;
         } catch (Exception e) {
             throw new Exception("Error during Measure Execution : " + e.getMessage(), e);
-        }            
-
+        }
     }
 
 }

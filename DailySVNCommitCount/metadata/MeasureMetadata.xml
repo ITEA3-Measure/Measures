@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="DailySVNCommitCount" type="COUNTING">
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="lastExecution" type="DESABLE"/>
+    <unit name="DailySVNCommitCountData">
+        <fields fieldName="commits" fieldType="u_integer"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+</Measure>

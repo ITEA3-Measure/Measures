@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="Class Complexity" type="DIRECT" unite="Numeric">
-    <description>The Class Complexity (CC) metric measures the complexity of OO code design and its maintainability. It  returns a complexity weight. A low weight means a better design information.
-This metric computes the complexity of each class computing and adding the cognitive weights of each method. Then to compute the full code weight, CC adds the weight of each class if there are in the same level or multiply  if there is derivation link.
-</description>
-    <scopeProperties defaultValue="" name="URL"/>
-    <scopeProperties defaultValue="" name="LOGIN"/>
-    <scopeProperties defaultValue="" name="PASSWORD"/>
-</Measure>

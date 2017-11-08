@@ -31,8 +31,8 @@ public class RandomGenerator extends DirectMeasure {
 			value = maxRange;
 		}
 
-		IntegerMeasurement measurement = new IntegerMeasurement();
-		measurement.setValue(value);		
+		Measurement measurement = new Measurement();
+		measurement.setValue(new Double(value));		
 		result.add(measurement);
 		
 		getProperties().put("PreviousValue", String.valueOf(value));

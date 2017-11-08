@@ -5,23 +5,23 @@ import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
 
 @objid ("319fa8b0-8a60-4d4e-b504-e751719485f5")
 public class DoubleMeasurement extends DefaultMeasurement {
-    @objid ("3fbb858a-ac04-4195-8c2c-bb23bc507e54")
+    @objid ("1855a59a-9fe5-495a-b091-2aeb9629e82a")
     public DoubleMeasurement() {
         
     }
 
-    @objid ("af9bc681-0a55-4e32-9dae-289ed613a140")
+    @objid ("5d6dca08-e345-41ec-979a-763d8c4b0275")
     public void setValue(Double value) {
         addValue("value",value);
     }
 
-    @objid ("db0ff918-2795-470a-9f61-2efb50f0508f")
+    @objid ("7053181b-5b50-4cfd-9f40-26518e6ce580")
     public Double getValue() {
         
         return (Double) getValues().get("value");
     }
 
-    @objid ("ee50a65a-31d7-400a-92cd-f5b08e09d748")
+    @objid ("8b0f6940-b472-44d6-97f4-b97ff509cd65")
     @Override
     public String getLabel() {
         

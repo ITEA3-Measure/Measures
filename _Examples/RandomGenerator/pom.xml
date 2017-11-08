@@ -9,7 +9,7 @@
 		<dependency>
 			<groupId>org.measure.smmmeasure.api</groupId>
 			<artifactId>SMMMeasureApi</artifactId>
-			<version>0.2.02</version>
+			<version>0.6.00</version>
 		</dependency>
 	</dependencies>
 

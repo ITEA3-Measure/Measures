@@ -2,15 +2,13 @@ package org.measure.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 import org.sonar.wsclient.Sonar;
 import org.sonar.wsclient.services.Measure;
 import org.sonar.wsclient.services.Resource;
 import org.sonar.wsclient.services.ResourceQuery;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("a496960f-2733-4267-93d9-b989469b4444")
 public class DirectMeasureImpl extends DirectMeasure {
