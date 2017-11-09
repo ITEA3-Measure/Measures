@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="DailyGithubCommitCount" type="COUNTING">
+<Measure category="VersionControl" name="DailyGithubCommitCount" provider="Measure.org By Softeam" type="COUNTING">
     <scopeProperties defaultValue="" name="Login" type="STRING"/>
     <scopeProperties defaultValue="" name="GitHubAuth" type="PASSWORD"/>
     <scopeProperties defaultValue="" name="Domain" type="STRING"/>

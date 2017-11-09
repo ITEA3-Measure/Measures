@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="ConditionCoverage_SonarCube4.5" type="DIRECT" unite="Numeric">
-    <description>On each line of code containing some boolean expressions, the condition coverage simply answers the following question: 'Has each boolean expression been evaluated both to true and false?'. This is the density of possible conditions in flow control structures that have been followed during unit tests execution.</description>
-    <scopeProperties defaultValue="" name="ServerURL"/>
-    <scopeProperties defaultValue="" name="Login"/>
-    <scopeProperties defaultValue="" name="Password"/>
-    <scopeProperties defaultValue="" name="ProjectKey"/>
-</Measure>

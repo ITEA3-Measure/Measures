@@ -1,1 +1,6 @@
 .DS_Store
+/.mvn/
+/.settings/
+/target/
+.classpath
+.project

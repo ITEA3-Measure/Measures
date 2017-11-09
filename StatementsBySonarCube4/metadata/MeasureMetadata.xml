@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarCube" name="StatementsBySonarCube4" provider="Measure.org By Softeam">
+    <description>Number of statements as defined in the Java Language Specification but without block definitions. Statements counter gets incremented by one each time a following keyword is encountered: if, else, while, do, for, switch, break, continue, return, throw, synchronized, catch, finally.
+
+Statements counter is not incremented by a class, method, field, annotation definition, package declaration and import declaration.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_text"/>
+    </unit>
+</Measure>

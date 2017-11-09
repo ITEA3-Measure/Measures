@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="DailySVNCommitCount" type="COUNTING">
+<Measure category="VersionControl" name="DailySVNCommitCount" provider="Measure.org By Softeam" type="COUNTING">
     <scopeProperties defaultValue="" name="url" type="STRING"/>
     <scopeProperties defaultValue="" name="login" type="STRING"/>
     <scopeProperties defaultValue="" name="password" type="PASSWORD"/>

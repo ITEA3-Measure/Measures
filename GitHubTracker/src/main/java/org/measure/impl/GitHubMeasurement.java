@@ -20,7 +20,7 @@ public class GitHubMeasurement extends DefaultMeasurement {
     public String getLabel() {
         
         return "[Author]: " + getValues().get("author") + "  [date]: " + getValues().get("postDate") + "[message]: "
-                        + getValues().get("commitMessage");
+                                + getValues().get("commitMessage");
     }
 
 }
