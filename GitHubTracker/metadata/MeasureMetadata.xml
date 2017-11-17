@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Measure category="VersionControl" name="GitHubTracker" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Retrive commit informations ( Author, Message,Date , number of ligne added, number of ligne deleted , number of ligne changed))  form an GitHub repository. All commit from the last exection date of the measure are returned.</description>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>
     <scopeProperties defaultValue="" name="GitHubAuth" type="PASSWORD"/>
     <scopeProperties defaultValue="" name="Domain" type="STRING"/>

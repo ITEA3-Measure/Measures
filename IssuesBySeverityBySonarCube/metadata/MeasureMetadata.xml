@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarCube" name="IssuesBySeverityBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Number of issues with severity being blocker, critical, major, minor or info.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="STRING"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <scopeProperties defaultValue="" name="Severity" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

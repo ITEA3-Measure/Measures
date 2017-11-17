@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Measure category="VersionControl" name="SVNTracker" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Retrive commit informations ( Author, Message and Date)  form an SVN repository. All commit from the last exection date of the measure are returned.</description>
     <scopeProperties defaultValue="" name="url" type="STRING"/>
     <scopeProperties defaultValue="" name="login" type="STRING"/>
     <scopeProperties defaultValue="" name="password" type="PASSWORD"/>

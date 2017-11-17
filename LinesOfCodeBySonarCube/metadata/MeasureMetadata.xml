@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarCube" name="LinesOfCodeBySonarCube" provider="Measure.org By Softeam" type="COUNTING">
+    <description>Number of physical lines that contain at least one character which is neither a whitespace or a tabulation or part of a comment.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

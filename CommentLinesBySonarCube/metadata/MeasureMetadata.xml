@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarCube" name="CommentLinesBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Number of lines containing either comment or commented-out code.
+
+Non-significant comment lines (empty comment lines, comment lines containing only special characters, etc.) do not increase the number of comment lines.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>
