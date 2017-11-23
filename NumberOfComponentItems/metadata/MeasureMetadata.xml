@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modelio Implementation" name="NumberOfComponentItems" provider="Measure.org By Softeam" type="COUNTING">
+    <description>Count the number of Classes annotated @ComponentItem in Java Model
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
+    <scopeProperties defaultValue="" name="value" type="STRING"/>
+</Measure>

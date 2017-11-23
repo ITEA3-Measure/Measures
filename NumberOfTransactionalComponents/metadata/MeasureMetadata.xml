@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modelio Implementation" name="NumberOfTransactionalComponents" provider="Measure.org By Softeam" type="COUNTING">
+    <description>Count the number of  Components annotated @Transactional.
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>

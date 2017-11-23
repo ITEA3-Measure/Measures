@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modelio Implementation" name="NumberOfComponentServices" provider="Measure.org By Softeam" type="COUNTING">
+    <description>NCS is the total number of services interfaces in the java Modelio model. Services are provided from lower layers and notably the sensors to the upper layers managing the operators actions. They reflect the richness of operator actions and parametering of the sensors.
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>
