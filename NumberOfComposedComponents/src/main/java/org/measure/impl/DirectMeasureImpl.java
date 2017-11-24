@@ -99,6 +99,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         //Number of Requirement        
         //Total number of Requirement defined in the selected scope
         this.defaultNamespaces = "modelio://Modeliosoft.Analyst/2.0.00";
+        // Hawk EOL Query
         this.query ="return Note.all.select(n|'@ComposedComponent'.isSubstringOf(n.Content)).size();";
     }
 
