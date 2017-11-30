@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="LinesToCoverOnNEwCodeBySonarCube" type="DIRECT">
+    <description>Number of lines of code which could be covered by unit tests (for example, blank lines or full comments lines are not considered as lines to cover).
+Restricted to new / updated source code.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="STRING"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <unit name="Numeric"/>
+</Measure>

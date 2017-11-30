@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modelio Design" name="InterfaceByComponentRatio" provider="Measure.org By Softeam" type="DIRECT">
+    <description>The average number of Interfaces realised by each compnents in analysed project.
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMTS Tool (Hawk Server)).
+</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+</Measure>
