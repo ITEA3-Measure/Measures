@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="AverageComplexityInheritance" type="COLLECTIVE">
+    <description>The Average Complexity due to Inheritance metric measures  the average complexity of OO code design. It computes the average of the Class Complexity Inheritance with the number of the classes in the program.
+</description>
+    <references measureRef="ClassComplexityInheritance" number="1" role="ClassComplexityInheritance A"/>
+    <scopeProperties defaultValue="" name="URL" type="STRING"/>
+    <scopeProperties defaultValue="" name="LOGIN" type="STRING"/>
+    <scopeProperties defaultValue="" name="PASSWORD" type="STRING"/>
+    <unit name="Weight">
+        <fields fieldName="weight" fieldType="u_integer"/>
+    </unit>
+</Measure>
