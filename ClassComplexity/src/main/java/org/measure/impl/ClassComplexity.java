@@ -22,12 +22,11 @@ import org.tmatesoft.svn.core.wc.SVNRevision;
 import org.tmatesoft.svn.core.wc.SVNUpdateClient;
 import org.tmatesoft.svn.core.wc2.*;
 
-@objid ("ddaed34d-c390-4c8d-90ca-dc81aaf7e0f2")
-public class ClassComplexity extends DirectMeasure {
-    @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
-     int weight;
 
-    @objid ("8f5df965-8ab1-49bb-8786-6c729bd36cb2")
+public class ClassComplexity extends DirectMeasure {
+
+    int weight;
+
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result=new ArrayList<IMeasurement>();
@@ -58,7 +57,6 @@ public class ClassComplexity extends DirectMeasure {
         return result;
     }
 
-    @objid ("0d3f91c6-7bec-4d29-957a-9f737589369a")
     private void classCheck(File files) {
         if (files.isDirectory()) {
             for (File child : files.listFiles()) {
@@ -74,7 +72,6 @@ public class ClassComplexity extends DirectMeasure {
         }
     }
 
-    @objid ("e72d64ae-b21e-471a-a94c-ada8407299be")
     public void fileParse(File classFile) {
         try {
             System.out.println(classFile.getAbsolutePath());
@@ -92,7 +89,6 @@ public class ClassComplexity extends DirectMeasure {
         }
     }
 
-    @objid ("685d8539-0c88-43c2-ad8c-66f4219de2c0")
     public void countIfForStmt(Node block, int level) {
         List<Node> stmtNodes = block.getChildNodes();
                // System.out.println("Block : \n"+stmtNodes+" FIN BLOCK");
@@ -122,7 +118,6 @@ public class ClassComplexity extends DirectMeasure {
         }
     }
 
-    @objid ("9148c04a-3359-4a39-a712-6766da7ffd39")
     public boolean deleteDir(File dir) {
         if (dir.isDirectory()) {
             String[] children = dir.list();
