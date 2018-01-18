@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="ExtendedWeightedClassComplexity" type="COLLECTIVE">
+    <description>The Extended Weighted Class Complexity (EWCC)metric measures  the complexity of code design and its maintainability. This metric is based on WCC and adds the cognitive complexity of the classes whose it derives, to compute the cognitive weight of a class. Then to compute the full code weight, EWCC adds the weight of each class if there are in the same level or multiply  if there is derivation link.</description>
+    <references measureRef="WeightedClassComplexity" number="1" role="WeightedClassComplexity A"/>
+    <scopeProperties defaultValue="" name="URL" type="STRING"/>
+    <scopeProperties defaultValue="" name="LOGIN" type="STRING"/>
+    <scopeProperties defaultValue="" name="PASSWORD" type="STRING"/>
+    <unit name="Weight">
+        <fields fieldName="weight" fieldType="u_integer"/>
+    </unit>
+</Measure>
