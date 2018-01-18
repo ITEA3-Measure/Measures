@@ -29,10 +29,9 @@ import org.tmatesoft.svn.core.wc.SVNRevision;
 import org.tmatesoft.svn.core.wc.SVNUpdateClient;
 import org.tmatesoft.svn.core.wc2.*;
 
-@objid ("ddaed34d-c390-4c8d-90ca-dc81aaf7e0f2")
 public class WeightedClassComplexity extends DerivedMeasure {
 
-    @objid ("210d2ed7-a6cc-4259-84a4-e17b54d9de09")
+
     int weight;
 
 
@@ -77,7 +76,7 @@ public class WeightedClassComplexity extends DerivedMeasure {
         return result;
     }
 
-    @objid ("0d3f91c6-7bec-4d29-957a-9f737589369a")
+
     private void classCheck(File files) {
         if (files.isDirectory()) {
             for (File child : files.listFiles()) {
@@ -93,7 +92,7 @@ public class WeightedClassComplexity extends DerivedMeasure {
         }
     }
 
-    @objid ("e72d64ae-b21e-471a-a94c-ada8407299be")
+
     public void fileParse(File classFile) {
         try {
             //System.out.println(classFile.getAbsolutePath());
@@ -136,7 +135,7 @@ public class WeightedClassComplexity extends DerivedMeasure {
     }
 
 
-    @objid ("9148c04a-3359-4a39-a712-6766da7ffd39")
+
     public boolean deleteDir(File dir) {
         if (dir.isDirectory()) {
             String[] children = dir.list();
