@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Bug Trackers" name="MantisIssueSeverity" provider="Softeam" type="DIRECT">
+    <description>Calculate the actual number of opened issues (by severity of project from Mantis Bug Tracker tool.</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="projectName" type="STRING"/>
+    <unit name="IssueBySeverity">
+        <fields fieldName="features" fieldType="u_integer"/>
+        <fields fieldName="minors" fieldType="u_integer"/>
+        <fields fieldName="majors" fieldType="u_integer"/>
+        <fields fieldName="crashs" fieldType="u_integer"/>
+        <fields fieldName="blocks" fieldType="u_integer"/>
+    </unit>
+</Measure>

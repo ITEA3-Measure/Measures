@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="NumberofComponentitemsandImplementation" type="BINARY">
+    <description>Sum of Number of Component Items and Number of Component Implementations</description>
+    <references measureRef="NumberOfComponentItems" number="1" role=""/>
+    <references measureRef="Number of Component Implementations" number="1" role=""/>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>

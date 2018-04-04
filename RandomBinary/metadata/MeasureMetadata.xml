@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="RandomBinary" provider="Measure.org By Softeam" type="BINARY">
+    <description>TODO : Please fill the measure description</description>
+    <references measureRef="Random" number="1" role="Random A"/>
+    <references measureRef="Random" number="1" role="Random B"/>
+    <scopeProperties defaultValue="+" name="Operation" type="STRING"/>
+    <unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>

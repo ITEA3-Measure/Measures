@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="NumberofEventsperitem" type="BINARY">
+    <description>EPI, the number of events ports per item, is the ratio between the number of Events interfaces and the number of component items (including the component implementations) in the java Modelio model, or more formally : EPI = NCE / (NCI + NIM). </description>
+    <references measureRef="Number of Component items and Implementation" number="1" role=""/>
+    <references measureRef="Number of Component Events" number="1" role=""/>
+</Measure>

@@ -6,4 +6,7 @@
     <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
     <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <unit name="Percent">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
 </Measure>

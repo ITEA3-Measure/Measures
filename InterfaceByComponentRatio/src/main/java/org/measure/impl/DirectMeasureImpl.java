@@ -107,17 +107,17 @@ public class DirectMeasureImpl extends DirectMeasure {
         this.instanceName = getProperty(SCOPE_INSTANCENAME);
         this.repository = getProperty(SCOPE_REPOSITORY);
             
-        		this.query = "var namespaces = NameSpace.all.select(c|c.Realized.size > 0);"
-        				+ "var nbdep = 0;"
-        				+ "if(namespaces.notEmpty()){"
-        				+ "for(nsp in namespaces){"
-        				+ "if(nsp.Realized.notEmpty()){"
-        				+ " nbdep = nbdep + nsp.Realized.size;"
-        				+ "}"
-        				+ "}"
-        				+ "return nbdep / namespaces.size();"
-        				+ "}"
-        				+ "return 0.0;";
+                this.query = "var namespaces = NameSpace.all.select(c|c.Realized.size > 0);"
+                        + "var nbdep = 0;"
+                        + "if(namespaces.notEmpty()){"
+                        + "for(nsp in namespaces){"
+                        + "if(nsp.Realized.notEmpty()){"
+                        + " nbdep = nbdep + nsp.Realized.size;"
+                        + "}"
+                        + "}"
+                        + "return nbdep / namespaces.size();"
+                        + "}"
+                        + "return 0.0;";
     }
 
     @objid ("a4fe2110-804c-484e-bc40-cafd64e2dbcc")

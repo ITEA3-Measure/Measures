@@ -8,14 +8,7 @@ public class Test {
     @objid ("c6a7f22a-b6e9-49e5-ab52-0e80b6d7b269")
     @org.junit.Test
     public void testMeasure() {
-        org.measure.impl.DirectMeasureImpl measure = new org.measure.impl.DirectMeasureImpl();
-        try {
-            
-            
-           
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        
     }
 
 }

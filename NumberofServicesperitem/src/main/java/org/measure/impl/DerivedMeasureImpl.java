@@ -2,11 +2,9 @@ package org.measure.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DerivedMeasure;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("65ed6073-555f-469e-afec-562337e46914")
 public class DerivedMeasureImpl extends DerivedMeasure {

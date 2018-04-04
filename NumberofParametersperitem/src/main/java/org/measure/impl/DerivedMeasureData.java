@@ -1,11 +1,9 @@
 package org.measure.impl;
 
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("2d0d686a-c91a-4746-94da-29a158986726")
 public class DerivedMeasureData extends DefaultMeasurement {
