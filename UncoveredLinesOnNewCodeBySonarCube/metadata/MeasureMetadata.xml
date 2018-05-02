@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="UncoveredLinesOnNewCodeBySonarCube" type="DIRECT">
+<Measure category="SonarCube 4.3" name="UncoveredLinesOnNewCodeBySonarCube" provider="Softeam" type="DIRECT">
     <description>Number of lines of code which are not covered by unit tests.
 Restricted to new / updated source code.</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>
     <scopeProperties defaultValue="" name="Password" type="STRING"/>
     <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
-    <unit name="Numeric"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
 </Measure>

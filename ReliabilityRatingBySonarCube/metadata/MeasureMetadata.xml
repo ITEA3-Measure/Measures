@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="ReliabilityRatingBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="ReliabilityRatingBySonarCube" provider="Softeam" type="DIRECT">
     <description>A = 0 Bug
 B = at least 1 Minor Bug
 C = at least 1 Major Bug

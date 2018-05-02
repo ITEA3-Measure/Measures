@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="QualityGateDetailsBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="QualityGateDetailsBySonarCube" provider="Softeam" type="DIRECT">
     <description>For all the conditions of your Quality Gate, you know which condition is failing and which is not.</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>

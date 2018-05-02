@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="PublicAPIBySonarCube" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="SonarCube 4.3" name="PublicAPIBySonarCube" provider="Softeam" type="COUNTING">
     <description>Public classes, interfaces, methods, constructors, annotations and attributes.
 
 The following objects are excluded:

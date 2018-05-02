@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Analysis" name="NumberOfBusinessRule" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="Modeling Tool" name="NumberOfBusinessRule" provider="Softeam" type="COUNTING">
     <description>Total number of Business Rule defined in the selected scope.
 (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).
 </description>

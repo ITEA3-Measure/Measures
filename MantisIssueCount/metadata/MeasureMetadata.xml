@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Bug Trackers" name="MantisIssueCount" provider="Softeam" type="DIRECT">
+<Measure category="Mantis" name="MantisIssueCount" provider="Softeam" type="DIRECT">
     <description>Calculate the actual number of issues (by status) of project from Mantis Bug Tracker tool.</description>
     <scopeProperties defaultValue="" name="url" type="STRING"/>
     <scopeProperties defaultValue="" name="login" type="STRING"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="DuplicatedBlocksBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="DuplicatedBlocksBySonarCube" provider="Softeam" type="DIRECT">
     <description>Number of duplicated blocks of lines.
 
 For a block of code to be considered as duplicated:

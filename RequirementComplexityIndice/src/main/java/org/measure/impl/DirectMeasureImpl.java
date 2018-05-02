@@ -15,7 +15,7 @@ import org.hawk.service.api.utils.APIUtils;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-@objid ("010d09ef-8ff3-4e37-a41f-2793ff1dee8c")
+@objid ("d069379a-71fb-4bef-9da3-1a2cda2c76fc")
 public class DirectMeasureImpl extends DirectMeasure {
     @objid ("1fae617a-464a-4508-9fe7-0993cbd63e58")
     public static final String SCOPE_SERVERURL = "serverUrl";
@@ -74,12 +74,16 @@ public class DirectMeasureImpl extends DirectMeasure {
             // select instance if not selected
             selectInstance(instanceName);
         
-            // send query
-            QueryResult qResult = executeQuery();
-            
-            IntegerMeasurement res = new IntegerMeasurement();
-            res.setValue(qResult.getVInteger());        
-            result.add(res);
+            try {
+                // Execute query
+                QueryResult qResult = executeQuery();
+        
+                IntegerMeasurement res = new IntegerMeasurement();
+                res.setValue(qResult.getVInteger());
+                result.add(res);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             
             // disconnect
             disconnect();

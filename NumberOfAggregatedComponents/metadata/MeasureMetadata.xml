@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Implementation" name="NumberOfAggregatedComponents" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="Naval Group" name="NumberOfAggregatedComponents" provider="Softeam" type="COUNTING">
     <description>NAC is the total number of aggregated components in the java Modelio model. Along with the number of composed components, this metric reflects the usage of the software decomposition in the modelled application.
  (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>

@@ -15,45 +15,45 @@ import org.hawk.service.api.utils.APIUtils;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-@objid ("fd640aea-ba76-4558-94ce-4025b66be59c")
+@objid ("1c8dba5a-2f44-4e1d-a591-ead7c0b1658b")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("e4a102ee-c2d8-4cca-a14d-1e3c515a09aa")
+    @objid ("0cf01137-4a3c-469e-bdeb-77c3a40f7525")
     public static final String SCOPE_SERVERURL = "serverUrl";
 
-    @objid ("827c2434-efb0-4c47-a2a7-27950ccea4d6")
+    @objid ("c2728cd6-04ec-497f-b29e-f9f2146bc24a")
     public static final String SCOPE_INSTANCENAME = "instanceName";
 
-    @objid ("46f08631-a335-4dd9-bbdd-e6af847758c7")
+    @objid ("1d5da55a-f612-494a-b739-4c6b479ccad3")
     public static final String SCOPE_REPOSITORY = "repository";
 
-    @objid ("03ca2d91-f8c5-4390-9e96-a368eca34921")
+    @objid ("74095f9e-a8ee-41b4-9a78-f86f07ce213d")
     private Hawk.Client client;
 
-    @objid ("dda96130-d65d-4673-b4a3-1523429659be")
+    @objid ("da8af073-6a17-492e-80db-a776168a417d")
     private ThriftProtocol clientProtocol;
 
-    @objid ("fe40b0b1-f7ea-4182-b504-5a76fb0b6d43")
+    @objid ("52f5298b-3225-4505-bbc9-d633155e4836")
     private String currentInstance;
 
-    @objid ("ef5c4337-1e1b-472e-b400-879e3d4ea3c5")
+    @objid ("2b8f57b5-76f6-4c11-b938-054240413102")
     private String defaultNamespaces;
 
-    @objid ("81f3c7ae-4512-40aa-a984-3dcbbac067b6")
+    @objid ("46ff8d0d-baf4-4852-ae9c-828b0c998d4a")
     private String serverUrl;
 
-    @objid ("ee1670b2-6604-4103-b4bb-8ec3cc0e9944")
+    @objid ("5e64caf6-f5c2-4194-9ce3-59cf41f9a1b3")
     private String instanceName;
 
-    @objid ("0a00cd27-c5d6-4afe-b9a5-964d904fc2cb")
+    @objid ("8fad3783-d0d2-4053-83a2-91d2b0e8f6a7")
     private String query;
 
     /**
      * (optional) The repository for the query (or * for all repositories).
      */
-    @objid ("607740d4-4548-4096-9c81-d68e26cfad69")
+    @objid ("3fa50876-b5f7-4dd0-9ff9-17e504669c43")
     private String repository;
 
-    @objid ("8e8db03a-134b-425c-967b-5ba821ee8f1d")
+    @objid ("44b497d8-ab71-4bc4-85c4-9b6181834208")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
@@ -74,12 +74,16 @@ public class DirectMeasureImpl extends DirectMeasure {
             // select instance if not selected
             selectInstance(instanceName);
         
-            // send query
-            QueryResult qResult = executeQuery();
-            
-            IntegerMeasurement res = new IntegerMeasurement();
-            res.setValue(qResult.getVInteger());        
-            result.add(res);
+            try {
+                // Execute query
+                QueryResult qResult = executeQuery();
+        
+                IntegerMeasurement res = new IntegerMeasurement();
+                res.setValue(qResult.getVInteger());
+                result.add(res);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             
             // disconnect
             disconnect();
@@ -90,7 +94,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         return result;
     }
 
-    @objid ("ee331041-9310-49bf-bb97-1f026d691e6b")
+    @objid ("9e620a18-9e59-4c9e-a272-d75df539ece2")
     protected void initProperties() {
         this.serverUrl = getProperty(SCOPE_SERVERURL);
         this.instanceName = getProperty(SCOPE_INSTANCENAME);
@@ -104,7 +108,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         + "return result;";
     }
 
-    @objid ("dcc2da90-471e-42ae-a56a-7834d1d3bb45")
+    @objid ("4e0db2b1-21f4-4a88-92c6-fa9be69955f0")
     protected void connect(String url, String username, String password) throws Exception {
         clientProtocol = ThriftProtocol.guessFromURL(url);
         if (client != null) {
@@ -114,7 +118,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         client = APIUtils.connectTo(Hawk.Client.class, url, clientProtocol, "", "");
     }
 
-    @objid ("b3c32c78-82e0-4631-96d1-1996698bd9f5")
+    @objid ("32e7dc2e-dbc4-4cc6-8d3d-41c210adf0b0")
     protected void disconnect() throws Exception {
         if (client != null) {
             final TTransport transport = client.getInputProtocol().getTransport();
@@ -125,14 +129,14 @@ public class DirectMeasureImpl extends DirectMeasure {
         }
     }
 
-    @objid ("2abb9e42-36d2-45e2-80a2-1ee74718123a")
+    @objid ("1f219fb6-ccc4-4df7-838d-fdb5e55ac892")
     protected void selectInstance(String name) throws Exception {
         checkConnected();
         findInstance(name);
         currentInstance = name;
     }
 
-    @objid ("700419ab-b6c7-4e8a-9cde-c6bf78a32f97")
+    @objid ("fe6d181f-5ef8-44cf-8f69-934ac18711e3")
     protected QueryResult executeQuery() throws Exception {
         checkInstanceSelected();
         HawkQueryOptions opts = new HawkQueryOptions();
@@ -147,14 +151,14 @@ public class DirectMeasureImpl extends DirectMeasure {
         return client.query(currentInstance, query, "org.hawk.epsilon.emc.EOLQueryEngine", opts);
     }
 
-    @objid ("856b1d63-6f2f-4115-bd2f-bd210326f236")
+    @objid ("9679465c-015b-4d64-85d5-85b8d68a9391")
     private void checkConnected() throws ConnectException {
         if (client == null) {
             throw new ConnectException("Please connect to a Thrift endpoint first!");
         }
     }
 
-    @objid ("4f410494-20bf-4037-a348-7eaa5448d1ed")
+    @objid ("0110f776-a513-46bb-b03b-3d1ce2b18c60")
     protected void checkInstanceSelected() throws ConnectException {
         checkConnected();
         if (currentInstance == null) {
@@ -162,7 +166,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         }
     }
 
-    @objid ("9ae1b6d5-3420-4db5-8beb-aca49caa01e7")
+    @objid ("40efd1b4-db7f-4f5b-99cb-7178159ad791")
     protected HawkInstance findInstance(final String name) throws Exception {
         for (HawkInstance i : client.listInstances()) {
             if (i.name.equals(name)) {

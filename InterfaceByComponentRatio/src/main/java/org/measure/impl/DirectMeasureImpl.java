@@ -16,45 +16,45 @@ import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.IntegerMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-@objid ("1c5873c9-7926-4f2d-8b66-ea58d32a5a30")
+@objid ("8e2b26e8-12b7-4a0e-94f9-50ccf7551ae9")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("3db2cc18-4d71-451d-8c26-64c0674a6fc6")
+    @objid ("483e7ff3-3ac3-46c5-983f-39d1ac3f82f4")
     public static final String SCOPE_SERVERURL = "serverUrl";
 
-    @objid ("c8f8adee-55d9-4b25-8f78-b28087c74463")
+    @objid ("c3be5c61-542e-4571-a519-db3b2765727c")
     public static final String SCOPE_INSTANCENAME = "instanceName";
 
-    @objid ("5d5e1dd1-5dbc-49b0-bf96-f19ac8c6375b")
+    @objid ("c1dfeeca-0495-4530-ace6-16ea855dbfda")
     public static final String SCOPE_REPOSITORY = "repository";
 
-    @objid ("2a23d2ee-7c2e-484c-b7aa-5c5f83c3d20c")
+    @objid ("0eaee533-d498-433c-ae27-5f1308461bc6")
     private Hawk.Client client;
 
-    @objid ("94d8a30b-1948-445c-bb18-641794a0415a")
+    @objid ("26ad16b0-0b65-42bf-9c7f-025f4ec29052")
     private ThriftProtocol clientProtocol;
 
-    @objid ("67850cd0-95c0-4641-929c-45e5219428e5")
+    @objid ("a6f27db2-6381-47ca-aa96-09060f47a6fa")
     private String currentInstance;
 
-    @objid ("3620fd9f-f83a-4d27-85eb-5b7fc7c554f8")
+    @objid ("6130447a-01cc-47f0-9746-ac3804b88cdc")
     private String defaultNamespaces;
 
-    @objid ("3b4a9627-7465-421e-acb0-faf3ee920667")
+    @objid ("ddc48e19-d806-4ae2-9177-c326b10737a7")
     private String serverUrl;
 
-    @objid ("c5c17ebe-28ba-4b9a-b49a-20fd2bdad4e2")
+    @objid ("90c90f68-6690-4697-8776-be08b7b9d535")
     private String instanceName;
 
-    @objid ("ad0f147f-18bc-4612-a15d-75b2df2c5585")
+    @objid ("8b356402-94cf-4043-807f-7e546886b0fc")
     private String query;
 
     /**
      * (optional) The repository for the query (or * for all repositories).
      */
-    @objid ("59ab8958-a8da-4794-b01d-e3d543f965c4")
+    @objid ("84f6547a-9370-437e-831d-b15e1ea3f307")
     private String repository;
 
-    @objid ("1d302c15-e89d-46b8-b59c-91f022eff6de")
+    @objid ("8cb47897-f776-4181-b85e-549cb1e64aba")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
@@ -91,17 +91,16 @@ public class DirectMeasureImpl extends DirectMeasure {
             }
                
             result.add(res);
+        } catch (Throwable e) {
+           e.printStackTrace();
+        }
             
             // disconnect
             disconnect();
-        
-        } catch (Throwable e) {
-            throw new Exception("Error during Measure Execution : " + e.getMessage(), e);
-        }
         return result;
     }
 
-    @objid ("1fcb4095-2276-4659-8c9c-a6c9bd232304")
+    @objid ("3f03dced-cf48-411a-a452-435dcdbe9d15")
     protected void initProperties() {
         this.serverUrl = getProperty(SCOPE_SERVERURL);
         this.instanceName = getProperty(SCOPE_INSTANCENAME);
@@ -120,7 +119,7 @@ public class DirectMeasureImpl extends DirectMeasure {
                         + "return 0.0;";
     }
 
-    @objid ("a4fe2110-804c-484e-bc40-cafd64e2dbcc")
+    @objid ("3dd1269d-c103-4a69-8bb8-279ee9b86464")
     protected void connect(String url, String username, String password) throws Exception {
         clientProtocol = ThriftProtocol.guessFromURL(url);
         if (client != null) {
@@ -130,7 +129,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         client = APIUtils.connectTo(Hawk.Client.class, url, clientProtocol, "", "");
     }
 
-    @objid ("bb2f8b8d-ba7e-4fe1-8793-3afeb5b9611c")
+    @objid ("2991b169-fd81-4c45-810e-04815d28bd6f")
     protected void disconnect() throws Exception {
         if (client != null) {
             final TTransport transport = client.getInputProtocol().getTransport();
@@ -141,14 +140,14 @@ public class DirectMeasureImpl extends DirectMeasure {
         }
     }
 
-    @objid ("b54c08f2-c3a0-4611-a35e-3b1f0348b12e")
+    @objid ("a47b08c4-9d37-42b3-ab70-43de71ecd675")
     protected void selectInstance(String name) throws Exception {
         checkConnected();
         findInstance(name);
         currentInstance = name;
     }
 
-    @objid ("feea26df-3f2b-479c-b449-0fc851b4d7d9")
+    @objid ("d3bce668-c070-4de6-b7cb-e9dc16c9e4ea")
     protected QueryResult executeQuery() throws Exception {
         checkInstanceSelected();
         HawkQueryOptions opts = new HawkQueryOptions();
@@ -163,14 +162,14 @@ public class DirectMeasureImpl extends DirectMeasure {
         return client.query(currentInstance, query, "org.hawk.epsilon.emc.EOLQueryEngine", opts);
     }
 
-    @objid ("8f979998-14af-4696-ab81-c8078294fa7b")
+    @objid ("146a61fb-05cc-4a27-a699-17cf161ec7f4")
     private void checkConnected() throws ConnectException {
         if (client == null) {
             throw new ConnectException("Please connect to a Thrift endpoint first!");
         }
     }
 
-    @objid ("19194138-a67c-4285-925f-b3b9f34c25f0")
+    @objid ("be3cc0ed-c3e5-4964-b7ed-d06ebbcfd80f")
     protected void checkInstanceSelected() throws ConnectException {
         checkConnected();
         if (currentInstance == null) {
@@ -178,7 +177,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         }
     }
 
-    @objid ("eda0cc99-32c3-4037-a9ec-783d64dbf82c")
+    @objid ("794cf699-0d59-48bf-90e6-5808d1402f9c")
     protected HawkInstance findInstance(final String name) throws Exception {
         for (HawkInstance i : client.listInstances()) {
             if (i.name.equals(name)) {

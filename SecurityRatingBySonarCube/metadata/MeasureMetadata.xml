@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="SecurityRatingBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="SecurityRatingBySonarCube" provider="Softeam" type="DIRECT">
     <description>A = 0 Vulnerability
 B = at least 1 Minor Vulnerability
 C = at least 1 Major Vulnerability

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="CommentLinesBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="CommentLinesBySonarCube" provider="Softeam" type="DIRECT">
     <description>Number of lines containing either comment or commented-out code.
 
 Non-significant comment lines (empty comment lines, comment lines containing only special characters, etc.) do not increase the number of comment lines.</description>

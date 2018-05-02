@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="MethodsBySonarCube" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="SonarCube 4.3" name="MethodsBySonarCube" provider="Softeam" type="COUNTING">
     <description>Number of functions. Depending on the language, a function is either a function or a method or a paragraph.</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>
