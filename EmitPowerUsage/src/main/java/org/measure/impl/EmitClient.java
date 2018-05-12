@@ -1,4 +1,4 @@
-package org.measure.power;
+package org.measure.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;

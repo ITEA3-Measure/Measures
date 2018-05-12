@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="EmitPowerMeasure" type="DIRECT" category="ProductionMeasure" provider="Measure.org">
-    <description>Power measures for power measurements retrieved from EMIT systems.</description>
+<Measure name="Power Measure" type="DIRECT" category="Emit" provider="Measure.org">
+    <description>Power in watt provided by EMIT powermeters.</description>
     <scopeProperties name="hostname" type="STRING" defaultValue="app.icam.fr">
         <description>Hostname</description>
     </scopeProperties>
@@ -19,9 +19,12 @@
     <scopeProperties name="password" type="PASSWORD" defaultValue="m3@suR">
         <description>Password</description>
     </scopeProperties>
-    <unit name="EmitPowerMeasurement">
+    <scopeProperties name="topic" type="STRING" defaultValue="peaktech/power">
+        <description>Topic</description>
+    </scopeProperties>
+    <unit name="Power">
         <fields fieldName="topic" fieldType="u_string"/>
-        <fields fieldName="issued" fieldType="u_long"/>
+        <fields fieldName="timestamp" fieldType="u_long"/>
         <fields fieldName="value" fieldType="u_double"/>
     </unit>
 </Measure>

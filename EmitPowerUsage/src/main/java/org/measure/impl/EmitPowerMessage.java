@@ -1,4 +1,4 @@
-package org.measure.power;
+package org.measure.impl;
 
 public class EmitPowerMessage {
 
