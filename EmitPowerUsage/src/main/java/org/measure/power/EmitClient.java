@@ -72,7 +72,7 @@ public class EmitClient {
         return this.getStatus(request);
 	}
 	
-	public List<PowerMessage> getMessages(String topic, Long issued) throws Exception {
+	public List<EmitPowerMessage> getMessages(String topic, Long issued) throws Exception {
 		if (topic == null) throw new NullPointerException("undefined string parameter 'topic'");
 		if (issued == null) throw new NullPointerException("undefined timestamp parameter 'issued'");
 		URIBuilder builder = new URIBuilder("/" + toolname + "/messages/search");
@@ -85,7 +85,7 @@ public class EmitClient {
         int status = response.getStatusLine().getStatusCode();
         EntityUtils.consume(entity);
         if (status == 200) {
-        	return Arrays.asList(mapper.fromJson(message, PowerMessage[].class));
+        	return Arrays.asList(mapper.fromJson(message, EmitPowerMessage[].class));
         } else {
         	throw new Exception("error " + status + ": " + message);
         }        

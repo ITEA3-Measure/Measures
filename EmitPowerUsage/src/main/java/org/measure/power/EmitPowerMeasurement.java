@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.measure.smm.measure.api.IMeasurement;
 
-public class PowerMeasurement implements IMeasurement  {
+public class EmitPowerMeasurement implements IMeasurement  {
 
 	private static final String TOPIC = "topic";
 	
@@ -52,7 +52,7 @@ public class PowerMeasurement implements IMeasurement  {
 		this.values.put(VALUE, value);
 	}
 
-	public PowerMeasurement(PowerMessage message) {
+	public EmitPowerMeasurement(EmitPowerMessage message) {
 		this.setValues();
 		this.setTopic(message.getTopic());
 		this.setIssued(message.getIssued());

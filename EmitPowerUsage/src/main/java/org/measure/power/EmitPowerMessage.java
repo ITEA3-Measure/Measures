@@ -1,6 +1,6 @@
 package org.measure.power;
 
-public class PowerMessage {
+public class EmitPowerMessage {
 
 	private String topic;
 	

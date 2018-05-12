@@ -7,7 +7,7 @@ import java.util.List;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-public class PowerMeasure extends DirectMeasure {
+public class EmitPowerMeasure extends DirectMeasure {
 
 	private String topic;
 	
@@ -43,7 +43,7 @@ public class PowerMeasure extends DirectMeasure {
 		return client;
 	}
 	
-	public PowerMeasure() {
+	public EmitPowerMeasure() {
 		super();
 	}
 	
@@ -52,10 +52,10 @@ public class PowerMeasure extends DirectMeasure {
 		EmitClient client = this.getClient();
 		String topic = this.getTopic();
 		Long issued = this.getIssued();
-		List<PowerMessage> messages = client.getMessages(topic, issued);
+		List<EmitPowerMessage> messages = client.getMessages(topic, issued);
 		List<IMeasurement> measurements = new ArrayList<IMeasurement>(messages.size());
-		for (PowerMessage message : messages) {
-			PowerMeasurement measurement = new PowerMeasurement(message);
+		for (EmitPowerMessage message : messages) {
+			EmitPowerMeasurement measurement = new EmitPowerMeasurement(message);
 			measurements.add(measurement);
 		}
 		return measurements;
