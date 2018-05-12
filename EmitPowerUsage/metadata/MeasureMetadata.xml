@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="EmitPowerUsage" type="DIRECT" unite="Numeric">
-    <description>Retrieve the power measurements selected from instrument features on EMIT systems.</description>
-    <scopeProperties name="EmitServerUri" defaultValue="http://emit.icam.fr/emit">
-        <description>URI of the EMIT system</description>
+<Measure name="PowerMeasure" type="DIRECT" category="ProductionMeasure" provider="Measure.org">
+    <description>Power measures for measurements retrieved from EMIT systems.</description>
+    <scopeProperties name="hostname" type="STRING" defaultValue="app.icam.fr">
+        <description>Hostname</description>
     </scopeProperties>
-    <scopeProperties name="AccessToken" defaultValue="">
-        <description>Access Token retrieved from the previous EMIT system</description>
+    <scopeProperties name="port" type="INTEGER" defaultValue="80">
+        <description>Port</description>
     </scopeProperties>
+    <scopeProperties name="protocol" type="STRING" defaultValue="http">
+        <description>Protocol</description>
+    </scopeProperties>
+    <scopeProperties name="toolname" type="STRING" defaultValue="emit">
+        <description>Toolname</description>
+    </scopeProperties>
+    <scopeProperties name="username" type="STRING" defaultValue="measure@emit.icam.fr">
+        <description>Username</description>
+    </scopeProperties>
+    <scopeProperties name="password" type="PASSWORD" defaultValue="m3@suR">
+        <description>Password</description>
+    </scopeProperties>
+    <unit name="PowerMeasurement">
+        <fields fieldName="topic" fieldType="u_string"/>
+        <fields fieldName="issued" fieldType="u_long"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
 </Measure>
