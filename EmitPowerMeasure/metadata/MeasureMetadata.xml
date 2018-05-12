@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="Power Measure" type="DIRECT" category="Emit" provider="Measure.org">
+<Measure name="PowerMeasure" type="DIRECT" category="Emit" provider="Measure.org">
     <description>Power in watt provided by EMIT powermeters.</description>
     <scopeProperties name="hostname" type="STRING" defaultValue="app.icam.fr">
         <description>Hostname</description>
@@ -24,7 +24,7 @@
     </scopeProperties>
     <unit name="Power">
         <fields fieldName="topic" fieldType="u_string"/>
-        <fields fieldName="timestamp" fieldType="u_long"/>
+        <fields fieldName="issued" fieldType="u_long"/>
         <fields fieldName="value" fieldType="u_double"/>
     </unit>
 </Measure>
