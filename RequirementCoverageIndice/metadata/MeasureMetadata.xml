@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Analysis" name="RequirementCoverageIndice" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="Modeling Tool" name="RequirementCoverageIndice" provider="Softeam" type="DIRECT">
     <description>The average number of requirements tracing an architecture model.
 (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).
 </description>
     <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
     <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <unit name="Percent">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
 </Measure>

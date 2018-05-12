@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Softeam" name="ModelioTestingFramework" provider="Softeam" type="DIRECT">
+    <description>Specific Measure implemented By Softeam which collect Data for Modelio Testing Framework.</description>
+    <scopeProperties defaultValue="" name="project" type="STRING"/>
+    <scopeProperties defaultValue="" name="testReportUrl" type="STRING"/>
+    <scopeProperties defaultValue="" name="lastSession" type="DESABLE"/>
+    <unit name="ModelioTestData">
+        <fields fieldName="project" fieldType="u_keyword"/>
+        <fields fieldName="session_id" fieldType="u_keyword"/>
+        <fields fieldName="test_id" fieldType="u_keyword"/>
+        <fields fieldName="execution_date" fieldType="u_date"/>
+        <fields fieldName="type" fieldType="u_text"/>
+        <fields fieldName="subject" fieldType="u_text"/>
+        <fields fieldName="status" fieldType="u_text"/>
+        <fields fieldName="duration" fieldType="u_long"/>
+    </unit>
+</Measure>

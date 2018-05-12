@@ -3,7 +3,7 @@ package org.measure.impl;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
 
-@objid ("b39b0a26-51d3-42c9-a07e-54f250739e1e")
+@objid ("e92f8138-370f-4492-8eab-98c755ddebe5")
 public class IntegerMeasurement extends DefaultMeasurement {
     @objid ("057970fb-e91e-46e0-b262-78a768385012")
     public IntegerMeasurement() {

@@ -1,10 +1,9 @@
 package org.measure.test;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.impl.DerivedMeasureImpl;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("d353abca-b292-4d57-a167-98803ea62afa")
 public class Test {

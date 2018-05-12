@@ -9,20 +9,7 @@ public class Test {
     @objid ("a2a492fe-03d3-479e-98aa-4ca01acd4e3d")
     @org.junit.Test
     public void testMeasure() {
-        org.measure.impl.DirectMeasureImpl measure = new org.measure.impl.DirectMeasureImpl();
-        try {
-            
-            
-            measure.getProperties().put(DirectMeasureImpl.SCOPE_SERVERURL, "http://localhost:8080/thrift/hawk/tuple");
-            measure.getProperties().put(DirectMeasureImpl.SCOPE_REPOSITORY, "*");
-            measure.getProperties().put(DirectMeasureImpl.SCOPE_INSTANCENAME, "instance_37");
-            
-            for(IMeasurement result : measure.getMeasurement()){
-                System.out.println("Test Resul : " + result.getLabel());
-            }            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        
     }
 
 }

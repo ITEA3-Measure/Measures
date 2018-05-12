@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Design" name="InterfaceByComponentRatio" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="Modeling Tool" name="InterfaceByComponentRatio" provider="Softeam" type="DIRECT">
     <description>The average number of Interfaces realised by each compnents in analysed project.
 (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMTS Tool (Hawk Server)).
 </description>

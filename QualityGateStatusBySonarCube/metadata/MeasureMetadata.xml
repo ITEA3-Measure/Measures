@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="QualityGateStatusBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="QualityGateStatusBySonarCube" provider="Softeam" type="DIRECT">
     <description>State of the Quality Gate associated to your Project. Possible values are : ERROR, WARN, OK</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>

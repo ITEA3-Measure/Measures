@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Implementation" name="NumberOfComponentTypes" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="Naval Group" name="NumberOfComponentTypes" provider="Softeam" type="COUNTING">
     <description>NCT is the total number of interfaces component types in the java Modelio model. Along with the total number of data, this metric provides an idea of the functional richness of the modelled application.
  (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="CoverageOnNewCodeBySonarCube" type="DIRECT">
+<Measure category="SonarCube 4.3" name="CoverageOnNewCodeBySonarCube" provider="Softeam" type="DIRECT">
     <description>It is a mix of Line coverage and Condition coverage. Its goal is to provide an even more accurate answer to the following question: How much of the source code has been covered by the unit tests?
 Restricted to new / updated source code.</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>
     <scopeProperties defaultValue="" name="Password" type="STRING"/>
     <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
-    <unit name="Numeric"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
 </Measure>

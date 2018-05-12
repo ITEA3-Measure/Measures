@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Modelio Implementation" name="NumberOfComponentServices" provider="Measure.org By Softeam" type="COUNTING">
+<Measure category="Naval Group" name="NumberOfComponentServices" provider="Softeam" type="COUNTING">
     <description>NCS is the total number of services interfaces in the java Modelio model. Services are provided from lower layers and notably the sensors to the upper layers managing the operators actions. They reflect the richness of operator actions and parametering of the sensors.
 (Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).</description>
     <scopeProperties defaultValue="*" name="repository" type="STRING"/>

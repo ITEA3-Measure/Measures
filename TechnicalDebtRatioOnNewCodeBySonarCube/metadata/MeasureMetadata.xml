@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="SonarCube" name="TechnicalDebtRatioOnNewCodeBySonarCube" provider="Measure.org By Softeam" type="DIRECT">
+<Measure category="SonarCube 4.3" name="TechnicalDebtRatioOnNewCodeBySonarCube" provider="Softeam" type="DIRECT">
     <description>Ratio between the cost to develop the code changed in the leak period and the cost of the issues linked to it.</description>
     <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Login" type="STRING"/>

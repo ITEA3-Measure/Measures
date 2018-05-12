@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="RandomSum" provider="Measure.org By Softeam" type="COLLECTIVE">
+    <description>Test Measure : Simple example of Collective Measure</description>
+    <references measureRef="Random" number="10" role="RandomNumber"/>
+    <unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>

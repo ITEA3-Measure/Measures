@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="Random" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Test Measure : Simple example of Direct Measure
+</description>
+    <scopeProperties defaultValue="" name="MaxRange" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="MinRange" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="Delta" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="Value" type="INTEGER"/>
+    <unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+</Measure>

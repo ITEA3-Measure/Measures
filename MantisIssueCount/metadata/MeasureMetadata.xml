@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Mantis" name="MantisIssueCount" provider="Softeam" type="DIRECT">
+    <description>Calculate the actual number of issues (by status) of project from Mantis Bug Tracker tool.</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="projectName" type="STRING"/>
+    <scopeProperties defaultValue="" name="severity" type="ENUM">
+        <enumType>
+            <enumvalue label="Feature" value="Feature"/>
+            <enumvalue label="Minor" value="Minor"/>
+            <enumvalue label="Major" value="Major"/>
+            <enumvalue label="Crash" value="Crash"/>
+            <enumvalue label="Block" value="Block"/>
+        </enumType>
+    </scopeProperties>
+    <unit name="MantisIssueKind">
+        <fields fieldName="allIssues" fieldType="u_integer"/>
+        <fields fieldName="openIssues" fieldType="u_integer"/>
+        <fields fieldName="newIssue" fieldType="u_integer"/>
+        <fields fieldName="feedbackIssue" fieldType="u_integer"/>
+        <fields fieldName="acknowledgedIssue" fieldType="u_integer"/>
+        <fields fieldName="confirmedIssue" fieldType="u_integer"/>
+        <fields fieldName="assignedIssue" fieldType="u_integer"/>
+        <fields fieldName="resolvedIssue" fieldType="u_integer"/>
+        <fields fieldName="closedIssue" fieldType="u_integer"/>
+    </unit>
+</Measure>

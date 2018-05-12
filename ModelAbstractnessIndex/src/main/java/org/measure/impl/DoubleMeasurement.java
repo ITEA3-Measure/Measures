@@ -3,25 +3,25 @@ package org.measure.impl;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.defaultimpl.measurements.DefaultMeasurement;
 
-@objid ("8f967266-06c8-4045-afec-690079a5ea15")
+@objid ("877b6c10-17b6-4cc1-b6a5-641b0c045a41")
 public class DoubleMeasurement extends DefaultMeasurement {
-    @objid ("dce8a136-3ed9-463d-9dcd-f5920bd4b05a")
+    @objid ("a7c0f706-13c2-4bb9-add5-6593776b4fe7")
     public DoubleMeasurement() {
         
     }
 
-    @objid ("1a207441-cced-4bad-a889-afb0d07a2f9c")
+    @objid ("7fc1f691-f978-4559-8b21-ac235ce1e955")
     public void setValue(Double value) {
         addValue("value",value);
     }
 
-    @objid ("3827834f-0e4d-45f0-9a36-166bdd00bd12")
+    @objid ("c9ba69fa-44fa-4dfc-bcff-3e69472aee7f")
     public Double getValue() {
         
         return (Double) getValues().get("value");
     }
 
-    @objid ("86b5b41d-5d6b-4a1f-a169-a9253afa199e")
+    @objid ("a0d691a4-7439-409e-b171-96fd46fca623")
     @Override
     public String getLabel() {
         
