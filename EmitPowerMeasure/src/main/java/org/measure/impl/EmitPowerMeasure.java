@@ -1,7 +1,6 @@
 package org.measure.impl;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import org.measure.smm.measure.api.IMeasurement;
@@ -22,9 +21,9 @@ public class EmitPowerMeasure extends DirectMeasure {
 		return topic;
 	}
 
-	private Long getIssued() {
+	private Long getIssued() throws Exception {
 		if (last == null) {
-			last = Calendar.getInstance().getTimeInMillis();
+			last = client.getTimestamp();
 		}
 		return last;
 	}
@@ -53,12 +52,15 @@ public class EmitPowerMeasure extends DirectMeasure {
 		String topic = this.getTopic();
 		Long issued = this.getIssued();
 		List<EmitPowerMessage> messages = client.getMessages(topic, issued);
-		client.tearDown();
 		List<IMeasurement> measurements = new ArrayList<IMeasurement>(messages.size());
 		for (EmitPowerMessage message : messages) {
 			EmitPowerMeasurement measurement = new EmitPowerMeasurement(message);
 			measurements.add(measurement);
+			if (last < message.getIssued()) {
+				last = message.getIssued();
+			}
 		}
+		client.tearDown();
 		return measurements;
 	}
 

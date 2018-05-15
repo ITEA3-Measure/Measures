@@ -1,14 +1,17 @@
 package org.measure.impl;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -48,7 +51,7 @@ public class EmitClient {
 	
 	public void tearDown() throws Exception {
 		this.doUserClear();
-		client.close();
+		// client.close();
 	}
 
 	private void doIndex() throws Exception {
@@ -79,16 +82,95 @@ public class EmitClient {
 		builder.addParameter("topic", topic);
 		builder.addParameter("started", issued.toString());
         HttpGet request = new HttpGet(builder.build());
+        return this.getList(EmitPowerMessage[].class, request);       
+	}
+	
+	public Long getTimestamp() throws Exception {
+		URIBuilder builder = new URIBuilder("/" + toolname + "/timestamp");
+        HttpGet request = new HttpGet(builder.build());
+        return this.getLong(request);
+	}
+	
+	private <T> T getObject(Class<T> type, HttpRequestBase request) throws Exception {
 		HttpResponse response = client.execute(host, request);
         HttpEntity entity = response.getEntity();
         String message = EntityUtils.toString(entity);
         int status = response.getStatusLine().getStatusCode();
         EntityUtils.consume(entity);
         if (status == 200) {
-        	return Arrays.asList(mapper.fromJson(message, EmitPowerMessage[].class));
+        	return mapper.fromJson(message, type);
         } else {
-        	throw new Exception("error " + status + ": " + message);
-        }        
+        	throw new Exception(status + ": " + message);
+        }
+	}
+	
+	private <T> List<T> getList(Class<T[]> type, HttpRequestBase request) throws Exception {
+		HttpResponse response = client.execute(host, request);
+        HttpEntity entity = response.getEntity();
+        String message = EntityUtils.toString(entity);
+        int status = response.getStatusLine().getStatusCode();
+        EntityUtils.consume(entity);
+        if (status == 200) {
+        	return Arrays.asList(mapper.fromJson(message, type));
+        } else {
+        	throw new Exception(status + ": " + message);
+        }
+	}
+	
+	private Boolean getBoolean(HttpRequestBase request) throws Exception {
+		HttpResponse response = client.execute(host, request);
+		HttpEntity entity = response.getEntity();
+		String message = EntityUtils.toString(entity);
+		int status = response.getStatusLine().getStatusCode();
+		EntityUtils.consume(entity);
+		if (status == 200) {
+			return Boolean.valueOf(message);
+		} else {
+			throw new Exception(status + ": " + message);
+		}
+	}
+	
+	private Integer getInteger(HttpRequestBase request) throws Exception {
+		HttpResponse response = client.execute(host, request);
+		HttpEntity entity = response.getEntity();
+		String message = EntityUtils.toString(entity);
+		int status = response.getStatusLine().getStatusCode();
+		EntityUtils.consume(entity);
+		if (status == 200) {
+			return Integer.valueOf(message);
+		} else {
+			throw new Exception(status + ": " + message);
+		}
+	}
+	
+	private Long getLong(HttpRequestBase request) throws Exception {
+		HttpResponse response = client.execute(host, request);
+		HttpEntity entity = response.getEntity();
+		String message = EntityUtils.toString(entity);
+		int status = response.getStatusLine().getStatusCode();
+		EntityUtils.consume(entity);
+		if (status == 200) {
+			return Long.valueOf(message);
+		} else {
+			throw new Exception(status + ": " + message);
+		}
+	}
+
+	private UUID getUUID(HttpRequestBase request) throws Exception {
+		return UUID.fromString(this.getString(request));
+	}
+
+	private String getString(HttpRequestBase request) throws Exception {
+		HttpResponse response = client.execute(host, request);
+		HttpEntity entity = response.getEntity();
+		String message = EntityUtils.toString(entity);
+		int status = response.getStatusLine().getStatusCode();
+		EntityUtils.consume(entity);
+		if (status == 200) {
+			return this.doClean(message);
+		} else {
+			throw new Exception(status + ": " + message);
+		}
 	}
 	
 	private int getStatus(HttpRequestBase request) throws Exception {
@@ -97,6 +179,21 @@ public class EmitClient {
 		int status = response.getStatusLine().getStatusCode();
 		EntityUtils.consume(entity);
 		return status;
+	}
+	
+	private String doClean(String string) {
+		String clean = string.trim();
+		if (clean.startsWith("\"")) {
+			if (clean.startsWith("\"")) {
+				return clean.substring(1, clean.length() - 1);
+			} else {
+				return clean.substring(1, clean.length());
+			}
+		} else if (clean.startsWith("\"")) {
+			return clean.substring(0, clean.length() - 1);
+		} else {
+			return clean;
+		}
 	}
 
 }
