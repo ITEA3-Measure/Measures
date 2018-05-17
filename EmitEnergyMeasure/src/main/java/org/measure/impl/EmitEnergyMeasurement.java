@@ -12,12 +12,12 @@ public class EmitEnergyMeasurement extends DefaultMeasurement {
 	
 	private static final String VALUE = "value";
 	
-	public EmitEnergyMeasurement(String topic, Long started, Long stopped, Double value) {
+	public EmitEnergyMeasurement(String topic, Long started, Long stopped, Float value) {
 		super();
 		this.addValue(TOPIC, topic);
 		this.addValue(STARTED, started);
 		this.addValue(STOPPED, stopped);
-		this.addValue(VALUE, value);
+		this.addValue(VALUE, value.floatValue());
 	}
 
 }

@@ -16,15 +16,15 @@
     <scopeProperties name="username" type="STRING" defaultValue="measure@emit.icam.fr">
         <description>Username</description>
     </scopeProperties>
-    <scopeProperties name="password" type="PASSWORD" defaultValue="m3@suR">
+    <scopeProperties name="password" type="STRING" defaultValue="m3@suR">
         <description>Password</description>
     </scopeProperties>
     <scopeProperties name="topic" type="STRING" defaultValue="peaktech/power">
         <description>Topic</description>
     </scopeProperties>
     <unit name="EmitPowerMeasurement">
-        <fields fieldName="topic" fieldType="u_string"/>
+        <fields fieldName="topic" fieldType="u_text"/>
         <fields fieldName="issued" fieldType="u_long"/>
-        <fields fieldName="value" fieldType="u_double"/>
+        <fields fieldName="value" fieldType="u_float"/>
     </unit>
 </Measure>

@@ -14,7 +14,7 @@ public class EmitPowerMeasurement extends DefaultMeasurement {
 		super();
 		this.addValue(TOPIC, message.getTopic());
 		this.addValue(ISSUED, message.getIssued());
-		this.addValue(VALUE, message.getValue());
+		this.addValue(VALUE, message.getValue().floatValue());
 	}
 
 }

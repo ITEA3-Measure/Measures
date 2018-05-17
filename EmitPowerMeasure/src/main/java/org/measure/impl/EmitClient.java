@@ -85,6 +85,15 @@ public class EmitClient {
         return this.getList(EmitPowerMessage[].class, request);       
 	}
 	
+	public List<EmitPowerMessage> getMessages(String topic, Long started, Long stopped) throws Exception {
+		URIBuilder builder = new URIBuilder("/" + toolname + "/messages/search");
+		builder.addParameter("topic", topic);
+		builder.addParameter("started", started.toString());
+		builder.addParameter("stopped", stopped.toString());
+        HttpGet request = new HttpGet(builder.build());
+        return this.getList(EmitPowerMessage[].class, request);       
+	}
+	
 	public Long getTimestamp() throws Exception {
 		URIBuilder builder = new URIBuilder("/" + toolname + "/timestamp");
         HttpGet request = new HttpGet(builder.build());

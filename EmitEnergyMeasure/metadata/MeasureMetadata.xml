@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure name="EnergyMeasure" type="DERIVED" category="Emit" provider="Measure.org">
+<Measure name="EmitEnergyMeasure" type="DERIVED" category="Emit" provider="Measure.org">
     <description>Energy in joule (watt-per-second) computed from the EMIT power measures.</description>
-    <references measureRef="PowerMeasure" role="inputs" />
+    <references measureRef="EmitPowerMeasure" role="inputs" />
     <scopeProperties name="topic" type="STRING" />
     <scopeProperties name="started" type="INTEGER" />
     <scopeProperties name="stopped" type="INTEGER" />
-    <unit name="Energy">
-        <fields fieldName="topic" fieldType="u_string"/>
+    <unit name="EmitEnergyMeasurement">
+        <fields fieldName="topic" fieldType="u_text"/>
         <fields fieldName="started" fieldType="u_long"/>
         <fields fieldName="stopped" fieldType="u_long"/>
-        <fields fieldName="value" fieldType="u_double"/>
+        <fields fieldName="value" fieldType="u_float"/>
     </unit>
 </Measure>
