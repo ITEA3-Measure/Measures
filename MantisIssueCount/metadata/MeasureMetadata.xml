@@ -14,6 +14,7 @@
             <enumvalue label="Block" value="Block"/>
         </enumType>
     </scopeProperties>
+    <scopeProperties defaultValue="" name="parameters" type="STRING"/>
     <unit name="MantisIssueKind">
         <fields fieldName="allIssues" fieldType="u_integer"/>
         <fields fieldName="openIssues" fieldType="u_integer"/>

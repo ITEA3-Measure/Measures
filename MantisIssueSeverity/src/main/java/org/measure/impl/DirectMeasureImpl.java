@@ -21,10 +21,11 @@ public class DirectMeasureImpl extends DirectMeasure {
         String login = getProperty("login");
         String password = getProperty("password");
         String projectName = getProperty("projectName");
+        String parameters = getProperty("parameters");
         
         Class.forName("com.mysql.jdbc.Driver");
         
-        try (Connection connect = DriverManager.getConnection(url + "?" + "user=" + login + "&password=" + password + "")) {
+        try (Connection connect = DriverManager.getConnection(url + "?" + "user=" + login + "&password=" + password + parameters)) {
             try (Statement statement = connect.createStatement()) {
         
                 // feature

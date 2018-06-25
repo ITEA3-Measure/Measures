@@ -24,6 +24,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         String password = getProperty("password");
         String projectName = getProperty("projectName");
         String severity = getProperty("severity");
+        String parameters = getProperty("parameters");
         
         int severityValue = 10;
         if("Minor".equals(severity)){
@@ -40,7 +41,7 @@ public class DirectMeasureImpl extends DirectMeasure {
         Class.forName("com.mysql.jdbc.Driver");
         
         
-        try(Connection connect = DriverManager.getConnection(url + "?"+ "user="+login+"&password="+password+"")) {
+        try(Connection connect = DriverManager.getConnection(url + "?"+ "user="+login+"&password="+password + parameters)) {
             try(Statement statement = connect.createStatement()){
                     
                 // 10:new
