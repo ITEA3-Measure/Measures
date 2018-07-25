@@ -1,4 +1,4 @@
-package org.measure.impl;
+package org.measure.impl.data;
 
 import java.util.ArrayList;
 import java.util.List;

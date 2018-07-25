@@ -1,4 +1,4 @@
-package org.measure.impl;
+package org.measure.impl.data;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 

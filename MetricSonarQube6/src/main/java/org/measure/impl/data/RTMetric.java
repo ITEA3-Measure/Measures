@@ -1,11 +1,15 @@
-package org.measure.impl;
+package org.measure.impl.data;
 
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("80abbde5-74fb-449b-8955-45771c1be527")
 public class RTMetric {
     @objid ("f327dcbd-e725-43c4-85aa-d8c8b52e0f18")
     private RTComponent component;
+
+    @objid ("329f8227-2fea-40d5-8917-dc40521ff379")
+    private List<RTError> errors;
 
     @objid ("76f922cc-d3b7-447c-8601-1b3d9d4e94bb")
     public RTComponent getComponent() {
@@ -23,6 +27,17 @@ public class RTMetric {
         if (component != null)
             return component.getValue();
         return "";
+    }
+
+    @objid ("b1062c79-8da3-4e5b-a35d-66320b41df5c")
+    public List<RTError> getErrors() {
+        
+        return errors;
+    }
+
+    @objid ("b117b690-7a64-424e-8768-dd5dfa663ed9")
+    public void setErrors(List<RTError> errors) {
+        this.errors = errors;
     }
 
 }
