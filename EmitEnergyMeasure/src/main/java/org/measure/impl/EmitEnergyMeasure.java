@@ -21,21 +21,18 @@ public class EmitEnergyMeasure extends DerivedMeasure {
 	}
 
 	private Float doCompute(String topic, Long started, Long stopped) {
-		Float value = 0.0f;
-		Float f_a = null;
-        Long a = null;
-        List<IMeasurement> measurements = this.getMeasureInputByRole("inputs");
-        List<IMeasurement> inputs = this.doFilter(topic, started, stopped, measurements);
-        for (IMeasurement input : inputs) {
-        	if (f_a == null) {
-        		f_a = (Float) input.getValues().get("value");
-        		a = (Long) input.getValues().get("issued");
-        	} else {
-        		Float f_b = (Float) input.getValues().get("value");
-        		Long b = (Long) input.getValues().get("issued");
-        		value += (b - a) * ((f_a + f_b) / 2); 
+		Float value = 0.0f; Float f_a = null; Long a = null;
+        	List<IMeasurement> inputs = this.getMeasureInputByRole("inputs");
+        	for (IMeasurement input : inputs) {
+        		if (f_a == null) {
+        			f_a = (Float) input.getValues().get("value");
+        			a = (Long) input.getValues().get("issued");
+        		} else {
+        			Float f_b = (Float) input.getValues().get("value");
+        			Long b = (Long) input.getValues().get("issued");
+        			value += (b - a) * ((f_a + f_b) / 2); 
+        		}
         	}
-        }
 		return value;
 	}
 
