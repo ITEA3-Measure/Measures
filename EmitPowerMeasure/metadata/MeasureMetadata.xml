@@ -6,7 +6,7 @@
     <scopeProperties name="protocol" type="STRING" defaultValue="http"></scopeProperties>
     <scopeProperties name="toolname" type="STRING" defaultValue="emit"></scopeProperties>
     <scopeProperties name="username" type="STRING" defaultValue="measure@emit.icam.fr"></scopeProperties>
-    <scopeProperties name="password" type="STRING" defaultValue="m3@suR"></scopeProperties>
+    <scopeProperties name="password" type="STRING" defaultValue="**********"></scopeProperties>
     <scopeProperties name="topic" type="STRING" defaultValue="peaktech/power"></scopeProperties>
     <unit name="EmitPowerMeasurement">
         <fields fieldName="topic" fieldType="u_text"/>
