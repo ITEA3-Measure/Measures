@@ -1,0 +1,8 @@
+
+
+return BusinessProcess.latest.all.size + BusinessFunction.latest.all.size + BusinessInteraction.latest.all.size + BusinessEvent.latest.all.size + BusinessService.latest.all.size + 
+		BusinessActor.latest.all.size + BusinessRole.latest.all.size + BusinessCollaboration.latest.all.size + BusinessInterface.latest.all.size + 
+        BusinessObject.latest.all.size + Contract.latest.all.size + Representation.latest.all.size
+;
+
+

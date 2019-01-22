@@ -1,0 +1,109 @@
+-- ArchiMate has 'concepts', and these have relationships of various
+-- types to others. We want to evaluate concepts by how critical they
+-- are.
+--
+-- This is an implementation of the importance metric in:
+-- Lightweight Metrics for Enterprise Architecture Analysis,
+-- Prince M. Singh and Marten J. van Sinderen, BIS 2015 Workshops,
+-- LNBIP 228, pp. 113–125, 2015. DOI: 10.1007/978-3-319-26762-3_11.
+-- It combines element- and relationship-based scores.
+--
+-- Default namespace: modelio://Modeliosoft.Archimate/1.0.03
+
+return Concept.latest.all
+  .select(c|c.Name.isDefined() and not c.relatedTo.isEmpty)
+  .collect(c | c.elementScore() * c.rScore()).max();
+
+-- Classification based on:
+-- http://pubs.opengroup.org/architecture/archimate3-doc/
+
+-- Business/Behavior
+operation BusinessProcess elementScore() { return 9; }
+operation BusinessFunction elementScore() { return 9; }
+operation BusinessInteraction elementScore() { return 9; }
+operation BusinessEvent elementScore() { return 9; }
+operation BusinessService elementScore() { return 9; }
+
+-- Business/Active
+operation BusinessActor elementScore() { return 6; }
+operation BusinessRole elementScore() { return 6; }
+operation BusinessCollaboration elementScore() { return 6; }
+operation BusinessInterface elementScore() { return 6; }
+
+-- Business/Passive
+operation BusinessObject elementScore() { return 3; }
+operation Contract elementScore() { return 3; }
+operation Representation elementScore() { return 3; }
+
+-- Application/Behavior
+operation ApplicationFunction elementScore() { return 8; }
+operation ApplicationInteraction elementScore() { return 8; }
+operation ApplicationProcess elementScore() { return 8; }
+operation ApplicationEvent elementScore() { return 8; }
+operation ApplicationService elementScore() { return 8; }
+
+-- Application/Active
+operation ApplicationComponent elementScore() { return 5; }
+operation ApplicationCollaboration elementScore() { return 5; }
+operation ApplicationInterface elementScore() { return 5; }
+
+-- Application/Passive
+operation DataObject elementScore() { return 2; }
+
+-- Technology/Behavior
+operation TechnologyFunction elementScore() { return 7; }
+operation TechnologyProcess elementScore() { return 7; }
+operation TechnologyInteraction elementScore() { return 7; }
+operation TechnologyEvent elementScore() { return 7; }
+operation TechnologyService elementScore() { return 7; }
+
+-- Technology/Active
+operation `modelio://Modeliosoft.Archimate/1.0.03`::Node elementScore() { return 4; }
+operation Device elementScore() { return 4; }
+operation SystemSoftware elementScore() { return 4; }
+operation TechnologyCollaboration elementScore() { return 4; }
+operation TechnologyInterface elementScore() { return 4; }
+operation Path elementScore() { return 4; }
+operation CommunicationNetwork elementScore() { return 4; }
+
+-- Technology/Passive
+operation TechnologyObject elementScore() { return 1; }
+operation `modelio://Modeliosoft.Archimate/1.0.03`::Artifact elementScore() { return 1; }
+
+-- Other Elements
+operation `modelio://Modeliosoft.Archimate/1.0.03`::Concept elementScore() { return 0; }
+
+operation Concept rScore() {
+  return (1.0 / self.relatedTo.size) * self.relatedTo.collect(a|a.rScore()).sum();
+}
+
+operation Bag avg() {
+  return self.sum() * 1.0 / self.size();
+}
+
+
+operation Sequence avg() {
+  return self.sum() * 1.0 / self.size();
+}
+
+operation Composition rScore() { return 8; }
+operation Aggregation rScore() { return 7; }
+operation Assignment rScore()  { return 6; }
+operation Realization rScore() { return 5; }
+operation DependencyRelationship rScore() { return 4; }
+operation Access rScore()         { return 3; }
+operation Triggering rScore()     { return 2; }
+operation Flow rScore()           { return 1; } 
+operation Influence rScore()      { return 0; }
+operation Serving rScore()        { return 0; }
+operation Specialization rScore() { return 0; }
+
+-- Not sure how these relate to Table 3 of the paper
+operation `modelio://Modeliosoft.Archimate/1.0.03`::Association rScore() {
+ return 0;
+}
+operation DynamicRelationship rScore() { return 0; }
+operation OtherRelationship rScore() { return 0; }
+operation Relationship rScore() { return 0; }
+operation rScore() { return 0; }
+

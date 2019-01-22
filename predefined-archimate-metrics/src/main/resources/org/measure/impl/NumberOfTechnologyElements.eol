@@ -1,0 +1,8 @@
+
+return TechnologyFunction.latest.all.size + TechnologyProcess.latest.all.size + TechnologyInteraction.latest.all.size + TechnologyEvent.latest.all.size + TechnologyService.latest.all.size + 
+	`modelio://Modeliosoft.Archimate/1.0.03`::Node.latest.all.size + Device.latest.all.size + SystemSoftware.latest.all.size + TechnologyCollaboration.latest.all.size + TechnologyInterface.latest.all.size + Path.latest.all.size + CommunicationNetwork.latest.all.size +
+    TechnologyObject.latest.all.size + `modelio://Modeliosoft.Archimate/1.0.03`::Artifact.latest.all.size
+
+;
+
+

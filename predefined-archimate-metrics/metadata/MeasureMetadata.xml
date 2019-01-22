@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modeling Tool" name="predefined-complex-queries" provider="Aston University" type="DIRECT">
+    <description>
+	    Provides a number of predefined queries for an archimate repository : 
+	    Avg_ImportanceScore.eol, 
+	    NumberOfBusinessElements.eol, 
+	    Max_ImportanceScore.eol, 
+	    NumberOfTechnologyElements.eol, 
+	    Median_ImportanceScore.eol, 
+	    Quartile1_ImportanceScore.eol, 
+	    Min_ImportanceScore.eol, 
+	    Quartile3_ImportanceScore.eol, 
+	    NumberOfApplicationElements.eol
+    </description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="modelio://Modeliosoft.Archimate/1.0.03" name="defaultNamespaces" type="STRING"/>
+    <scopeProperties defaultValue="Avg_ImportanceScore.eol" name="queryName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>
