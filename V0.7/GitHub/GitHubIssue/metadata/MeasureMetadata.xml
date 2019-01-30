@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="GitHub" name="GitHubIssue" provider="Softeam" type="DIRECT">
+    <description>Retrive informations related to issues if a GitHubRepository. All issues updated from the last exection date of the measure are returned.</description>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="AccessTocken" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="Organisation" type="STRING"/>
+    <scopeProperties defaultValue="" name="Repository" type="STRING"/>
+    <scopeProperties defaultValue="2000-01-01T00:00:00z" name="CollectDataSince" type="STRING"/>
+    <unit name="GitHubTrackerData">        
+        <fields fieldName="Id" fieldType="u_long"/>
+        <fields fieldName="Title" fieldType="u_keyword"/>
+        <fields fieldName="Body" fieldType="u_keyword"/>
+        <fields fieldName="State" fieldType="u_keyword"/>
+        <fields fieldName="CreatedAt" fieldType="u_date"/>
+        <fields fieldName="UpdatedAt" fieldType="u_date"/>
+        <fields fieldName="ClosedAt" fieldType="u_date"/>
+        <fields fieldName="ClosedBy" fieldType="u_keyword"/>
+        <fields fieldName="CommentsCount" fieldType="u_integer"/>
+        <fields fieldName="Author" fieldType="u_keyword"/>
+        <fields fieldName="Assignee" fieldType="u_keyword"/>      
+    </unit>
+    <views>
+ 		 <view name="GitHub Issues" type="TABLE" default="true" autoRefresh="false">
+    		<description>Commits</description>
+    		<datasource dataIndex="UpdatedAt,Title,Body,State,Author,ClosedAt,ClosedBy" dateIndex="UpdatedAt"  timePeriode="2y"/>
+    		<layout width="1380" height="600" fontSize="10" color="#ffadad" />
+    	</view> 
+	</views>
+</Measure>

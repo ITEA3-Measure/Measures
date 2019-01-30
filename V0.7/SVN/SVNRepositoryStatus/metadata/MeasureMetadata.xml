@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SVN" name="SVNRepositoryStatus" provider="Softeam" type="DIRECT">
+    <description>Retrieve general informations related to an SVN Repository (Size,Number of files,revision informations,..).</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="0" name="lastExecution" type="DESABLE"/>
+    <unit name="SVNData">
+        <fields fieldName="LastRevision" fieldType="u_long"/>
+        <fields fieldName="NumberOfLockedFiles" fieldType="u_long"/>
+        <fields fieldName="NumberOfFiles" fieldType="u_long"/>
+        <fields fieldName="NumberOfDirectory" fieldType="u_long"/>
+        <fields fieldName="RepositorySize" fieldType="u_long"/>
+    </unit>
+     <views>   
+	   	<view name="Last Revision Number" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="LastRevision"  timePeriode="1y"/>
+    		<layout width="200" height="150" fontSize="60" color="#8289d8" />
+    	</view> 
+    	 <view name="Number Of Directory" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="NumberOfDirectory"  timePeriode="1y"/>
+    		<layout width="200" height="150" fontSize="60" color="#8289d8" />
+    	</view> 
+    	<view name="Number Of Files" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="NumberOfFiles"  timePeriode="1y"/>
+    		<layout width="200" height="150" fontSize="60" color="#8289d8" />
+    	</view> 
+    	   	<view name="Repository Size (MO)" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="RepositorySize"  timePeriode="1y"/>
+    		<layout width="200" height="150" fontSize="60" color="#8289d8" />
+    	</view> 
+    		
+    	<view name="Number Of Locked Files" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="NumberOfLockedFiles"  timePeriode="1y"/>
+    		<layout width="200" height="150" fontSize="60" color="#8289d8" />
+    	</view> 
+    	
+    </views>
+</Measure>

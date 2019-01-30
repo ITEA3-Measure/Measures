@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="GitHub" name="GitHubOrganisation" provider="Softeam" type="DIRECT">
+    <description>General informations related to a GitHub Organisation</description>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="AccessTocken" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="Organisation" type="STRING"/>
+    <unit name="GitHubTrackerData">
+   	 	<fields fieldName="name" fieldType="u_text"/>
+    	<fields fieldName="creationdate" fieldType="u_date"/>
+   		<fields fieldName="updatedate" fieldType="u_date"/>
+   		<fields fieldName="compagny" fieldType="u_text"/>	
+        <fields fieldName="follower" fieldType="u_integer"/>
+        <fields fieldName="following" fieldType="u_integer"/>
+        <fields fieldName="memeber" fieldType="u_integer"/>
+        <fields fieldName="public_repo" fieldType="u_integer"/>
+        <fields fieldName="public_gist" fieldType="u_integer"/>
+    </unit>
+    <views>
+	<view name="Members" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="memeber"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="Followers" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="follower"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="Following" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="following"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    		 <view name="Public Repositorys" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="public_repo"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+ 		<view name="GitHub Organisation" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="name,creationdate,compagny,follower,following,memeber,public_repo"  timePeriode="1y"/>
+    		<layout width="500" height="260" fontSize="16" color="#DEDAF7" />
+    	</view> 		
+	</views>
+</Measure>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="GitHub" name="GitHubRepository" provider="Softeam" type="DIRECT">
+    <description>Retrieve general informations related to a GiHub Repository</description>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="AccessTocken" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="Organisation" type="STRING"/>
+    <scopeProperties defaultValue="" name="Repository" type="STRING"/>
+    <unit name="GitHubTrackerData">
+        <fields fieldName="name" fieldType="u_text"/>
+        <fields fieldName="description" fieldType="u_text"/>
+        <fields fieldName="owner" fieldType="u_text"/>
+        <fields fieldName="created at" fieldType="u_date"/>
+        <fields fieldName="updated at" fieldType="u_date"/>
+        <fields fieldName="language" fieldType="u_text"/>
+        <fields fieldName="star" fieldType="u_integer"/>
+        <fields fieldName="suscriber" fieldType="u_integer"/>
+        <fields fieldName="fork" fieldType="u_integer"/>
+        <fields fieldName="branche" fieldType="u_integer"/>
+    </unit>
+    <views>
+    	<view name="Stars" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="star"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="Suscribers" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="suscriber"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="Forks" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="fork"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="Branches" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="branche"  timePeriode="1y"/>
+    		<layout width="150" height="150" fontSize="60" color="#7EB26D" />
+    	</view> 
+    	<view name="GitHub Repository" type="VALUE" default="true" autoRefresh="false">
+    		<datasource dataIndex="name,description,owner,created at,language,star,suscriber,fork,branche"  timePeriode="1y"/>
+    		<layout width="1300" height="500" fontSize="16" color="#DEDAF7" />
+    	</view> 
+	</views>
+</Measure>

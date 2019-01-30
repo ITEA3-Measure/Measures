@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SVN" name="SVNCommitTracker" provider="Softeam" type="DIRECT">
+    <description>Retrive commit informations ( Author, Message and Date)  form an SVN repository. All commit from the last exection date of the measure are returned.</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="0" name="lastExecution" type="DESABLE"/>
+    <unit name="SVNData">
+   		<fields fieldName="Revision" fieldType="u_keyword"/>
+        <fields fieldName="Author" fieldType="u_keyword"/>
+        <fields fieldName="Message" fieldType="u_text"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+     <views>   
+	    <view name="Commits History" default="true">
+	    		<description>Commits History</description>
+	    		<datasource timePeriode="1y"/>
+	    		<layout width="900" height="450"/>
+				<customData>PGlmcmFtZSBzcmM9Imh0dHA6Ly97UExBVEZPUk1fVVJMfS9hcHAva2liYW5hIy92aXN1YWxpemUvY3JlYXRlP2VtYmVkPXRydWUmdHlwZT1oaXN0b2dyYW0maW5kZXhQYXR0ZXJuPXtQTEFURk9STV9JTkRFWH0mX2c9KHJlZnJlc2hJbnRlcnZhbDoocGF1c2U6IXQsdmFsdWU6MCksdGltZTooe1BMQVRGT1JNX1RJTUVQRVJJT0RFfSkpJl9hPShmaWx0ZXJzOiEoKSxsaW5rZWQ6IWYscXVlcnk6KGxhbmd1YWdlOmx1Y2VuZSxxdWVyeTonJyksdWlTdGF0ZToodmlzOihjb2xvcnM6KENvbW1pdHM6JTIzMDUyQjUxKSxsZWdlbmRPcGVuOiF0KSksdmlzOihhZ2dzOiEoKGVuYWJsZWQ6IXQsaWQ6JzEnLHBhcmFtczooY3VzdG9tTGFiZWw6Q29tbWl0cyksc2NoZW1hOm1ldHJpYyx0eXBlOmNvdW50KSwoZW5hYmxlZDohdCxpZDonMicscGFyYW1zOihjdXN0b21JbnRlcnZhbDonMmgnLGN1c3RvbUxhYmVsOidDb21taXRzK3Blcit3ZWVrcycsZHJvcF9wYXJ0aWFsczohZixleHRlbmRlZF9ib3VuZHM6KCksZmllbGQ6cG9zdERhdGUsaW50ZXJ2YWw6YXV0byxtaW5fZG9jX2NvdW50OjEsdGltZVJhbmdlOihmcm9tOm5vdy0xeSxtb2RlOnF1aWNrLHRvOm5vdyksdGltZV96b25lOkV1cm9wZSUyRkJlcmxpbix1c2VOb3JtYWxpemVkRXNJbnRlcnZhbDohdCksc2NoZW1hOnNlZ21lbnQsdHlwZTpkYXRlX2hpc3RvZ3JhbSkpLHBhcmFtczooYWRkTGVnZW5kOiF0LGFkZFRpbWVNYXJrZXI6IWYsYWRkVG9vbHRpcDohdCxjYXRlZ29yeUF4ZXM6ISgoaWQ6Q2F0ZWdvcnlBeGlzLTEsbGFiZWxzOihzaG93OiF0LHRydW5jYXRlOjEwMCkscG9zaXRpb246Ym90dG9tLHNjYWxlOih0eXBlOmxpbmVhciksc2hvdzohdCxzdHlsZTooKSx0aXRsZTooKSx0eXBlOmNhdGVnb3J5KSksZ3JpZDooY2F0ZWdvcnlMaW5lczohZixzdHlsZTooY29sb3I6JTIzZWVlKSksbGVnZW5kUG9zaXRpb246dG9wLHNlcmllc1BhcmFtczohKChkYXRhOihpZDonMScsbGFiZWw6Q29tbWl0cyksZHJhd0xpbmVzQmV0d2VlblBvaW50czohdCxtb2RlOnN0YWNrZWQsc2hvdzp0cnVlLHNob3dDaXJjbGVzOiF0LHR5cGU6aGlzdG9ncmFtLHZhbHVlQXhpczpWYWx1ZUF4aXMtMSkpLHRpbWVzOiEoKSx0eXBlOmhpc3RvZ3JhbSx2YWx1ZUF4ZXM6ISgoaWQ6VmFsdWVBeGlzLTEsbGFiZWxzOihmaWx0ZXI6IWYscm90YXRlOjAsc2hvdzohdCx0cnVuY2F0ZToxMDApLG5hbWU6TGVmdEF4aXMtMSxwb3NpdGlvbjpsZWZ0LHNjYWxlOihtb2RlOm5vcm1hbCx0eXBlOmxpbmVhciksc2hvdzohdCxzdHlsZTooKSx0aXRsZToodGV4dDpDb21taXRzKSx0eXBlOnZhbHVlKSkpLHRpdGxlOidOZXcrVmlzdWFsaXphdGlvbicsdHlwZTpoaXN0b2dyYW0pKSIgaGVpZ2h0PSJ7UExBVEZPUk1fSEVJR0hUfSIgd2lkdGg9IntQTEFURk9STV9XSURUSH0iIHN0eWxlPSJib3JkZXI6bm9uZSI+PC9pZnJhbWU+</customData>
+		</view> 
+		   <view name="Commits By Users" default="false">
+	    		<description>Commits By Users</description>
+	    		<datasource timePeriode="1y"/>
+	    		<layout width="450" height="450"/>
+				<customData>PGlmcmFtZSBzcmM9Imh0dHA6Ly97UExBVEZPUk1fVVJMfS9hcHAva2liYW5hIy92aXN1YWxpemUvY3JlYXRlP2VtYmVkPXRydWUmdHlwZT1waWUmaW5kZXhQYXR0ZXJuPXtQTEFURk9STV9JTkRFWH0mX2c9KHJlZnJlc2hJbnRlcnZhbDoocGF1c2U6IXQsdmFsdWU6MCksdGltZTooe1BMQVRGT1JNX1RJTUVQRVJJT0RFfSkpJl9hPShmaWx0ZXJzOiEoKSxsaW5rZWQ6IWYscXVlcnk6KGxhbmd1YWdlOmx1Y2VuZSxxdWVyeTonJyksdWlTdGF0ZToodmlzOihsZWdlbmRPcGVuOiFmKSksdmlzOihhZ2dzOiEoKGVuYWJsZWQ6IXQsaWQ6JzEnLHBhcmFtczooKSxzY2hlbWE6bWV0cmljLHR5cGU6Y291bnQpLChlbmFibGVkOiF0LGlkOicyJyxwYXJhbXM6KGZpZWxkOkF1dGhvcixtaXNzaW5nQnVja2V0OiFmLG1pc3NpbmdCdWNrZXRMYWJlbDpNaXNzaW5nLG9yZGVyOmRlc2Msb3JkZXJCeTonMScsb3RoZXJCdWNrZXQ6IWYsb3RoZXJCdWNrZXRMYWJlbDpPdGhlcixzaXplOjUpLHNjaGVtYTpzZWdtZW50LHR5cGU6dGVybXMpKSxwYXJhbXM6KGFkZExlZ2VuZDohdCxhZGRUb29sdGlwOiF0LGlzRG9udXQ6IWYsbGFiZWxzOihsYXN0X2xldmVsOiF0LHNob3c6IXQsdHJ1bmNhdGU6MTAwLHZhbHVlczohdCksbGVnZW5kUG9zaXRpb246dG9wLHR5cGU6cGllKSx0aXRsZTonTmV3K1Zpc3VhbGl6YXRpb24nLHR5cGU6cGllKSkiIGhlaWdodD0ie1BMQVRGT1JNX0hFSUdIVH0iIHdpZHRoPSJ7UExBVEZPUk1fV0lEVEh9IiBzdHlsZT0iYm9yZGVyOm5vbmUiPjwvaWZyYW1lPg==</customData>
+			</view> 
+			<view name="Commits Table" type="TABLE" default="true" autoRefresh="false">
+	    		<description>Commits Table</description>
+	    		<datasource dataIndex="Revision,postDate,Author,Message" dateIndex="postDate"  timePeriode="1y"/>
+	    		<layout width="1380" height="600" fontSize="10" color="#FFFFFF" />
+    		</view> 
+    </views>
+</Measure>
