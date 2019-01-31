@@ -7,5 +7,5 @@
     <unit name="MetricValue">
         <fields fieldName="postDate" fieldType="u_date"/>
         <fields fieldName="value" fieldType="u_double"/>
-    </unit> 
+    </unit>   
 </Measure>
