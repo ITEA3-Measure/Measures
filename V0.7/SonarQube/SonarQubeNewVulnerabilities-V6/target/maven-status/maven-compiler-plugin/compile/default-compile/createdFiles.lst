@@ -1,0 +1,7 @@
+org/measure/sonarqube/newvulnerabilities/DirectMeasureImpl.class
+org/measure/sonarqube/newvulnerabilities/DirectMeasureData.class
+org/measure/sonarqube/newvulnerabilities/DirectMeasureImpl$1.class
+org/measure/sonarqube/newvulnerabilities/data/RTHistory.class
+org/measure/sonarqube/newvulnerabilities/data/RTMetric.class
+org/measure/sonarqube/newvulnerabilities/data/RTError.class
+org/measure/sonarqube/newvulnerabilities/data/RTMeasure.class

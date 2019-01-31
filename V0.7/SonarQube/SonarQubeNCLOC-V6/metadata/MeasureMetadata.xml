@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Category" name="SonarQubeNCLOC-V6" provider="MeasureProvider" type="DIRECT">
+    <description>Generic SonarQube 6 Lines of Code. Provide the number of physical lines that contain at least one character which is neither a whitespace nor a tabulation nor part of a comment. </description>
+    <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Component" type="STRING"/>
+    <scopeProperties defaultValue="" name="From" type="DATE"/>
+    <unit name="MetricValue">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

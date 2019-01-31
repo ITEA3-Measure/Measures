@@ -1,0 +1,6 @@
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/DirectMeasureData.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/data/RTMeasure.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/data/RTMetric.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/DirectMeasureImpl.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/data/RTHistory.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeDuplicatedLinesDensity-V6/src/main/java/org/measure/sonarqube/duplicatedlinesdensity/data/RTError.java

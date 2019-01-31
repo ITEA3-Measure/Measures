@@ -1,0 +1,7 @@
+org/measure/sonarqube/linecoverage/DirectMeasureData.class
+org/measure/sonarqube/linecoverage/DirectMeasureImpl.class
+org/measure/sonarqube/linecoverage/DirectMeasureImpl$1.class
+org/measure/sonarqube/linecoverage/data/RTMetric.class
+org/measure/sonarqube/linecoverage/data/RTHistory.class
+org/measure/sonarqube/linecoverage/data/RTError.class
+org/measure/sonarqube/linecoverage/data/RTMeasure.class

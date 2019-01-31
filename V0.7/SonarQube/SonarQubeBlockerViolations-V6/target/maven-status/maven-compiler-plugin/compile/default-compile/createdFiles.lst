@@ -1,0 +1,7 @@
+org/measure/sonarqube/blockerviolations/DirectMeasureImpl$1.class
+org/measure/sonarqube/blockerviolations/DirectMeasureData.class
+org/measure/sonarqube/blockerviolations/data/RTMeasure.class
+org/measure/sonarqube/blockerviolations/data/RTError.class
+org/measure/sonarqube/blockerviolations/data/RTHistory.class
+org/measure/sonarqube/blockerviolations/data/RTMetric.class
+org/measure/sonarqube/blockerviolations/DirectMeasureImpl.class

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Category" name="SonarQubeNewSqaleDebtRatio-V6" provider="MeasureProvider" type="DIRECT">
+    <description>Generic SonarQube 6 New Sqale Debt Ratio. Provide the ratio between the cost to develop the code changed in the leak period and the cost of the issues linked to it. </description>
+    <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Component" type="STRING"/>
+    <scopeProperties defaultValue="" name="From" type="DATE"/>
+    <unit name="MetricValue">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

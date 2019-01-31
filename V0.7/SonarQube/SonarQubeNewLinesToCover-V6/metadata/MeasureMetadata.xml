@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Category" name="SonarQubeNewLinesToCover-V6" provider="MeasureProvider" type="DIRECT">
+    <description>Generic SonarQube 6 Lines To Cover on New Code. Provide the number of new / updated lines of source code which could be covered by unit tests (for example, blank lines or full comments lines are not considered as lines to cover). </description>
+    <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Component" type="STRING"/>
+    <scopeProperties defaultValue="" name="From" type="DATE"/>
+    <unit name="MetricValue">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

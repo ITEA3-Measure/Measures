@@ -1,0 +1,7 @@
+org/measure/sonarqube/branchcoverage/hitsdata/data/RTMeasure.class
+org/measure/sonarqube/branchcoverage/hitsdata/data/RTHistory.class
+org/measure/sonarqube/branchcoverage/hitsdata/DirectMeasureImpl.class
+org/measure/sonarqube/branchcoverage/hitsdata/data/RTError.class
+org/measure/sonarqube/branchcoverage/hitsdata/DirectMeasureImpl$1.class
+org/measure/sonarqube/branchcoverage/hitsdata/DirectMeasureData.class
+org/measure/sonarqube/branchcoverage/hitsdata/data/RTMetric.class

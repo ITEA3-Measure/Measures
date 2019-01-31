@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Category" name="SonarQubeUncoveredConditions-V6" provider="MeasureProvider" type="DIRECT">
+    <description>Generic SonarQube 6 Uncovered Conditions. Provide the number of conditions which are not covered by unit tests. </description>
+    <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Component" type="STRING"/>
+    <scopeProperties defaultValue="" name="From" type="DATE"/>
+    <unit name="MetricValue">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

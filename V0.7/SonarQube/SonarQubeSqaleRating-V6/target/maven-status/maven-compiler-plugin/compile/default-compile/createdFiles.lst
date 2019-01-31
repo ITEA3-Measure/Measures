@@ -1,0 +1,7 @@
+org/measure/sonarqube/sqalerating/data/RTHistory.class
+org/measure/sonarqube/sqalerating/data/RTError.class
+org/measure/sonarqube/sqalerating/DirectMeasureImpl.class
+org/measure/sonarqube/sqalerating/DirectMeasureData.class
+org/measure/sonarqube/sqalerating/data/RTMeasure.class
+org/measure/sonarqube/sqalerating/DirectMeasureImpl$1.class
+org/measure/sonarqube/sqalerating/data/RTMetric.class

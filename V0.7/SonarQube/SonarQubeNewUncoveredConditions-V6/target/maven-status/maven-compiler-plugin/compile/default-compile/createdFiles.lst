@@ -1,0 +1,7 @@
+org/measure/sonarqube/newuncoveredconditions/data/RTMeasure.class
+org/measure/sonarqube/newuncoveredconditions/data/RTHistory.class
+org/measure/sonarqube/newuncoveredconditions/DirectMeasureImpl$1.class
+org/measure/sonarqube/newuncoveredconditions/DirectMeasureImpl.class
+org/measure/sonarqube/newuncoveredconditions/DirectMeasureData.class
+org/measure/sonarqube/newuncoveredconditions/data/RTMetric.class
+org/measure/sonarqube/newuncoveredconditions/data/RTError.class

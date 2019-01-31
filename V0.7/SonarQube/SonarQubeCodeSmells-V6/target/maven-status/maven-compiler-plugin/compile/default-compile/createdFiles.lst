@@ -1,0 +1,7 @@
+org/measure/sonarqube/codesmells/data/RTError.class
+org/measure/sonarqube/codesmells/data/RTMeasure.class
+org/measure/sonarqube/codesmells/data/RTHistory.class
+org/measure/sonarqube/codesmells/DirectMeasureImpl$1.class
+org/measure/sonarqube/codesmells/DirectMeasureImpl.class
+org/measure/sonarqube/codesmells/DirectMeasureData.class
+org/measure/sonarqube/codesmells/data/RTMetric.class
