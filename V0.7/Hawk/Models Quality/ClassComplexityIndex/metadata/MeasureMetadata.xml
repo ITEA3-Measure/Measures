@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modeling Tool" name="ClassComplexityIndex"
+	provider="Softeam" type="DIRECT">
+	<description>The moy of direct subclasses of a class. A class
+		implementing an interface counts as a direct child of that interface.
+		(Modelio Measure : Measure apply to Modelio project by the
+		intermediary on the MMT Tool (Hawk Server)).
+	</description>
+	<scopeProperties defaultValue="*" name="repository"
+		type="STRING" />
+	<scopeProperties defaultValue="" name="instanceName"
+		type="STRING" />
+	<scopeProperties
+		defaultValue="http://localhost:8080/thrift/hawk/tuple"
+		name="serverUrl" type="STRING" />
+	<unit name="Percent">
+		<fields fieldName="value" fieldType="u_double" />
+	</unit>
+	<views>
+		<view name="Class Complexity Index" type="AREA" default="true" autoRefresh="true">
+			<description>Class Complexity Index - Last 30 days History</description>
+    		<datasource dataIndex="value" dateIndex="postDate"  timePeriode="30d" timeAggregation="d"/>
+    		<layout width="450" height="450" color="%23E24D42" />
+		</view>
+	</views>
+</Measure>
