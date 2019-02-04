@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Modeling Tool" name="NumberOfInterfaces" provider="Softeam" type="COUNTING">
+    <description>Total number of interfaces in the selected scope.
+(Modelio Measure : Measure apply to Modelio project by the intermediary on the MMT Tool (Hawk Server)).
+</description>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Numeric">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+	<views>
+		<view name="Number Of Interfaces" type="AREA" default="true"
+			autoRefresh="true">
+			<description>Number Of Interfaces - Last 30 days History
+			</description>
+			<datasource dataIndex="value" dateIndex="postDate"
+				timePeriode="30d" timeAggregation="d" />
+			<layout width="450" height="450" color="%23E24D42" />
+		</view>
+	</views>
+</Measure>
