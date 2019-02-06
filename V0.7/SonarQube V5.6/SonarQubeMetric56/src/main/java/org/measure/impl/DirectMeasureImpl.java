@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.restmodel.RTMeasure;
 import org.measure.restmodel.RTResponse;
 import org.measure.smm.measure.api.IMeasurement;
@@ -13,9 +12,7 @@ import org.springframework.http.client.support.BasicAuthorizationInterceptor;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-@objid ("1db9ff66-3851-45b5-811e-0ca24aae0101")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("adc71364-e20c-440b-90ed-c3c71677aa16")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
