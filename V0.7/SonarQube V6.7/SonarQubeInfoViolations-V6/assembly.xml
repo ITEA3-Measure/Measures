@@ -21,6 +21,7 @@
 				<exclude>jackson-databind-*.jar</exclude>
 				<exclude>jboss-logging-*.Final.jar</exclude>
 				<exclude>log4j-over-slf4j-*.jar</exclude>
+				<exclude>log4j-*.jar</exclude>
 				<exclude>logback-classic-*.jar</exclude>
 				<exclude>logback-core-*.jar</exclude>
 				<exclude>spring-aop-*.jar</exclude>

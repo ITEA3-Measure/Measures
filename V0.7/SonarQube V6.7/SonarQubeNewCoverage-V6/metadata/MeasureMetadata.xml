@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Category" name="SonarQubeNewCoverage-V6" provider="MeasureProvider" type="DIRECT">
+<Measure category="SonarQubeV67" name="SonarQubeNewCoverage-V6" provider="MeasureProvider" type="DIRECT">
     <description>Generic SonarQube 6 Coverage on New Code. It is a mix of line coverage and Condition coverage. Its goal is to provide an even more accurate answer to the following question: 'How much of the new / updated source code has been covered by the unit tests?'. </description>
     <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Component" type="STRING"/>

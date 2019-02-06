@@ -1,11 +1,8 @@
 package org.measure.test;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 
-@objid ("2f0d99fd-85e4-4018-a9fc-eb977bbc6daa")
 public class Test {
-    @objid ("52b04df0-8a1b-475d-9624-30f6b2444ef4")
     @org.junit.Test
     public void testMeasure() {
         //                org.measure.impl.DirectMeasureImpl measure = new org.measure.impl.DirectMeasureImpl();

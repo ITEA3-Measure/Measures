@@ -11,7 +11,6 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.resttemplatemodel.RTCollection;
 import org.measure.resttemplatemodel.RTElement;
 import org.measure.smm.measure.api.IMeasurement;
@@ -21,18 +20,14 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@objid ("3c9a825c-58cc-4168-ae36-b2198051b1cf")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("4ae95615-1d13-437e-9264-2db6018ce119")
+
     private Integer projectId;
 
-    @objid ("d3d372b8-f4a6-4473-9a6c-a3149985b2f9")
     private Date toDate;
 
-    @objid ("38638a90-1504-43a9-8915-6ed76a92ea1d")
     private Date fromDate;
 
-    @objid ("ccfeff98-a729-422e-8e88-218f6f02b51d")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
@@ -212,7 +207,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return result;
     }
 
-    @objid ("651a9976-9ad4-432b-8747-baf30b74333a")
     private static Integer durationToHours(String stringDuration) throws DatatypeConfigurationException {
         if(stringDuration == null)
             return 0;

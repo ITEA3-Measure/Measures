@@ -6,7 +6,6 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.impl.data.RTHistory;
 import org.measure.impl.data.RTMetric;
 import org.measure.smm.measure.api.IMeasurement;
@@ -15,9 +14,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
-@objid ("62c78a91-63dd-4e77-a55e-9d0ddc1c8825")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("45bd1a88-53e8-4323-aff4-e3864de1bd34")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();

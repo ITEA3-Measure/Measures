@@ -6,13 +6,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-@objid ("4adca81f-a7be-47e9-a972-d7d2409fc031")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("3f4a9539-1400-4a29-ac9d-814ecbcaacb9")
+
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();

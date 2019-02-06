@@ -1,29 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-        <modelVersion>4.0.0</modelVersion>
-        <groupId>org.measure.smmmeasure.impl</groupId>
-        <artifactId>MantisIssueData</artifactId>
-        <version>1.0.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.measure.smmmeasure.impl</groupId>
+	<artifactId>MantisIssueData</artifactId>
+	<version>1.0.0</version>
 
-        <repositories>
-            <repository>
-                <id>Modelio</id>
-                <url>http://repository.modelio.org/</url>
-            </repository>
-        </repositories>
+	<repositories>
+		<repository>
+			<id>Modelio</id>
+			<url>http://repository.modelio.org/</url>
+		</repository>
+	</repositories>
 
-        <dependencies>
-            <dependency>
-                <groupId>org.modelio</groupId>
-                <artifactId>javadesigner</artifactId>
-                <version>2.2.0</version>
-            </dependency>
+	<dependencies>
 
-            <dependency>
-                <groupId>org.measure.smmmeasure.api</groupId>
-                <artifactId>SMMMeasureApi</artifactId>
-                <version>0.6.00</version>
-            </dependency>
+		<dependency>
+			<groupId>org.measure.smmmeasure.api</groupId>
+			<artifactId>SMMMeasureApi</artifactId>
+			<version>0.7.00</version>
+		</dependency>
 
 
 		<dependency>
@@ -32,42 +28,61 @@
 			<version>8.0.8-dmr</version>
 		</dependency>
 
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-            </dependency>
-        </dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+	</dependencies>
 
-        <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <source>1.8</source>
-                                <target>1.8</target>
-                                <encoding>UTF-8</encoding>
-                            </configuration>
-                            </plugin>
-<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-dependency-plugin</artifactId>
-<executions>
-    <execution>
-        <id>copy-deps</id>
-        <phase>package</phase>
-        <goals>
-            <goal>copy-dependencies</goal>
-        </goals>
-        <inherited>false</inherited>
-        <configuration>
-            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-            <copyPom>false</copyPom>
-        </configuration>
-    </execution>
-</executions>
-</plugin>
-                    </plugins>
-            </build>
-            </project>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-deps</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<inherited>false</inherited>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<copyPom>false</copyPom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>assembly.xml</descriptor>
+					</descriptors>
+					<finalName>${project.artifactId}</finalName>
+
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

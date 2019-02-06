@@ -18,6 +18,34 @@ $symbol_escape = '\' )
 			<excludes>
 				<exclude>junit-*.jar</exclude>
 				<exclude>SMMMeasureApi-*.jar</exclude>
+				<exclude>slf4j-api-*.jar</exclude>
+				<exclude>hibernate-validator-*.jar</exclude>
+				<exclude>jackson-annotations-*.jar</exclude>
+				<exclude>jackson-core-*.jar</exclude>
+				<exclude>jackson-databind-*.jar</exclude>
+				<exclude>jboss-logging-*.Final.jar</exclude>
+				<exclude>log4j-*.jar</exclude>
+				<exclude>log4j-over-slf4j-*.jar</exclude>
+				<exclude>logback-classic-*.jar</exclude>
+				<exclude>logback-core-*.jar</exclude>
+				<exclude>spring-aop-*.jar</exclude>
+				<exclude>spring-beans-*.jar</exclude>
+				<exclude>spring-boot-*.jar</exclude>
+				<exclude>spring-boot-autoconfigure-*.jar</exclude>
+				<exclude>spring-boot-starter-*.jar</exclude>
+				<exclude>spring-boot-starter-logging-*.jar</exclude>
+				<exclude>spring-boot-starter-tomcat-*.jar</exclude>
+				<exclude>spring-boot-starter-web-*.jar</exclude>
+				<exclude>spring-context-*.jar</exclude>
+				<exclude>spring-core-*.jar</exclude>
+				<exclude>spring-expression-*.jar</exclude>
+				<exclude>spring-web-*.jar</exclude>
+				<exclude>spring-webmvc-*.jar</exclude>
+				<exclude>tomcat-embed-core-*.jar</exclude>
+				<exclude>tomcat-embed-el-*.jar</exclude>
+				<exclude>tomcat-embed-websocket-*.jar</exclude>
+				<exclude>validation-api-*.jar</exclude>
+
 			</excludes>
 		</fileSet>
 		<fileSet>

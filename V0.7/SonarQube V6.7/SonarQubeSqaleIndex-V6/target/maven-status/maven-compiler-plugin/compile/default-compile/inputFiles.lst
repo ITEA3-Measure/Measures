@@ -1,6 +1,6 @@
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTMeasure.java
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTError.java
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTHistory.java
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/DirectMeasureImpl.java
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTMetric.java
-/home/aboudeffa/work/Measures/Tookit/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/DirectMeasureData.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/DirectMeasureData.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTHistory.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTMetric.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTError.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/data/RTMeasure.java
+/home/kchaabouni/kais2/p03_measure_platform/Dev/Measures/Measures/V0.7/SonarQube V6.7/SonarQubeSqaleIndex-V6/src/main/java/org/measure/sonarqube/sqaleindex/DirectMeasureImpl.java

@@ -14,16 +14,12 @@
 
 	<dependencies>
 
-		<dependency>
-			<groupId>org.modelio</groupId>
-			<artifactId>javadesigner</artifactId>
-			<version>2.2.0</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.measure.smmmeasure.api</groupId>
 			<artifactId>SMMMeasureApi</artifactId>
-			<version>0.6.01</version>
+			<version>0.7.00</version>
 		</dependency>
 
 		<dependency>

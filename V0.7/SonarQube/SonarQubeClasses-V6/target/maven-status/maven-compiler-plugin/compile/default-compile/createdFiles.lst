@@ -1,7 +1,0 @@
-org/measure/sonarqube/classes/DirectMeasureImpl.class
-org/measure/sonarqube/classes/data/RTError.class
-org/measure/sonarqube/classes/data/RTMeasure.class
-org/measure/sonarqube/classes/data/RTMetric.class
-org/measure/sonarqube/classes/DirectMeasureImpl$1.class
-org/measure/sonarqube/classes/DirectMeasureData.class
-org/measure/sonarqube/classes/data/RTHistory.class

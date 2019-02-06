@@ -1,7 +1,0 @@
-org/measure/sonarqube/securityrating/DirectMeasureData.class
-org/measure/sonarqube/securityrating/data/RTMeasure.class
-org/measure/sonarqube/securityrating/data/RTHistory.class
-org/measure/sonarqube/securityrating/DirectMeasureImpl.class
-org/measure/sonarqube/securityrating/data/RTMetric.class
-org/measure/sonarqube/securityrating/DirectMeasureImpl$1.class
-org/measure/sonarqube/securityrating/data/RTError.class

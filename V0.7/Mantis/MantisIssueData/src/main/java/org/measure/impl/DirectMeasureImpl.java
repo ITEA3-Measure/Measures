@@ -8,13 +8,11 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.smm.measure.api.IMeasurement;
 import org.measure.smm.measure.defaultimpl.measures.DirectMeasure;
 
-@objid ("7e2c2345-229c-42e9-9996-eb882a3b0d28")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("8f9d3eb9-f593-4ca2-a85e-c81e41f2c58a")
+
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
@@ -59,7 +57,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return result;
     }
 
-    @objid ("7fc8110a-98cf-4683-bb49-150666895717")
     private String getStatus(int value) {
         switch (value) {
         case 10:
@@ -90,7 +87,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return "new";
     }
 
-    @objid ("aca7369b-67f0-424b-a6e9-acb68b1264b7")
     private String getSeverity(int value) {
         switch (value) {
         case 10:
@@ -116,7 +112,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return "feature";
     }
 
-    @objid ("4bf39936-5696-44e4-9b22-57d5b674dd06")
     private String getReproductibility(int value) {
         switch (value) {
         case 10:
@@ -133,7 +128,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return "N/A";
     }
 
-    @objid ("94fd16e8-7ef8-42c3-86ad-95e72774b50d")
     private String getPriority(int value) {
         switch (value) {
         case 10:

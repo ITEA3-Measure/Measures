@@ -1,7 +1,0 @@
-org/measure/sonarqube/duplicatedlinesdensity/DirectMeasureData.class
-org/measure/sonarqube/duplicatedlinesdensity/DirectMeasureImpl$1.class
-org/measure/sonarqube/duplicatedlinesdensity/DirectMeasureImpl.class
-org/measure/sonarqube/duplicatedlinesdensity/data/RTError.class
-org/measure/sonarqube/duplicatedlinesdensity/data/RTMetric.class
-org/measure/sonarqube/duplicatedlinesdensity/data/RTMeasure.class
-org/measure/sonarqube/duplicatedlinesdensity/data/RTHistory.class

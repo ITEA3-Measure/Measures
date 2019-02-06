@@ -1,7 +1,0 @@
-org/measure/sonarqube/newuncoveredlines/data/RTMetric.class
-org/measure/sonarqube/newuncoveredlines/data/RTMeasure.class
-org/measure/sonarqube/newuncoveredlines/data/RTHistory.class
-org/measure/sonarqube/newuncoveredlines/DirectMeasureImpl.class
-org/measure/sonarqube/newuncoveredlines/DirectMeasureImpl$1.class
-org/measure/sonarqube/newuncoveredlines/DirectMeasureData.class
-org/measure/sonarqube/newuncoveredlines/data/RTError.class

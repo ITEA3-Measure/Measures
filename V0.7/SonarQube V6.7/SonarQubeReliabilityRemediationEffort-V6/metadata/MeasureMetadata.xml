@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Measure category="Category" name="SonarQubeReliabilityRemediationEffort-V6" provider="MeasureProvider" type="DIRECT">
+<Measure category="SonarQubeV67" name="SonarQubeReliabilityRemediationEffort-V6" provider="MeasureProvider" type="DIRECT">
     <description>Generic SonarQube 6 Reliability Remediation Effort	. Provide the effort to fix all bug issues. </description>
     <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
     <scopeProperties defaultValue="" name="Component" type="STRING"/>

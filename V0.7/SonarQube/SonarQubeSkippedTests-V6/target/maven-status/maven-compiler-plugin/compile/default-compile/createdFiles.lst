@@ -1,7 +1,0 @@
-org/measure/sonarqube/skippedtests/data/RTHistory.class
-org/measure/sonarqube/skippedtests/data/RTError.class
-org/measure/sonarqube/skippedtests/DirectMeasureImpl.class
-org/measure/sonarqube/skippedtests/data/RTMeasure.class
-org/measure/sonarqube/skippedtests/DirectMeasureData.class
-org/measure/sonarqube/skippedtests/DirectMeasureImpl$1.class
-org/measure/sonarqube/skippedtests/data/RTMetric.class

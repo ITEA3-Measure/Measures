@@ -11,7 +11,6 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.measure.impl.data.RTCollection;
 import org.measure.impl.data.RTDescription;
 import org.measure.impl.data.RTElement;
@@ -22,18 +21,13 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@objid ("dc79a81e-d72b-4023-81e8-9111af1f0d47")
 public class DirectMeasureImpl extends DirectMeasure {
-    @objid ("0269a538-4ef3-4612-8658-2858c6f93650")
     private Integer projectId;
 
-    @objid ("1d1ca730-0424-465b-82a7-174d13cc794d")
     private Date fromDate;
 
-    @objid ("1f1177e9-794f-4adf-a511-11ef67a695f9")
     private Date toDate;
 
-    @objid ("878f7b80-0226-4f1c-b994-8f996c833a61")
     @Override
     public List<IMeasurement> getMeasurement() throws Exception {
         List<IMeasurement> result = new ArrayList<IMeasurement>();
@@ -149,7 +143,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return result;
     }
 
-    @objid ("357b8938-0054-48df-8d10-eefa33d7e27b")
     private static Integer getWorkPackageId(String workPackageHref) {
         if (workPackageHref != null) {
             String idStr = workPackageHref.replace("/openproject/api/v3/work_packages/", "");
@@ -158,13 +151,11 @@ public class DirectMeasureImpl extends DirectMeasure {
         return null;
     }
 
-    @objid ("1102890f-f290-4228-bf90-8dbf39c61824")
     private static Integer getProjectId(String projectHref) {
         String idStr = projectHref.replace("/openproject/api/v3/projects/", "");
         return Integer.valueOf(idStr);
     }
 
-    @objid ("1f47bcd2-7788-450e-b31e-0a9b0d6ceebd")
     private static Integer durationToHours(String stringDuration) throws DatatypeConfigurationException {
         if(stringDuration == null)
             return null;
@@ -176,7 +167,6 @@ public class DirectMeasureImpl extends DirectMeasure {
         return totalDurationInHours;
     }
 
-    @objid ("0f02ae72-f374-4002-a7c1-29137661ac29")
     private static String isOnTime(RTElement rtWorkPackage, Date toDate) {
         if(rtWorkPackage.getDueDate() != null  
                 && rtWorkPackage.getDueDate().before(toDate) 
