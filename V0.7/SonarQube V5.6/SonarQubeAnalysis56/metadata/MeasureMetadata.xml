@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarQube56" name="SonarQubeAnalysis56" provider="Softeam" type="DIRECT">
+    <description>SonarQube 5.6 : Provide measures of selected metrics. If no metric is specified (Metrics field left blank), all metrics are provided.</description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <scopeProperties defaultValue="" name="Metrics" type="STRING"/>
+    <unit name="SonarQubeMeasures">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="major_violations" fieldType="u_double"/>
+        <fields fieldName="confirmed_issues" fieldType="u_double"/>
+        <fields fieldName="projects" fieldType="u_double"/>
+        <fields fieldName="conditions_by_line" fieldType="u_double"/>
+        <fields fieldName="violations" fieldType="u_double"/>
+        <fields fieldName="coverage_line_hits_data" fieldType="u_double"/>
+        <fields fieldName="uncovered_conditions" fieldType="u_double"/>
+        <fields fieldName="new_line_coverage" fieldType="u_double"/>
+        <fields fieldName="lines_to_cover" fieldType="u_double"/>
+        <fields fieldName="tests" fieldType="u_double"/>
+        <fields fieldName="sqale_index" fieldType="u_double"/>
+        <fields fieldName="new_minor_violations" fieldType="u_double"/>
+        <fields fieldName="false_positive_issues" fieldType="u_double"/>
+        <fields fieldName="line_coverage" fieldType="u_double"/>
+        <fields fieldName="branch_coverage" fieldType="u_double"/>
+        <fields fieldName="new_major_violations" fieldType="u_double"/>
+        <fields fieldName="sqale_debt_ratio" fieldType="u_double"/>
+        <fields fieldName="open_issues" fieldType="u_double"/>
+        <fields fieldName="new_vulnerabilities" fieldType="u_double"/>
+        <fields fieldName="comment_lines" fieldType="u_double"/>
+        <fields fieldName="duplicated_lines" fieldType="u_double"/>
+        <fields fieldName="new_info_violations" fieldType="u_double"/>
+        <fields fieldName="info_violations" fieldType="u_double"/>
+        <fields fieldName="functions" fieldType="u_double"/>
+        <fields fieldName="vulnerabilities" fieldType="u_double"/>
+        <fields fieldName="minor_violations" fieldType="u_double"/>
+        <fields fieldName="uncovered_lines" fieldType="u_double"/>
+        <fields fieldName="new_violations" fieldType="u_double"/>
+        <fields fieldName="coverage" fieldType="u_double"/>
+        <fields fieldName="new_uncovered_lines" fieldType="u_double"/>
+        <fields fieldName="skipped_tests" fieldType="u_double"/>
+        <fields fieldName="new_code_smells" fieldType="u_double"/>
+        <fields fieldName="bugs" fieldType="u_double"/>
+        <fields fieldName="covered_conditions_by_line" fieldType="u_double"/>
+        <fields fieldName="new_branch_coverage" fieldType="u_double"/>
+        <fields fieldName="new_critical_violations" fieldType="u_double"/>
+        <fields fieldName="blocker_violations" fieldType="u_double"/>
+        <fields fieldName="ncloc" fieldType="u_double"/>
+        <fields fieldName="new_bugs" fieldType="u_double"/>
+        <fields fieldName="critical_violations" fieldType="u_double"/>
+        <fields fieldName="cognitive_complexity" fieldType="u_double"/>
+        <fields fieldName="new_security_remediation_effort" fieldType="u_double"/>
+        <fields fieldName="test_success_density" fieldType="u_double"/>
+        <fields fieldName="new_blocker_violations" fieldType="u_double"/>
+        <fields fieldName="complexity" fieldType="u_double"/>
+        <fields fieldName="new_reliability_remediation_effort" fieldType="u_double"/>
+        <fields fieldName="duplicated_files" fieldType="u_double"/>
+        <fields fieldName="duplicated_blocks" fieldType="u_double"/>
+        <fields fieldName="security_remediation_effort" fieldType="u_double"/>
+        <fields fieldName="new_coverage" fieldType="u_double"/>
+        <fields fieldName="code_smells" fieldType="u_double"/>
+        <fields fieldName="new_technical_debt" fieldType="u_double"/>
+        <fields fieldName="new_sqale_debt_ratio" fieldType="u_double"/>
+        <fields fieldName="test_errors" fieldType="u_double"/>
+        <fields fieldName="duplicated_lines_density" fieldType="u_double"/>
+        <fields fieldName="directories" fieldType="u_double"/>
+        <fields fieldName="lines" fieldType="u_double"/>
+        <fields fieldName="classes" fieldType="u_double"/>
+        <fields fieldName="test_failures" fieldType="u_double"/>
+        <fields fieldName="reliability_remediation_effort" fieldType="u_double"/>
+        <fields fieldName="new_uncovered_conditions" fieldType="u_double"/>
+        <fields fieldName="statements" fieldType="u_double"/>
+        <fields fieldName="sqale_rating" fieldType="u_double"/>
+        <fields fieldName="security_rating" fieldType="u_double"/>
+        <fields fieldName="test_execution_time" fieldType="u_double"/>
+        <fields fieldName="files" fieldType="u_double"/>
+        <fields fieldName="comment_lines_density" fieldType="u_double"/>
+        <fields fieldName="reopened_issues" fieldType="u_double"/>
+        <fields fieldName="reliability_rating" fieldType="u_double"/>
+        <fields fieldName="new_lines_to_cover" fieldType="u_double"/>
+        <fields fieldName="class_complexity" fieldType="u_double"/>
+        <fields fieldName="file_complexity" fieldType="u_double"/>
+        <fields fieldName="function_complexity" fieldType="u_double"/>
+        <fields fieldName="public_documented_api_density" fieldType="u_double"/>
+        <fields fieldName="public_undocumented_api" fieldType="u_double"/>
+        <fields fieldName="commented_out_code_lines" fieldType="u_double"/>
+        <fields fieldName="public_api" fieldType="u_double"/>
+    </unit>
+</Measure>

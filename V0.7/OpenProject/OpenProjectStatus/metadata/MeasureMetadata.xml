@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="OpenProject" name="OpenProjectStatus" provider="Softeam" type="DIRECT">
+    <description>OpenProject: Provide information about selected Project general status</description>
+    <scopeProperties defaultValue="" name="openprojectUrl" type="STRING"/>
+    <scopeProperties defaultValue="" name="apikey" type="STRING"/>
+    <scopeProperties defaultValue="" name="projectName" type="STRING"/>
+    <unit name="ProjectInformation">
+        <fields fieldName="openFeatures" fieldType="u_integer"/>
+        <fields fieldName="totalFeatures" fieldType="u_integer"/>
+        <fields fieldName="openTasks" fieldType="u_integer"/>
+        <fields fieldName="totalTasks" fieldType="u_integer"/>
+        <fields fieldName="openMilestones" fieldType="u_integer"/>
+        <fields fieldName="totalMilestones" fieldType="u_integer"/>
+        <fields fieldName="openPhases" fieldType="u_integer"/>
+        <fields fieldName="totalPhases" fieldType="u_integer"/>
+        <fields fieldName="openEpics" fieldType="u_integer"/>
+        <fields fieldName="totalEpics" fieldType="u_integer"/>
+        <fields fieldName="openUserStories" fieldType="u_integer"/>
+        <fields fieldName="totalUserStories" fieldType="u_integer"/>
+        <fields fieldName="openBugs" fieldType="u_integer"/>
+        <fields fieldName="totalBugs" fieldType="u_integer"/>
+        <fields fieldName="openSpecifications" fieldType="u_integer"/>
+        <fields fieldName="totalSpecifications" fieldType="u_integer"/>
+        <fields fieldName="openQualityRequirements" fieldType="u_integer"/>
+        <fields fieldName="totalQualityRequirements" fieldType="u_integer"/>
+        <fields fieldName="totalEstimatedTime" fieldType="u_long"/>
+        <fields fieldName="totalSpentTime" fieldType="u_long"/>
+        <fields fieldName="totalRemainingTime" fieldType="u_long"/>
+        <fields fieldName="open" fieldType="u_integer"/>
+        <fields fieldName="total" fieldType="u_integer"/>
+    </unit>
+</Measure>

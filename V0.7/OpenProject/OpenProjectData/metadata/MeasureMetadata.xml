@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="OpenProject" name="OpenProjectData" provider="Softeam" type="DIRECT">
+    <description>OpenProject: Provide information about Work Packages of selected Project</description>
+    <scopeProperties defaultValue="" name="openprojectUrl" type="STRING"/>
+    <scopeProperties defaultValue="" name="apikey" type="STRING"/>
+    <scopeProperties defaultValue="" name="projectName" type="STRING"/>
+    <scopeProperties defaultValue="" name="lastExecution" type="DESABLE"/>
+    <unit name="WorkPackageInformation">
+        <fields fieldName="issueId" fieldType="u_keyword"/>
+        <fields fieldName="summary" fieldType="u_text"/>
+        <fields fieldName="description" fieldType="u_text"/>
+        <fields fieldName="issuetype" fieldType="u_keyword"/>
+        <fields fieldName="openProjectUrl" fieldType="u_keyword"/>
+        <fields fieldName="projectId" fieldType="u_keyword"/>
+        <fields fieldName="projectName" fieldType="u_keyword"/>
+        <fields fieldName="version" fieldType="u_keyword"/>
+        <fields fieldName="parentId" fieldType="u_keyword"/>
+        <fields fieldName="parentSummary" fieldType="u_text"/>
+        <fields fieldName="creator" fieldType="u_keyword"/>
+        <fields fieldName="responsible" fieldType="u_keyword"/>
+        <fields fieldName="assignee" fieldType="u_keyword"/>
+        <fields fieldName="created" fieldType="u_date"/>
+        <fields fieldName="updated" fieldType="u_date"/>
+        <fields fieldName="startdate" fieldType="u_date"/>
+        <fields fieldName="duedate" fieldType="u_date"/>
+        <fields fieldName="timeestimate" fieldType="u_long"/>
+        <fields fieldName="timespent" fieldType="u_long"/>
+        <fields fieldName="remainingTime" fieldType="u_long"/>
+        <fields fieldName="percentageDone" fieldType="u_long"/>
+        <fields fieldName="priority" fieldType="u_keyword"/>
+        <fields fieldName="status" fieldType="u_keyword"/>
+        <fields fieldName="ontime" fieldType="u_keyword"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+</Measure>

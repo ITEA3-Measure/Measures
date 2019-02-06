@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarQube56" name="SonarQubeMetric56" provider="Softeam" type="DIRECT">
+    <description>SonarQube 5.6 : Provide measure of selected metric. </description>
+    <scopeProperties defaultValue="" name="ServerURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Login" type="STRING"/>
+    <scopeProperties defaultValue="" name="Password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="ProjectKey" type="STRING"/>
+    <scopeProperties defaultValue="" name="Metric" type="ENUM">
+        <enumType>
+            <enumvalue label="major_violations" value="major_violations"/>
+            <enumvalue label="confirmed_issues" value="confirmed_issues"/>
+            <enumvalue label="projects" value="projects"/>
+            <enumvalue label="conditions_by_line" value="conditions_by_line"/>
+            <enumvalue label="violations" value="violations"/>
+            <enumvalue label="coverage_line_hits_data" value="coverage_line_hits_data"/>
+            <enumvalue label="uncovered_conditions" value="uncovered_conditions"/>
+            <enumvalue label="new_line_coverage" value="new_line_coverage"/>
+            <enumvalue label="lines_to_cover" value="lines_to_cover"/>
+            <enumvalue label="tests" value="tests"/>
+            <enumvalue label="sqale_index" value="sqale_index"/>
+            <enumvalue label="new_minor_violations" value="new_minor_violations"/>
+            <enumvalue label="false_positive_issues" value="false_positive_issues"/>
+            <enumvalue label="line_coverage" value="line_coverage"/>
+            <enumvalue label="branch_coverage" value="branch_coverage"/>
+            <enumvalue label="new_major_violations" value="new_major_violations"/>
+            <enumvalue label="sqale_debt_ratio" value="sqale_debt_ratio"/>
+            <enumvalue label="open_issues" value="open_issues"/>
+            <enumvalue label="new_vulnerabilities" value="new_vulnerabilities"/>
+            <enumvalue label="comment_lines" value="comment_lines"/>
+            <enumvalue label="duplicated_lines" value="duplicated_lines"/>
+            <enumvalue label="new_info_violations" value="new_info_violations"/>
+            <enumvalue label="info_violations" value="info_violations"/>
+            <enumvalue label="functions" value="functions"/>
+            <enumvalue label="vulnerabilities" value="vulnerabilities"/>
+            <enumvalue label="minor_violations" value="minor_violations"/>
+            <enumvalue label="uncovered_lines" value="uncovered_lines"/>
+            <enumvalue label="new_violations" value="new_violations"/>
+            <enumvalue label="coverage" value="coverage"/>
+            <enumvalue label="new_uncovered_lines" value="new_uncovered_lines"/>
+            <enumvalue label="skipped_tests" value="skipped_tests"/>
+            <enumvalue label="new_code_smells" value="new_code_smells"/>
+            <enumvalue label="bugs" value="bugs"/>
+            <enumvalue label="covered_conditions_by_line" value="covered_conditions_by_line"/>
+            <enumvalue label="new_branch_coverage" value="new_branch_coverage"/>
+            <enumvalue label="new_critical_violations" value="new_critical_violations"/>
+            <enumvalue label="blocker_violations" value="blocker_violations"/>
+            <enumvalue label="ncloc" value="ncloc"/>
+            <enumvalue label="new_bugs" value="new_bugs"/>
+            <enumvalue label="critical_violations" value="critical_violations"/>
+            <enumvalue label="cognitive_complexity" value="cognitive_complexity"/>
+            <enumvalue label="new_security_remediation_effort" value="new_security_remediation_effort"/>
+            <enumvalue label="test_success_density" value="test_success_density"/>
+            <enumvalue label="new_blocker_violations" value="new_blocker_violations"/>
+            <enumvalue label="complexity" value="complexity"/>
+            <enumvalue label="new_reliability_remediation_effort" value="new_reliability_remediation_effort"/>
+            <enumvalue label="duplicated_files" value="duplicated_files"/>
+            <enumvalue label="duplicated_blocks" value="duplicated_blocks"/>
+            <enumvalue label="security_remediation_effort" value="security_remediation_effort"/>
+            <enumvalue label="new_coverage" value="new_coverage"/>
+            <enumvalue label="code_smells" value="code_smells"/>
+            <enumvalue label="new_technical_debt" value="new_technical_debt"/>
+            <enumvalue label="new_sqale_debt_ratio" value="new_sqale_debt_ratio"/>
+            <enumvalue label="test_errors" value="test_errors"/>
+            <enumvalue label="duplicated_lines_density" value="duplicated_lines_density"/>
+            <enumvalue label="directories" value="directories"/>
+            <enumvalue label="lines" value="lines"/>
+            <enumvalue label="classes" value="classes"/>
+            <enumvalue label="test_failures" value="test_failures"/>
+            <enumvalue label="reliability_remediation_effort" value="reliability_remediation_effort"/>
+            <enumvalue label="new_uncovered_conditions" value="new_uncovered_conditions"/>
+            <enumvalue label="statements" value="statements"/>
+            <enumvalue label="sqale_rating" value="sqale_rating"/>
+            <enumvalue label="security_rating" value="security_rating"/>
+            <enumvalue label="test_execution_time" value="test_execution_time"/>
+            <enumvalue label="files" value="files"/>
+            <enumvalue label="comment_lines_density" value="comment_lines_density"/>
+            <enumvalue label="reopened_issues" value="reopened_issues"/>
+            <enumvalue label="reliability_rating" value="reliability_rating"/>
+            <enumvalue label="new_lines_to_cover" value="new_lines_to_cover"/>
+            <enumvalue label="class_complexity" value="class_complexity"/>
+            <enumvalue label="file_complexity" value="file_complexity"/>
+            <enumvalue label="function_complexity" value="function_complexity"/>
+            <enumvalue label="public_documented_api_density" value="public_documented_api_density"/>
+            <enumvalue label="public_undocumented_api" value="public_undocumented_api"/>
+            <enumvalue label="commented_out_code_lines" value="commented_out_code_lines"/>
+            <enumvalue label="public_api" value="public_api"/>
+        </enumType>
+    </scopeProperties>
+    <unit name="SonarQubeMeasure">
+        <fields fieldName="value" fieldType="u_double"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+</Measure>

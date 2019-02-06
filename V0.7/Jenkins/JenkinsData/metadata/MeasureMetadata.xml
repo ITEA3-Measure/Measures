@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Jenkins" name="JenkinsData" provider="Softeam" type="DIRECT">
+    <description>Jenkins: Provide information about builds of the selected Jenkins Job</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="user" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="jobName" type="STRING"/>
+    <scopeProperties defaultValue="" name="lastBuild" type="DESABLE"/>
+    <unit name="BuildInformation">
+        <fields fieldName="buildClazz" fieldType="u_keyword"/>
+        <fields fieldName="buildDescription" fieldType="u_text"/>
+        <fields fieldName="buildNumber" fieldType="u_integer"/>
+        <fields fieldName="buildUrl" fieldType="u_keyword"/>
+        <fields fieldName="duration" fieldType="u_long"/>
+        <fields fieldName="estimatedDuration" fieldType="u_long"/>
+        <fields fieldName="result" fieldType="u_keyword"/>
+        <fields fieldName="timestamp" fieldType="u_date"/>
+        <fields fieldName="jobClazz" fieldType="u_keyword"/>
+        <fields fieldName="jobName" fieldType="u_keyword"/>
+        <fields fieldName="jobUrl" fieldType="u_keyword"/>
+        <fields fieldName="postDate" fieldType="u_date"/>
+    </unit>
+</Measure>

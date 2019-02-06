@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Mantis" name="MantisIssueData" provider="Softeam" type="DIRECT">
+    <description>Return all available data rested to issues frome a specified date of a Mantis Bug Tracker</description>
+    <scopeProperties defaultValue="" name="url" type="STRING"/>
+    <scopeProperties defaultValue="" name="login" type="STRING"/>
+    <scopeProperties defaultValue="" name="password" type="PASSWORD"/>
+    <scopeProperties defaultValue="" name="from" type="DATE"/>
+    <scopeProperties defaultValue="" name="projectName" type="STRING"/>
+    <scopeProperties defaultValue="" name="parameters" type="STRING"/>
+    <unit name="MantisIssue">
+        <fields fieldName="name" fieldType="u_text"/>
+        <fields fieldName="project" fieldType="u_text"/>
+        <fields fieldName="priority" fieldType="u_text"/>
+        <fields fieldName="severity" fieldType="u_text"/>
+        <fields fieldName="reproductibility" fieldType="u_text"/>
+        <fields fieldName="status" fieldType="u_text"/>
+        <fields fieldName="os" fieldType="u_text"/>
+        <fields fieldName="platform" fieldType="u_text"/>
+        <fields fieldName="version" fieldType="u_text"/>
+        <fields fieldName="submited" fieldType="u_date"/>
+        <fields fieldName="lastupdate" fieldType="u_date"/>
+    </unit>
+</Measure>
