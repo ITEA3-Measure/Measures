@@ -1,0 +1,7 @@
+org/measure/sonarqube/newtechnicaldebt/data/RTError.class
+org/measure/sonarqube/newtechnicaldebt/data/RTMetric.class
+org/measure/sonarqube/newtechnicaldebt/DirectMeasureImpl.class
+org/measure/sonarqube/newtechnicaldebt/DirectMeasureData.class
+org/measure/sonarqube/newtechnicaldebt/DirectMeasureImpl$1.class
+org/measure/sonarqube/newtechnicaldebt/data/RTHistory.class
+org/measure/sonarqube/newtechnicaldebt/data/RTMeasure.class

@@ -1,0 +1,7 @@
+org/measure/sonarqube/minorviolations/DirectMeasureImpl.class
+org/measure/sonarqube/minorviolations/DirectMeasureData.class
+org/measure/sonarqube/minorviolations/DirectMeasureImpl$1.class
+org/measure/sonarqube/minorviolations/data/RTHistory.class
+org/measure/sonarqube/minorviolations/data/RTMetric.class
+org/measure/sonarqube/minorviolations/data/RTMeasure.class
+org/measure/sonarqube/minorviolations/data/RTError.class

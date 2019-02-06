@@ -1,0 +1,7 @@
+org/measure/sonarqube/newcriticalviolations/data/RTHistory.class
+org/measure/sonarqube/newcriticalviolations/DirectMeasureData.class
+org/measure/sonarqube/newcriticalviolations/data/RTMetric.class
+org/measure/sonarqube/newcriticalviolations/data/RTMeasure.class
+org/measure/sonarqube/newcriticalviolations/DirectMeasureImpl$1.class
+org/measure/sonarqube/newcriticalviolations/data/RTError.class
+org/measure/sonarqube/newcriticalviolations/DirectMeasureImpl.class

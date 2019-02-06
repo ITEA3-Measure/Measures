@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="SonarQube" name="SonarQubeMetricHistory-V6" provider="Softeam" type="DIRECT">
+    <description>Generic SonarQube 6 Historical Metric. Provide the list of selected SonarQube Metric  value since the from date. </description>
+    <scopeProperties defaultValue="" name="SonarQubeURL" type="STRING"/>
+    <scopeProperties defaultValue="" name="Metric" type="ENUM">
+        <enumType>
+            <enumvalue label="complexity" value="complexity"/>
+            <enumvalue label="cognitive_complexity" value="cognitive_complexity"/>
+            <enumvalue label="duplicated_blocks" value="duplicated_blocks"/>
+            <enumvalue label="duplicated_files" value="duplicated_files"/>
+            <enumvalue label="duplicated_lines" value="duplicated_lines"/>
+            <enumvalue label="duplicated_lines_density" value="duplicated_lines_density"/>
+            <enumvalue label="new_violations" value="new_violations"/>
+            <enumvalue label="new_blocker_violations" value="new_blocker_violations"/>
+            <enumvalue label="new_critical_violations" value="new_critical_violations"/>
+            <enumvalue label="new_major_violations" value="new_major_violations"/>
+            <enumvalue label="new_minor_violations" value="new_minor_violations"/>
+            <enumvalue label="new_info_violations" value="new_info_violations"/>
+            <enumvalue label="violations" value="violations"/>
+            <enumvalue label="blocker_violations" value="blocker_violations"/>
+            <enumvalue label="critical_violations" value="critical_violations"/>
+            <enumvalue label="major_violations" value="major_violations"/>
+            <enumvalue label="minor_violations" value="minor_violations"/>
+            <enumvalue label="info_violations" value="info_violations"/>
+            <enumvalue label="false_positive_issues" value="false_positive_issues"/>
+            <enumvalue label="open_issues" value="open_issues"/>
+            <enumvalue label="confirmed_issues" value="confirmed_issues"/>
+            <enumvalue label="reopened_issues" value="reopened_issues"/>
+            <enumvalue label="code_smells" value="code_smells"/>
+            <enumvalue label="new_code_smells" value="new_code_smells"/>
+            <enumvalue label="sqale_rating" value="sqale_rating"/>
+            <enumvalue label="sqale_index" value="sqale_index"/>
+            <enumvalue label="new_technical_debt" value="new_technical_debt"/>
+            <enumvalue label="sqale_debt_ratio" value="sqale_debt_ratio"/>
+            <enumvalue label="new_sqale_debt_ratio" value="new_sqale_debt_ratio"/>
+            <enumvalue label="alert_status" value="alert_status"/>
+            <enumvalue label="bugs" value="bugs"/>
+            <enumvalue label="new_bugs" value="new_bugs"/>
+            <enumvalue label="reliability_rating" value="reliability_rating"/>
+            <enumvalue label="reliability_remediation_effort" value="reliability_remediation_effort"/>
+            <enumvalue label="new_reliability_remediation_effort" value="new_reliability_remediation_effort"/>
+            <enumvalue label="vulnerabilities" value="vulnerabilities"/>
+            <enumvalue label="new_vulnerabilities" value="new_vulnerabilities"/>
+            <enumvalue label="security_rating" value="security_rating"/>
+            <enumvalue label="security_remediation_effort" value="security_remediation_effort"/>
+            <enumvalue label="new_security_remediation_effort" value="new_security_remediation_effort"/>
+            <enumvalue label="classes" value="classes"/>
+            <enumvalue label="comment_lines" value="comment_lines"/>
+            <enumvalue label="comment_lines_density" value="comment_lines_density"/>
+            <enumvalue label="directories" value="directories"/>
+            <enumvalue label="files" value="files"/>
+            <enumvalue label="lines" value="lines"/>
+            <enumvalue label="ncloc" value="ncloc"/>
+            <enumvalue label="functions" value="functions"/>
+            <enumvalue label="projects" value="projects"/>
+            <enumvalue label="statements" value="statements"/>
+            <enumvalue label="branch_coverage" value="branch_coverage"/>
+            <enumvalue label="new_branch_coverage" value="new_branch_coverage"/>
+            <enumvalue label="branch_coverage_hits_data" value="branch_coverage_hits_data"/>
+            <enumvalue label="conditions_by_line" value="conditions_by_line"/>
+            <enumvalue label="covered_conditions_by_line" value="covered_conditions_by_line"/>
+            <enumvalue label="coverage" value="coverage"/>
+            <enumvalue label="new_coverage" value="new_coverage"/>
+            <enumvalue label="line_coverage" value="line_coverage"/>
+            <enumvalue label="new_line_coverage" value="new_line_coverage"/>
+            <enumvalue label="coverage_line_hits_data" value="coverage_line_hits_data"/>
+            <enumvalue label="lines_to_cover" value="lines_to_cover"/>
+            <enumvalue label="new_lines_to_cover" value="new_lines_to_cover"/>
+            <enumvalue label="skipped_tests" value="skipped_tests"/>
+            <enumvalue label="uncovered_conditions" value="uncovered_conditions"/>
+            <enumvalue label="new_uncovered_conditions" value="new_uncovered_conditions"/>
+            <enumvalue label="uncovered_lines" value="uncovered_lines"/>
+            <enumvalue label="new_uncovered_lines" value="new_uncovered_lines"/>
+            <enumvalue label="tests" value="tests"/>
+            <enumvalue label="test_execution_time" value="test_execution_time"/>
+            <enumvalue label="test_errors" value="test_errors"/>
+            <enumvalue label="test_failures" value="test_failures"/>
+            <enumvalue label="test_success_density" value="test_success_density"/>
+        </enumType>
+    </scopeProperties>
+    <scopeProperties defaultValue="" name="Component" type="STRING"/>
+    <scopeProperties defaultValue="" name="From" type="DATE"/>
+    <unit name="MetricValue">
+        <fields fieldName="postDate" fieldType="u_date"/>
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

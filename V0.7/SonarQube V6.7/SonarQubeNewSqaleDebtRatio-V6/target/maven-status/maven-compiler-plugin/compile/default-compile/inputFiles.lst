@@ -1,0 +1,6 @@
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/DirectMeasureImpl.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/data/RTHistory.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/data/RTMetric.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/data/RTError.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/DirectMeasureData.java
+/home/aboudeffa/work/Measures/Tookit/SonarQubeNewSqaleDebtRatio-V6/src/main/java/org/measure/sonarqube/newsqaledebtratio/data/RTMeasure.java
