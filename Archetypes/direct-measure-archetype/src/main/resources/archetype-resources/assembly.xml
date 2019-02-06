@@ -1,0 +1,65 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set(
+$symbol_escape = '\' )
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<fileSets>
+		<fileSet>
+			<directory>${symbol_dollar}{project.build.directory}/lib</directory>
+			<outputDirectory>/lib</outputDirectory>
+			<excludes>
+				<exclude>junit-*.jar</exclude>
+				<exclude>SMMMeasureApi-*.jar</exclude>
+				<exclude>slf4j-api-*.jar</exclude>
+				<exclude>hibernate-validator-*.jar</exclude>
+				<exclude>jackson-annotations-*.jar</exclude>
+				<exclude>jackson-core-*.jar</exclude>
+				<exclude>jackson-databind-*.jar</exclude>
+				<exclude>jboss-logging-*.Final.jar</exclude>
+				<exclude>log4j-over-slf4j-*.jar</exclude>
+				<exclude>logback-classic-*.jar</exclude>
+				<exclude>logback-core-*.jar</exclude>
+				<exclude>spring-aop-*.jar</exclude>
+				<exclude>spring-beans-*.jar</exclude>
+				<exclude>spring-boot-*.jar</exclude>
+				<exclude>spring-boot-autoconfigure-*.jar</exclude>
+				<exclude>spring-boot-starter-*.jar</exclude>
+				<exclude>spring-boot-starter-logging-*.jar</exclude>
+				<exclude>spring-boot-starter-tomcat-*.jar</exclude>
+				<exclude>spring-boot-starter-web-*.jar</exclude>
+				<exclude>spring-context-*.jar</exclude>
+				<exclude>spring-core-*.jar</exclude>
+				<exclude>spring-expression-*.jar</exclude>
+				<exclude>spring-web-*.jar</exclude>
+				<exclude>spring-webmvc-*.jar</exclude>
+				<exclude>tomcat-embed-core-*.jar</exclude>
+				<exclude>tomcat-embed-el-*.jar</exclude>
+				<exclude>tomcat-embed-websocket-*.jar</exclude>
+				<exclude>validation-api-*.jar</exclude>
+
+			</excludes>
+		</fileSet>
+		<fileSet>
+			<directory>${symbol_dollar}{project.build.directory}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${symbol_dollar}{project.basedir}/metadata</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>*.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>
