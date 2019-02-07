@@ -29,4 +29,15 @@
         <fields fieldName="open" fieldType="u_integer"/>
         <fields fieldName="total" fieldType="u_integer"/>
     </unit>
+	<views>
+		<view name="OpenProject Status History" type="TABLE" default="true"
+			autoRefresh="true">
+			<description>OpenProject Status History</description>
+			<datasource
+				dataIndex="postDate,openFeatures,totalFeatures,openTasks,totalTasks,openMilestones,totalMilestones,openPhases,totalPhases,openEpics,totalEpics,openUserStories,totalUserStories,openBugs,totalBugs,openSpecifications,totalSpecifications,openQualityRequirements,totalQualityRequirements,totalEstimatedTime,totalSpentTime,totalRemainingTime,open,total"
+				dateIndex="postDate" timePeriode="7d" />
+			<layout width="2400" height="800" fontSize="10"
+				color="#ffadad" />
+		</view>
+	</views>
 </Measure>

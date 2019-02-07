@@ -20,4 +20,14 @@
         <fields fieldName="jobUrl" fieldType="u_keyword"/>
         <fields fieldName="postDate" fieldType="u_date"/>
     </unit>
+	<views>
+		<view name="Jenkins Builds History" type="TABLE"
+			default="true" autoRefresh="true">
+			<description>Jenkins Builds History</description>
+			<datasource
+				dataIndex="postDate,buildClazz,buildDescription,buildNumber,buildUrl,duration,estimatedDuration,result,timestamp,jobClazz,jobName,jobUrl"
+				dateIndex="postDate" timePeriode="7d" />
+			<layout width="1200" height="800" fontSize="10" color="#ffadad" />
+		</view>
+	</views>
 </Measure>
