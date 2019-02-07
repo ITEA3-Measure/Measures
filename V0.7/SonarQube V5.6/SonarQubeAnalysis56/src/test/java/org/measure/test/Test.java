@@ -6,20 +6,20 @@ public class Test {
 
     @org.junit.Test
     public void testMeasure() {
-        org.measure.impl.DirectMeasureImpl measure = new org.measure.impl.DirectMeasureImpl();
-        measure.getProperties().put("ServerURL", "http://localhost:9000/");
-        measure.getProperties().put("Login", "admin");
-        measure.getProperties().put("Password", "admin");
-        measure.getProperties().put("ProjectKey", "org.proejct:module.app");
-        measure.getProperties().put("Metrics", "new_code_smells,bugs,code_smells");
+//        org.measure.impl.DirectMeasureImpl measure = new org.measure.impl.DirectMeasureImpl();
+//        measure.getProperties().put("ServerURL", "http://localhost:9000/");
+//        measure.getProperties().put("Login", "admin");
+//        measure.getProperties().put("Password", "admin");
+//        measure.getProperties().put("ProjectKey", "org.proejct:module.app");
+//        measure.getProperties().put("Metrics", "new_code_smells,bugs,code_smells");
         
-        try {
-            for(IMeasurement result : measure.getMeasurement()){
-                System.out.println("Test Resul : " + result.getLabel());
-            }            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            for(IMeasurement result : measure.getMeasurement()){
+//                System.out.println("Test Resul : " + result.getLabel());
+//            }            
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
 }
