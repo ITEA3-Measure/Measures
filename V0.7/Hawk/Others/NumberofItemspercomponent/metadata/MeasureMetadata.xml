@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="NumberofItemspercomponent" type="BINARY">
+    <description>IPC, the number of items per component, is the ratio between the number of component items (including the component implementations) and the number of component implementations. Formally : IPC = (NCI + NIM) / NIM. It is close to 1 when the component implementations are mostly monolithic and has bigger values when the component is segmented into several items.</description>
+    <references measureRef="Number of Component items and Implementation" number="1" role=""/>
+    <references measureRef="Number of Component Implementations" number="1" role=""/>
+    <scopeProperties defaultValue="*" name="repository" type="STRING"/>
+    <scopeProperties defaultValue="" name="instanceName" type="STRING"/>
+    <scopeProperties defaultValue="http://localhost:8080/thrift/hawk/tuple" name="serverUrl" type="STRING"/>
+    <unit name="Percent">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>

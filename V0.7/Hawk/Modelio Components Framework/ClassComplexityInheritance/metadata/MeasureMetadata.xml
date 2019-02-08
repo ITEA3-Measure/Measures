@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="ClassComplexityInheritance" type="DIRECT">
+    <description>The Class Complexity due to Inheritance (CCI) metric measures  the complexity of OO code design due to the inheritance and its maintainability. It returns a cognitive weight which a low value means a better design information.
+This metric computes the cognitive weight of a class computing the weight of each methods and adds the complexity weights of the directly inherited classes. Then to compute the full code weight, CCI adds the weight of each class if there are in the same level or multiply  if there is derivation link.</description>
+    <scopeProperties defaultValue="" name="URL" type="STRING"/>
+    <scopeProperties defaultValue="" name="LOGIN" type="STRING"/>
+    <scopeProperties defaultValue="" name="PASSWORD" type="STRING"/>
+    <unit name="Weight">
+        <fields fieldName="weight" fieldType="u_integer"/>
+    </unit>
+</Measure>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="Random" provider="Measure.org By Softeam" type="DIRECT">
+    <description>Test Measure : Simple example of Direct Measure
+</description>
+    <scopeProperties defaultValue="" name="MaxRange" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="MinRange" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="Delta" type="INTEGER"/>
+    <scopeProperties defaultValue="" name="Value" type="INTEGER"/>
+    <unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+    <views>
+		<view name="Random Value History" type="AREA" default="false" autoRefresh="true">
+			<description>Random Value History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="Random Value" type="VALUE" default="true" autoRefresh="true">
+			<datasource dataIndex="value" timePeriode="30d" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>

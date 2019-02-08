@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="PlatformTest" name="RandomBinary" provider="Measure.org By Softeam" type="BINARY">
+    <description>Test Measure : Simple example of Binary Measure</description>
+    <references measureRef="Random" number="1" role="Random A"/>
+    <references measureRef="Random" number="1" role="Random B"/>
+    <scopeProperties defaultValue="+" name="Operation" type="STRING"/>
+    <unit name="RandomUnit">
+        <fields fieldName="value" fieldType="u_integer"/>
+    </unit>
+    <views>
+		<view name="Random Binary Value History" type="AREA" default="false" autoRefresh="true">
+			<description>Random Binary Value History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="Random Binary Value" type="VALUE" default="true" autoRefresh="true">
+			<datasource dataIndex="value" timePeriode="30d" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
+</Measure>
