@@ -1,0 +1,7 @@
+
+return ApplicationFunction.latest.all.size + ApplicationInteraction.latest.all.size + ApplicationProcess.latest.all.size + ApplicationEvent.latest.all.size + ApplicationService.latest.all.size +
+	ApplicationComponent.latest.all.size + ApplicationCollaboration.latest.all.size + ApplicationInterface.latest.all.size +
+    DataObject.latest.all.size 
+
+;
+
