@@ -9,4 +9,15 @@
     <unit name="Numeric">
         <fields fieldName="value" fieldType="u_integer"/>
     </unit>
+    <views>
+		<view name="NumberOfTests History" type="AREA" default="true" autoRefresh="true">
+			<description>NumberOfTests History</description>
+			<datasource dataIndex="value" dateIndex="postDate" timePeriode="30d" timeAggregation="d" />
+			<layout width="420" height="420" color="%23FCD071" />
+		</view>
+		<view name="NumberOfTests" type="VALUE" default="false" autoRefresh="false">
+			<datasource dataIndex="value" timePeriode="1y" />
+			<layout width="220" height="150" fontSize="60" color="#FCD071" />
+		</view>
+	</views>
 </Measure>
