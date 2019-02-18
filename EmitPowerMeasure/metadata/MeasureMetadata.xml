@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure name="EmitPowerMeasure" type="DIRECT" category="Emit" provider="Measure.org">
+    <description>Power in watt provided by EMIT powermeters.</description>
+    <scopeProperties name="hostname" type="STRING" defaultValue="app.icam.fr">
+        <description>Hostname</description>
+    </scopeProperties>
+    <scopeProperties name="port" type="INTEGER" defaultValue="80">
+        <description>Port</description>
+    </scopeProperties>
+    <scopeProperties name="protocol" type="STRING" defaultValue="http">
+        <description>Protocol</description>
+    </scopeProperties>
+    <scopeProperties name="username" type="STRING" defaultValue="measure@emit.icam.fr">
+        <description>Username</description>
+    </scopeProperties>
+    <scopeProperties name="password" type="STRING" defaultValue="m3@suR">
+        <description>Password</description>
+    </scopeProperties>
+    <scopeProperties name="uuid" type="STRING" defaultValue="f2eb12f1-fa95-4f0c-8b6e-e6fd78dcd773">
+        <description>Topic</description>
+    </scopeProperties>
+    <unit name="EmitPowerMeasurement">
+        <fields fieldName="topic" fieldType="u_text"/>
+        <fields fieldName="issued" fieldType="u_long"/>
+        <fields fieldName="value" fieldType="u_float"/>
+    </unit>
+</Measure>
