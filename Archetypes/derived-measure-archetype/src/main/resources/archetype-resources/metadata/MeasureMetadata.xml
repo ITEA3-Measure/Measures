@@ -1,0 +1,13 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Measure category="Category" name="${artifactId}" provider="MeasureProvider" type="BINARY">
+    <description>TODO : Please fill in the measure description</description>
+    <references measureRef="Measure1" number="1" role="Role A"/>
+    <references measureRef="Measure1" number="1" role="Role B"/>
+    <scopeProperties defaultValue="+" name="Operation" type="STRING"/>
+    <unit name="UnitOfMeasureExample">
+        <fields fieldName="value" fieldType="u_double"/>
+    </unit>
+</Measure>
