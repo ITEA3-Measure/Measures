@@ -20,17 +20,12 @@
 		<dependency>
 			<groupId>org.measure.smmmeasure.api</groupId>
 			<artifactId>SMMMeasureApi</artifactId>
-			<version>0.6.02</version>
+			<version>0.7.00</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hawk.service</groupId>
 			<artifactId>org.hawk.service.api</artifactId>
-			<version>1.2.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hawk.service</groupId>
-			<artifactId>org.hawk.service.artemis</artifactId>
 			<version>1.2.0-SNAPSHOT</version>
 		</dependency>
 
